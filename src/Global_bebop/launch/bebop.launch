@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- <rosparam command="load" file="$(find beb)/src/bebop2.yaml" />  -->
+  <arg name="frame" default = "Parrot_umar1"/>
+  <arg name="worldFrame" default="world"/>
+  
+    <node name="random_bebop_commands" pkg="beb" type="beb" output="screen">
+
+    <param name="frame" value="$(arg frame)" />
+    <param name="worldFrame" value="$(arg worldFrame)" />
+    <rosparam command="load" file="$(find beb)/src/bebop2.yaml" />
+  
+  </node>
+  
+   <node name="talker" pkg="beb" type="MPC.py" output="screen">
+    </node>
+
+    <node name="plotter" pkg="beb" type="plotter.py" output="screen">
+    </node>
+
+    <node name="Optimizer" pkg="beb" type="Optimizer.py" output="screen">
+    </node>
+
+ <!--    <node name="LearnModel" pkg="beb" type="GP_filt.py" output="screen">
+    </node>
+    
+   <node name="fixed_tf_broadcaster" pkg="beb" type="FrameBoad.py" output="screen">
+    </node>
+
+    <node name="TrainBag" pkg="beb" type="TrainBag.py" output="screen">
+    </node>
+-->
+
+     <include file="$(find qualisys)/launch/qualisys.launch">
+     </include>
+
+    <include file="$(find qualisys)/launch/qualisys_odom.launch">
+        <arg name="model" default="$(arg frame)"/>
+        <arg name="output" default="screen"/>
+    </include>
+ 
+
+</launch>

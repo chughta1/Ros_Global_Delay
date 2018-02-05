@@ -1,0 +1,8 @@
+prefix=/home/chuggi/catkin_ws/install
+
+Name: beb
+Description: Description of beb
+Version: 2.4.2
+Cflags: -I/home/chuggi/catkin_ws/install/include
+Libs: -L/home/chuggi/catkin_ws/install/lib 
+Requires: message_runtime

@@ -1,0 +1,265 @@
+#include <ros/ros.h>
+#include <geometry_msgs/Twist.h> 
+#include <stdlib.h> 
+#include <tf/transform_listener.h>
+#include <ros/console.h>
+
+using namespace std;
+
+#include "pid.hpp"
+double get(
+    const ros::NodeHandle& n,
+    const std::string& name) {
+    double value;
+    n.getParam(name, value);
+    return value;
+}
+
+ double fr[4];
+  void PosCallback( geometry_msgs::TransformStamped f )
+    {   
+       fr[0]=(f.transform.translation.x);
+       fr[1]=(f.transform.translation.y);
+       fr[2]=(f.transform.translation.z);
+       tfScalar roll1, pitch1, yaw1;
+                tf::Matrix3x3(
+                    tf::Quaternion(
+                        f.transform.rotation.x,
+                        f.transform.rotation.y,
+                        f.transform.rotation.z,
+                        f.transform.rotation.w
+                    )).getRPY(roll1, pitch1, yaw1);
+       fr[3]=(yaw1);
+    } 
+
+class Controller
+{
+public:
+  Controller(
+        const std::string& worldFrame,
+        const std::string& frame,
+        const ros::NodeHandle& n):
+        m_worldFrame(worldFrame)
+        , m_frame(frame)
+        , m_pubNav()
+        , m_error()
+        , ch_pose()
+        , m_listener()
+        , m_pidX(
+            get(n, "PIDs/X/kp"),
+            get(n, "PIDs/X/kd"),
+            get(n, "PIDs/X/ki"),
+            get(n, "PIDs/X/minOutput"),
+            get(n, "PIDs/X/maxOutput"),
+            get(n, "PIDs/X/integratorMin"),
+            get(n, "PIDs/X/integratorMax"),
+            "x")
+        , m_pidY(
+            get(n, "PIDs/Y/kp"),
+            get(n, "PIDs/Y/kd"),
+            get(n, "PIDs/Y/ki"),
+            get(n, "PIDs/Y/minOutput"),
+            get(n, "PIDs/Y/maxOutput"),
+            get(n, "PIDs/Y/integratorMin"),
+            get(n, "PIDs/Y/integratorMax"),
+            "y")
+        , m_pidZ(
+            get(n, "PIDs/Z/kp"),
+            get(n, "PIDs/Z/kd"),
+            get(n, "PIDs/Z/ki"),
+            get(n, "PIDs/Z/minOutput"),
+            get(n, "PIDs/Z/maxOutput"),
+            get(n, "PIDs/Z/integratorMin"),
+            get(n, "PIDs/Z/integratorMax"),
+            "z")
+        , m_pidYaw(
+            get(n, "PIDs/Yaw/kp"),
+            get(n, "PIDs/Yaw/kd"),
+            get(n, "PIDs/Yaw/ki"),
+            get(n, "PIDs/Yaw/minOutput"),
+            get(n, "PIDs/Yaw/maxOutput"),
+            get(n, "PIDs/Yaw/integratorMin"),
+            get(n, "PIDs/Yaw/integratorMax"),
+            "yaw")
+        , m_goal()////////////////////posestamped goal
+       // , m_subscribeGoal()///////////callbacks
+        {
+        ros::NodeHandle nh;
+
+        m_listener.waitForTransform(m_worldFrame, m_frame, ros::Time(0), ros::Duration(10.0)); ///////// wait for the last transform from world to m to be aviable
+        m_pubNav = nh.advertise<geometry_msgs::Twist>("bebop/cmd_vel", 1);
+        m_error = nh.advertise<geometry_msgs::Vector3>("error", 1);
+     //   m_subscribeGoal = nh.subscribe("goal", 1, &Controller::goalChanged, this);//////////////////////callback=goalChanged
+        ch_pose = nh.advertise<geometry_msgs::Pose>("pos_check",1);
+    //    Postf = nh.subscribe("tf",1, PosCallback);
+                
+    }
+    void run(double frequency)
+    {
+        ros::NodeHandle node;
+        ros::Timer timer = node.createTimer(ros::Duration(1.0/frequency), &Controller::iteration, this);
+        ros::spin();
+    }
+
+private:
+/*  void goalChanged(
+        const geometry_msgs::PoseStamped msg)
+    {
+        m_goal = msg;
+    }
+*/
+    
+ /* void getTransform(///////////////////////////////////////////////////////////////////////////////////redundant function for getting transform matrix
+        const std::string& sourceFrame,
+        const std::string& targetFrame,
+        tf::StampedTransform& result)
+    {
+        m_listener.lookupTransform(sourceFrame, targetFrame, ros::Time(0), result);
+    }
+    */
+  void pidReset()
+    {
+        m_pidX.reset();
+        m_pidY.reset();
+        m_pidZ.reset();
+        m_pidYaw.reset();
+    }
+
+    double satin(double g)
+    {
+       double mx = 0.04;
+       double mn = -0.04;
+        if (g>mx)
+            return mx;
+        else if(g<mn)
+            return mn;
+    }
+
+  void iteration(const ros::TimerEvent& e)
+  {
+                
+    
+                // My ghetto additions
+                m_goal.pose.position.x = 0;
+                m_goal.pose.position.y = 0;
+                m_goal.pose.position.z = 1;
+                m_goal.pose.orientation.x = 0;
+                m_goal.pose.orientation.y = 0;
+                m_goal.pose.orientation.z = 0;
+                m_goal.pose.orientation.w = 0;
+                //geometry_msgs::PoseStamped msg4;
+                //msg4.header.stamp = worldFrame.stamp_;
+               // msg4.pose = m_goal.pose;
+          //      goalChanged(msg4);
+                // End of my ghetto additions
+                tf::StampedTransform transform;
+          //      tf::Matrix3x3 m(5,0,0,0,5,0,0,0,5);
+              //  m.setIdentity();
+         //       transform.setBasis(m); 
+                m_listener.lookupTransform( m_worldFrame,m_frame, ros::Time(0), transform);
+            //    Postf.subscribe("tf",1, PosCallback);
+                ROS_DEBUG("Hello %s", m_worldFrame);
+
+                geometry_msgs::Vector3 msg2;
+        /*        msg2.linear.x = transform.getOrigin().x();
+                msg2.linear.y = transform.getOrigin().y();
+                msg2.linear.z = transform.getOrigin().z();
+
+          */     
+               msg2.x = transform.getOrigin().x();
+               msg2.y = transform.getOrigin().y();
+               msg2.z = transform.getRotation().w();
+                
+             //   msg2.angular.z = m_goal.pose.orientation.z-transform.getRotation().z();
+
+         //       geometry_msgs::PoseStamped targetWorld;
+            //    targetWorld.header.stamp = transform.stamp_;
+         //       targetWorld.header.frame_id = m_worldFrame;
+          //      targetWorld.pose = m_goal.pose;
+
+          //      geometry_msgs::PoseStamped targetDrone;
+            /*    m_listener.transformPose(m_frame, targetWorld, targetDrone);
+
+                tfScalar roll, pitch, yaw;
+                tf::Matrix3x3(
+                    tf::Quaternion(
+                        targetDrone.pose.orientation.x,
+                        targetDrone.pose.orientation.y,
+                        targetDrone.pose.orientation.z,
+                        targetDrone.pose.orientation.w
+                    )).getRPY(roll, pitch, yaw);
+
+                geometry_msgs::Twist msg;
+                msg.linear.x = m_pidX.update(0.0, targetDrone.pose.position.x);
+                msg.linear.y = m_pidY.update(0.0, targetDrone.pose.position.y);
+                msg.linear.z = m_pidZ.update(0.0, targetDrone.pose.position.z);
+                msg.angular.z = m_pidYaw.update(0.0, yaw);
+                
+                
+
+                m_pubNav.publish(msg);
+                */
+  //              int es = m_listener.frameExists(m_frame);
+     //        ROS_ERROR_STREAM("Frame exists: " << es);
+               m_error.publish(msg2);
+                //ch_pose.publish(msg3);
+                
+                
+  }
+
+private:
+    std::string m_worldFrame;
+    std::string m_frame;
+    ros::Publisher m_pubNav;
+    ros::Publisher m_error;
+    ros::Publisher ch_pose;
+    tf::TransformListener m_listener;
+    PID m_pidX;
+    PID m_pidY;
+    PID m_pidZ;
+    PID m_pidYaw;
+    geometry_msgs::PoseStamped m_goal;
+    ros::Subscriber Postf;
+  //  ros::Subscriber m_subscribeGoal;      
+};
+
+
+
+int main(int argc, char **argv) {
+     //Initializes ROS, and sets up a node
+     ros::init(argc, argv, "random_bebop_commands");
+     ros::NodeHandle n("~");
+     
+     //Ceates the publisher, and tells it to publish
+     //to the husky/cmd_vel topic, with a queue size of 100
+    // ros::Publisher pub=nh.advertise<geometry_msgs::Twist>("bebop/cmd_vel", 1);
+  std::string worldFrame;
+  n.param<std::string>("worldFrame", worldFrame, "/world");
+  std::string frame;
+  n.param<std::string>("frame", frame);
+
+  double frequency;
+  n.getParam("frame", frame);
+  n.param("frequency", frequency, 50.0);
+     
+  
+     //Sets the loop to publish at a rate of 10Hz
+
+
+            //Declares the message to be sent
+          //  geometry_msgs::Twist msg;
+          
+        //   msg.linear.x=0.1;
+           
+          // msg.angular.z=6*double(rand())/double(RAND_MAX)-3;
+           //Publish the message
+        //   pub.publish(msg);
+
+          //Delays untill it is time to send another message
+  
+        Controller controller(worldFrame, frame, n);
+        controller.run(frequency);
+
+
+ return 0;
+}

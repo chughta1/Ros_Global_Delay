@@ -1,0 +1,35 @@
+<package>
+  <name>beb</name>
+  <version>2.4.2</version>
+  <description>Provides teleoperation using joysticks or keyboard.</description>
+  <maintainer email="mwise@willowgarage.com">Melonee Wise</maintainer>
+  <license>BSD</license>
+  <url type="website">http://ros.org/wiki/turtlebot_teleop</url>
+  <url type="repository">https://github.com/turtlebot/turtlebot</url>
+  <url type="bugtracker">https://github.com/turtlebot/turtlebot/issues</url>
+  
+  <author email="mwise@willowgarage.com">Melonee Wise</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>joy</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>bebop_msgs</build_depend>
+  <build_depend>rosbag</build_depend>
+  <build_depend>python-numpy</build_depend>
+  
+  <run_depend>python-numpy</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>joy</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>bebop_msgs</run_depend>
+<run_depend>rosbag</run_depend>
+
+</package>
