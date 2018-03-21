@@ -21,8 +21,10 @@
   <build_depend>bebop_msgs</build_depend>
   <build_depend>rosbag</build_depend>
   <build_depend>python-numpy</build_depend>
+  <build_depend>std</build_depend>
   
   <run_depend>python-numpy</run_depend>
+  <run_depend>std</run_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>rospy</run_depend>
   <run_depend>geometry_msgs</run_depend>

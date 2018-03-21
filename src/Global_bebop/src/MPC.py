@@ -15,6 +15,8 @@ from geometry_msgs.msg import Twist
 from geometry_msgs.msg import TwistStamped
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Float64
+from std_msgs.msg import Int64
+from std_msgs.msg import Bool
 from rospy.numpy_msg import numpy_msg
 #import matplotlib.pyplot as plt
 from cvxpy import *
@@ -250,29 +252,20 @@ def talker():
       Goals_new = PoseStamped()
       
       Nonetype = type(None)
-      
+      ch = Int64()
       
       rospy.init_node('Predict', anonymous=True)
-      #rospy.Subscriber("/Parrot_new/odom", Odometry, getVel)
       predict = rospy.Publisher('InputPast',TwistStamped,queue_size=1)
       plot_pub = rospy.Publisher('plotting_data',Vector3,queue_size=1)
       pub_th = rospy.Publisher('getTheta',Float64,queue_size=1)
       PushTraj = rospy.Publisher('getFullT',numpy_msg(Float64),queue_size=1)
-      #pub_Xsend = rospy.Publisher('SendX',Pose,queue_size=1)
-      #l_theta = rospy.Publisher('Learntheta',float,queue_size=1)
       listener = tf.TransformListener()
       AskforNext = rospy.Service('trajectory',Next_trajectory,getPoints)
       ConfirmCompletion = rospy.Service('complete',Complete,Completion)
-     # listener.waitForTransform('/Parrot_new','/world',rospy.Time(0),rospy.Duration(10))
-      # plt.figure(num=None, figsize=(12, 12))
-      # plt.subplot(1, 1, 1)
-      # plt.ylim([-1.5, 1.5])
-      # plt.xlim([-1.5, 1.5])
-      # plt.xlabel("x[m]")
-      # plt.ylabel("y[m]")
-      # plt.grid(True)
+      Rotation_check = rospy.Publisher('Rot_Check',Int64,queue_size = 1)
       th0 = th
-      rad = 0.3
+      rad = rospy.get_param('~radius')
+      rad = float(rad)
       x0 = np.matrix([rad*np.cos(th0), rad*np.sin(th0), 0.05, th0]).T  # [x,y,v theta]
       #x0 = np.matrix([0, 0, 0.05, th0]).T
       x = x0
@@ -285,12 +278,9 @@ def talker():
       while not rospy.is_shutdown():
         plot_pub.publish(plot_data)
         pub_th.publish(th)
-        #print("Value of Theta")
-        #print(th)
-        #if(AskT):
-        #if(Active):
-         # PrevPoints = Points
         if not (NotOccupied):
+          ch.data=0
+          Rotation_check.publish(ch)
           #print("I am here")
           Active = True
           th0 = th
@@ -304,22 +294,13 @@ def talker():
           
           
           target = [rad*np.cos(th), rad*np.sin(th)]
-          #target = [0.5*width*np.sign(np.cos(th)),0.5*height*np.sign(np.sin(th))] # rect addition
           Vf = GetListFromMatrix(xstar1.value[2, T])
-          #print("Velocity Profile")
-          #print(Vf)
           x0 = np.matrix([rad*np.cos(th0), rad*np.sin(th0), Vf[0], th0]).T  # [x,y,v theta]
-          #x0 = np.matrix([0.5*width*np.sign(np.cos(th0)),0.5*height*np.sign(np.sin(th0)),Vf[0],th0]).T # Rect addition
           x = x0
           u = np.matrix([0.0, 0.00]).T  # [a,beta]
           #plt.figure(num=None, figsize=(12, 12))
 
           mincost = 100000
-          #print("Goals x")
-          #print(Goals_new.pose.position.x)
-          #print("Goals y")
-          #print(Goals_new.pose.position.y)
-          
 
           for i in range(1000):
               A, B, C = LinealizeCarModel(x, u, dt, lr)
@@ -385,7 +366,9 @@ def talker():
         #  print(len(testArray))
         #  print(testArray)
           if(th>2*mt.pi):
-          	NotOccupied = True
+            NotOccupied = True
+            ch.data = 1
+            Rotation_check.publish(ch)
  
       
 
@@ -395,4 +378,4 @@ if __name__ == '__main__':
    try:
        talker()
    except rospy.ROSInterruptException:
-       pass
+		pass

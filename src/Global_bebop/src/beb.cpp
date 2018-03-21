@@ -267,7 +267,7 @@ private:
   this_time = ros::Time::now().toSec();
 
 
-delay = 0.8;
+delay = 0.3;
 
   delTime2 = ros::Time::now().toNSec();
 

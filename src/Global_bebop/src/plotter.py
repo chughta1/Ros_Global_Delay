@@ -24,6 +24,7 @@ global y_actual
 global Pred_x
 global Pred_y
 
+global frame
 
 
 plt.figure(num=None, figsize=(12, 12))
@@ -79,10 +80,13 @@ def plotter():
 
 
 	rospy.init_node('plotter', anonymous=True)
+	frame = rospy.get_param('~frame')
+	frameod = '/'+frame+'/odom'
 	rospy.Subscriber("plotting_data", Vector3, plot_callback)
-	rospy.Subscriber("/Parrot_umar1/odom", Odometry, getPos)
+	rospy.Subscriber(frameod, Odometry, getPos)
 	#rospy.Subscriber("/GP_Prediction", Vector3, GP_pred)
 	rospy.Subscriber("TrainPlot", Vector3, Tr_plot)
+
 	#plt.show()
 	plt.subplot(1, 1, 1)
 	

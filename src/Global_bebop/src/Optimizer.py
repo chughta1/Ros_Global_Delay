@@ -24,7 +24,7 @@ global TrajValid
 global Proceed
 global RadiusOfCurvature # Radius of Trajectory in Meters
 global ApproachAngle # Angle the drone approaches the trajectory curvature with in Degrees
-
+global frame
 
 
 FirstHit = True
@@ -33,7 +33,7 @@ TrajValid = True
 Proceed = False
 RadiusOfCurvature = 0.3
 ApproachAngle = 45
-steps = 50
+steps = 150
 
 
 CurrentPoint = np.zeros((1,2))
@@ -89,6 +89,7 @@ def ConfirmTrajectory():
 	global TrajValid
 	global Proceed
 	global FirstHit
+
 	Wrapper = []
 	Wrapper = GetTrajectory()
 
@@ -106,9 +107,10 @@ def ConfirmTrajectory():
 
 def Optimize():
 	global CurrentPoint
+	global frame
 	
 	rospy.init_node('Optimizer', anonymous=True)
-	
+	frame = rospy.get_param('~frame')
 	listener = tf.TransformListener()
 	OptimizeDist = rospy.Service('OptimizeDistance',Optimized,getInputs)
 
@@ -116,7 +118,7 @@ def Optimize():
 
 	while not rospy.is_shutdown():
 		try:
-		 	(trans,rot) = listener.lookupTransform('/world', '/Parrot_umar1', rospy.Time(0))
+		 	(trans,rot) = listener.lookupTransform('/world', frame, rospy.Time(0))
 		 	CurrentPoint[0,0] = trans[0]
 			CurrentPoint[0,1] = trans[1]
 		except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
