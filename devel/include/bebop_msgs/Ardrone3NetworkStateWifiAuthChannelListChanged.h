@@ -53,9 +53,12 @@ struct Ardrone3NetworkStateWifiAuthChannelListChanged_
   _in_or_out_type in_or_out;
 
 
-    enum { band_2_4ghz = 0u };
-     enum { band_5ghz = 1u };
- 
+
+  enum {
+    band_2_4ghz = 0u,
+    band_5ghz = 1u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::Ardrone3NetworkStateWifiAuthChannelListChanged_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::Ardrone3NetworkStateWifiAuthChannelListChanged_<ContainerAllocator> const> ConstPtr;
@@ -92,7 +95,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

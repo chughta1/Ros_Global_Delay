@@ -43,16 +43,19 @@ struct Ardrone3PilotingStateFlyingStateChanged_
   _state_type state;
 
 
-    enum { state_landed = 0u };
-     enum { state_takingoff = 1u };
-     enum { state_hovering = 2u };
-     enum { state_flying = 3u };
-     enum { state_landing = 4u };
-     enum { state_emergency = 5u };
-     enum { state_usertakeoff = 6u };
-     enum { state_motor_ramping = 7u };
-     enum { state_emergency_landing = 8u };
- 
+
+  enum {
+    state_landed = 0u,
+    state_takingoff = 1u,
+    state_hovering = 2u,
+    state_flying = 3u,
+    state_landing = 4u,
+    state_emergency = 5u,
+    state_usertakeoff = 6u,
+    state_motor_ramping = 7u,
+    state_emergency_landing = 8u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::Ardrone3PilotingStateFlyingStateChanged_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::Ardrone3PilotingStateFlyingStateChanged_<ContainerAllocator> const> ConstPtr;
@@ -103,7 +106,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

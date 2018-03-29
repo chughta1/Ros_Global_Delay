@@ -1,6 +1,0 @@
-set(geomtwo_SETUP_PY_VERSION "0.0.0")
-set(geomtwo_SETUP_PY_SCRIPTS "nodes")
-set(geomtwo_SETUP_PY_PACKAGES "geomtwo")
-set(geomtwo_SETUP_PY_PACKAGE_DIRS "src/geomtwo")
-set(geomtwo_SETUP_PY_MODULES "")
-set(geomtwo_SETUP_PY_MODULE_DIRS "")

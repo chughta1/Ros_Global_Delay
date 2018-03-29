@@ -53,29 +53,32 @@ struct CommonAnimationsStateList_
   _error_type error;
 
 
-    enum { anim_HEADLIGHTS_FLASH = 0u };
-     enum { anim_HEADLIGHTS_BLINK = 1u };
-     enum { anim_HEADLIGHTS_OSCILLATION = 2u };
-     enum { anim_SPIN = 3u };
-     enum { anim_TAP = 4u };
-     enum { anim_SLOW_SHAKE = 5u };
-     enum { anim_METRONOME = 6u };
-     enum { anim_ONDULATION = 7u };
-     enum { anim_SPIN_JUMP = 8u };
-     enum { anim_SPIN_TO_POSTURE = 9u };
-     enum { anim_SPIRAL = 10u };
-     enum { anim_SLALOM = 11u };
-     enum { anim_BOOST = 12u };
-     enum { anim_LOOPING = 13u };
-     enum { anim_BARREL_ROLL_180_RIGHT = 14u };
-     enum { anim_BARREL_ROLL_180_LEFT = 15u };
-     enum { anim_BACKSWAP = 16u };
-     enum { state_stopped = 0u };
-     enum { state_started = 1u };
-     enum { state_notAvailable = 2u };
-     enum { error_ok = 0u };
-     enum { error_unknown = 1u };
- 
+
+  enum {
+    anim_HEADLIGHTS_FLASH = 0u,
+    anim_HEADLIGHTS_BLINK = 1u,
+    anim_HEADLIGHTS_OSCILLATION = 2u,
+    anim_SPIN = 3u,
+    anim_TAP = 4u,
+    anim_SLOW_SHAKE = 5u,
+    anim_METRONOME = 6u,
+    anim_ONDULATION = 7u,
+    anim_SPIN_JUMP = 8u,
+    anim_SPIN_TO_POSTURE = 9u,
+    anim_SPIRAL = 10u,
+    anim_SLALOM = 11u,
+    anim_BOOST = 12u,
+    anim_LOOPING = 13u,
+    anim_BARREL_ROLL_180_RIGHT = 14u,
+    anim_BARREL_ROLL_180_LEFT = 15u,
+    anim_BACKSWAP = 16u,
+    state_stopped = 0u,
+    state_started = 1u,
+    state_notAvailable = 2u,
+    error_ok = 0u,
+    error_unknown = 1u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::CommonAnimationsStateList_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::CommonAnimationsStateList_<ContainerAllocator> const> ConstPtr;
@@ -152,7 +155,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

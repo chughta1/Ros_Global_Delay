@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/beb.dir/src/beb.cpp.o"
-  "/home/chuggi/catkin_ws/devel/lib/beb/beb.pdb"
-  "/home/chuggi/catkin_ws/devel/lib/beb/beb"
+  "/home/umar/catkin_ws/devel/lib/beb/beb.pdb"
+  "/home/umar/catkin_ws/devel/lib/beb/beb"
 )
 
 # Per-language clean rules from dependency scanning.

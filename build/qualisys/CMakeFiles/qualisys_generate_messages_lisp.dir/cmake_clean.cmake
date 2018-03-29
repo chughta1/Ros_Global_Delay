@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/qualisys_generate_messages_lisp"
-  "/home/chuggi/catkin_ws/devel/share/common-lisp/ros/qualisys/msg/Markers.lisp"
-  "/home/chuggi/catkin_ws/devel/share/common-lisp/ros/qualisys/msg/Marker.lisp"
-  "/home/chuggi/catkin_ws/devel/share/common-lisp/ros/qualisys/msg/Subject.lisp"
+  "/home/umar/catkin_ws/devel/share/common-lisp/ros/qualisys/msg/Subject.lisp"
+  "/home/umar/catkin_ws/devel/share/common-lisp/ros/qualisys/msg/Marker.lisp"
+  "/home/umar/catkin_ws/devel/share/common-lisp/ros/qualisys/msg/Markers.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

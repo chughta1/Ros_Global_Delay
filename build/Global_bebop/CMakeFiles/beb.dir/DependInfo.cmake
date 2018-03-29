@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chuggi/catkin_ws/src/Global_bebop/src/beb.cpp" "/home/chuggi/catkin_ws/build/Global_bebop/CMakeFiles/beb.dir/src/beb.cpp.o"
+  "/home/umar/catkin_ws/src/Global_bebop/src/beb.cpp" "/home/umar/catkin_ws/build/Global_bebop/CMakeFiles/beb.dir/src/beb.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,8 +17,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/chuggi/catkin_ws/devel/include"
-  "/opt/ros/jade/include"
+  "/home/umar/catkin_ws/devel/include"
+  "/opt/ros/kinetic/include"
+  "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 
 # Targets to which this target links.

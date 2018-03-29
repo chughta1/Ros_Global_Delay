@@ -1,8 +1,8 @@
-# Install script for directory: /home/chuggi/catkin_ws/src/Global_bebop
+# Install script for directory: /home/umar/catkin_ws/src/Global_bebop
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chuggi/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/umar/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,60 +34,64 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beb/srv" TYPE FILE FILES
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/path.srv"
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/land.srv"
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv"
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/randomDelay.srv"
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/CheckLearn.srv"
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/Estimate.srv"
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/TrReady.srv"
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv"
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/broadReady.srv"
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/Optimized.srv"
-    "/home/chuggi/catkin_ws/src/Global_bebop/srv/Complete.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/land.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beb/cmake" TYPE FILE FILES "/home/chuggi/catkin_ws/build/Global_bebop/catkin_generated/installspace/beb-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beb/cmake" TYPE FILE FILES "/home/umar/catkin_ws/build/Global_bebop/catkin_generated/installspace/beb-msg-paths.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/chuggi/catkin_ws/devel/include/beb")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/umar/catkin_ws/devel/include/beb")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/chuggi/catkin_ws/devel/share/roseus/ros/beb")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/umar/catkin_ws/devel/share/roseus/ros/beb")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/chuggi/catkin_ws/devel/share/common-lisp/ros/beb")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/umar/catkin_ws/devel/share/common-lisp/ros/beb")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/umar/catkin_ws/devel/share/gennodejs/ros/beb")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/chuggi/catkin_ws/build/Global_bebop/catkin_generated/installspace/beb.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beb/cmake" TYPE FILE FILES "/home/chuggi/catkin_ws/build/Global_bebop/catkin_generated/installspace/beb-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/umar/catkin_ws/build/Global_bebop/catkin_generated/installspace/beb.pc")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beb/cmake" TYPE FILE FILES "/home/umar/catkin_ws/build/Global_bebop/catkin_generated/installspace/beb-msg-extras.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beb/cmake" TYPE FILE FILES
-    "/home/chuggi/catkin_ws/build/Global_bebop/catkin_generated/installspace/bebConfig.cmake"
-    "/home/chuggi/catkin_ws/build/Global_bebop/catkin_generated/installspace/bebConfig-version.cmake"
+    "/home/umar/catkin_ws/build/Global_bebop/catkin_generated/installspace/bebConfig.cmake"
+    "/home/umar/catkin_ws/build/Global_bebop/catkin_generated/installspace/bebConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beb" TYPE FILE FILES "/home/chuggi/catkin_ws/src/Global_bebop/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beb" TYPE FILE FILES "/home/umar/catkin_ws/src/Global_bebop/package.xml")
 endif()
 

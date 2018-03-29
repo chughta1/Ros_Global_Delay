@@ -48,17 +48,20 @@ struct CommonAccessoryStateAccessoryConfigChanged_
   _error_type error;
 
 
-    enum { newAccessory_UNCONFIGURED = 0u };
-     enum { newAccessory_NO_ACCESSORY = 1u };
-     enum { newAccessory_STD_WHEELS = 2u };
-     enum { newAccessory_TRUCK_WHEELS = 3u };
-     enum { newAccessory_HULL = 4u };
-     enum { newAccessory_HYDROFOIL = 5u };
-     enum { newAccessory_IN_PROGRESS = 6u };
-     enum { error_OK = 0u };
-     enum { error_UNKNOWN = 1u };
-     enum { error_FLYING = 2u };
- 
+
+  enum {
+    newAccessory_UNCONFIGURED = 0u,
+    newAccessory_NO_ACCESSORY = 1u,
+    newAccessory_STD_WHEELS = 2u,
+    newAccessory_TRUCK_WHEELS = 3u,
+    newAccessory_HULL = 4u,
+    newAccessory_HYDROFOIL = 5u,
+    newAccessory_IN_PROGRESS = 6u,
+    error_OK = 0u,
+    error_UNKNOWN = 1u,
+    error_FLYING = 2u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::CommonAccessoryStateAccessoryConfigChanged_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::CommonAccessoryStateAccessoryConfigChanged_<ContainerAllocator> const> ConstPtr;
@@ -111,7 +114,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

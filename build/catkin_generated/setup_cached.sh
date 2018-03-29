@@ -7,9 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CPATH="/opt/ros/jade/include"
-export LD_LIBRARY_PATH="/opt/ros/jade/lib"
-export PATH="/opt/ros/jade/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export PKG_CONFIG_PATH="/opt/ros/jade/lib/pkgconfig"
-export PWD="/home/chuggi/catkin_ws/build"
-export PYTHONPATH="/opt/ros/jade/lib/python2.7/dist-packages:/home/chuggi/anaconda2/lib/python2.7/ctypes"
+export CMAKE_PREFIX_PATH="/home/umar/catkin_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/umar/catkin_ws/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/umar/catkin_ws/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/umar/catkin_ws/src:$ROS_PACKAGE_PATH"

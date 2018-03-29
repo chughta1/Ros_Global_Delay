@@ -1,8 +1,0 @@
-prefix=/home/chuggi/catkin_ws/devel
-
-Name: geomtwo
-Description: Description of geomtwo
-Version: 0.0.0
-Cflags: -I/home/chuggi/catkin_ws/devel/include
-Libs: -L/home/chuggi/catkin_ws/devel/lib 
-Requires: 

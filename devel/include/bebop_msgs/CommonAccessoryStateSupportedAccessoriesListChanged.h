@@ -43,12 +43,15 @@ struct CommonAccessoryStateSupportedAccessoriesListChanged_
   _accessory_type accessory;
 
 
-    enum { accessory_NO_ACCESSORY = 0u };
-     enum { accessory_STD_WHEELS = 1u };
-     enum { accessory_TRUCK_WHEELS = 2u };
-     enum { accessory_HULL = 3u };
-     enum { accessory_HYDROFOIL = 4u };
- 
+
+  enum {
+    accessory_NO_ACCESSORY = 0u,
+    accessory_STD_WHEELS = 1u,
+    accessory_TRUCK_WHEELS = 2u,
+    accessory_HULL = 3u,
+    accessory_HYDROFOIL = 4u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::CommonAccessoryStateSupportedAccessoriesListChanged_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::CommonAccessoryStateSupportedAccessoriesListChanged_<ContainerAllocator> const> ConstPtr;
@@ -91,7 +94,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

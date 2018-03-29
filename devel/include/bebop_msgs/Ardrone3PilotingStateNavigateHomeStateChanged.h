@@ -48,18 +48,21 @@ struct Ardrone3PilotingStateNavigateHomeStateChanged_
   _reason_type reason;
 
 
-    enum { state_available = 0u };
-     enum { state_inProgress = 1u };
-     enum { state_unavailable = 2u };
-     enum { state_pending = 3u };
-     enum { reason_userRequest = 0u };
-     enum { reason_connectionLost = 1u };
-     enum { reason_lowBattery = 2u };
-     enum { reason_finished = 3u };
-     enum { reason_stopped = 4u };
-     enum { reason_disabled = 5u };
-     enum { reason_enabled = 6u };
- 
+
+  enum {
+    state_available = 0u,
+    state_inProgress = 1u,
+    state_unavailable = 2u,
+    state_pending = 3u,
+    reason_userRequest = 0u,
+    reason_connectionLost = 1u,
+    reason_lowBattery = 2u,
+    reason_finished = 3u,
+    reason_stopped = 4u,
+    reason_disabled = 5u,
+    reason_enabled = 6u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::Ardrone3PilotingStateNavigateHomeStateChanged_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::Ardrone3PilotingStateNavigateHomeStateChanged_<ContainerAllocator> const> ConstPtr;
@@ -114,7 +117,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

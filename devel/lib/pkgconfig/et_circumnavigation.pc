@@ -1,8 +1,0 @@
-prefix=/home/chuggi/catkin_ws/devel
-
-Name: et_circumnavigation
-Description: Description of et_circumnavigation
-Version: 0.0.0
-Cflags: -I/home/chuggi/catkin_ws/devel/include
-Libs: -L/home/chuggi/catkin_ws/devel/lib 
-Requires: 

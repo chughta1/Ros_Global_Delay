@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/chuggi/catkin_ws/devel/include/beb/CheckLearn.h
+/home/umar/catkin_ws/devel/include/beb/CheckLearn.h
 ros/service_traits.h
 -
 beb/CheckLearnRequest.h
@@ -14,7 +14,7 @@ beb/CheckLearnRequest.h
 beb/CheckLearnResponse.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/CheckLearnRequest.h
+/home/umar/catkin_ws/devel/include/beb/CheckLearnRequest.h
 string
 -
 vector
@@ -30,7 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/CheckLearnResponse.h
+/home/umar/catkin_ws/devel/include/beb/CheckLearnResponse.h
 string
 -
 vector
@@ -46,7 +46,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/Complete.h
+/home/umar/catkin_ws/devel/include/beb/Complete.h
 ros/service_traits.h
 -
 beb/CompleteRequest.h
@@ -54,7 +54,7 @@ beb/CompleteRequest.h
 beb/CompleteResponse.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/CompleteRequest.h
+/home/umar/catkin_ws/devel/include/beb/CompleteRequest.h
 string
 -
 vector
@@ -70,7 +70,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/CompleteResponse.h
+/home/umar/catkin_ws/devel/include/beb/CompleteResponse.h
 string
 -
 vector
@@ -86,7 +86,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/Estimate.h
+/home/umar/catkin_ws/devel/include/beb/Estimate.h
 ros/service_traits.h
 -
 beb/EstimateRequest.h
@@ -94,7 +94,7 @@ beb/EstimateRequest.h
 beb/EstimateResponse.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/EstimateRequest.h
+/home/umar/catkin_ws/devel/include/beb/EstimateRequest.h
 string
 -
 vector
@@ -110,7 +110,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/EstimateResponse.h
+/home/umar/catkin_ws/devel/include/beb/EstimateResponse.h
 string
 -
 vector
@@ -128,7 +128,7 @@ ros/message_operations.h
 geometry_msgs/Vector3.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/Next_trajectory.h
+/home/umar/catkin_ws/devel/include/beb/Next_trajectory.h
 ros/service_traits.h
 -
 beb/Next_trajectoryRequest.h
@@ -136,7 +136,7 @@ beb/Next_trajectoryRequest.h
 beb/Next_trajectoryResponse.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/Next_trajectoryRequest.h
+/home/umar/catkin_ws/devel/include/beb/Next_trajectoryRequest.h
 string
 -
 vector
@@ -152,7 +152,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/Next_trajectoryResponse.h
+/home/umar/catkin_ws/devel/include/beb/Next_trajectoryResponse.h
 string
 -
 vector
@@ -168,7 +168,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/Optimized.h
+/home/umar/catkin_ws/devel/include/beb/Optimized.h
 ros/service_traits.h
 -
 beb/OptimizedRequest.h
@@ -176,7 +176,7 @@ beb/OptimizedRequest.h
 beb/OptimizedResponse.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/OptimizedRequest.h
+/home/umar/catkin_ws/devel/include/beb/OptimizedRequest.h
 string
 -
 vector
@@ -192,7 +192,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/OptimizedResponse.h
+/home/umar/catkin_ws/devel/include/beb/OptimizedResponse.h
 string
 -
 vector
@@ -208,7 +208,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/SendDelayLogic.h
+/home/umar/catkin_ws/devel/include/beb/SendDelayLogic.h
 ros/service_traits.h
 -
 beb/SendDelayLogicRequest.h
@@ -216,7 +216,7 @@ beb/SendDelayLogicRequest.h
 beb/SendDelayLogicResponse.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/SendDelayLogicRequest.h
+/home/umar/catkin_ws/devel/include/beb/SendDelayLogicRequest.h
 string
 -
 vector
@@ -232,7 +232,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/SendDelayLogicResponse.h
+/home/umar/catkin_ws/devel/include/beb/SendDelayLogicResponse.h
 string
 -
 vector
@@ -248,7 +248,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/TrReady.h
+/home/umar/catkin_ws/devel/include/beb/TrReady.h
 ros/service_traits.h
 -
 beb/TrReadyRequest.h
@@ -256,7 +256,7 @@ beb/TrReadyRequest.h
 beb/TrReadyResponse.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/TrReadyRequest.h
+/home/umar/catkin_ws/devel/include/beb/TrReadyRequest.h
 string
 -
 vector
@@ -272,7 +272,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/TrReadyResponse.h
+/home/umar/catkin_ws/devel/include/beb/TrReadyResponse.h
 string
 -
 vector
@@ -288,7 +288,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/broadReady.h
+/home/umar/catkin_ws/devel/include/beb/broadReady.h
 ros/service_traits.h
 -
 beb/broadReadyRequest.h
@@ -296,7 +296,7 @@ beb/broadReadyRequest.h
 beb/broadReadyResponse.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/broadReadyRequest.h
+/home/umar/catkin_ws/devel/include/beb/broadReadyRequest.h
 string
 -
 vector
@@ -312,7 +312,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/broadReadyResponse.h
+/home/umar/catkin_ws/devel/include/beb/broadReadyResponse.h
 string
 -
 vector
@@ -328,7 +328,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/randomDelay.h
+/home/umar/catkin_ws/devel/include/beb/randomDelay.h
 ros/service_traits.h
 -
 beb/randomDelayRequest.h
@@ -336,7 +336,7 @@ beb/randomDelayRequest.h
 beb/randomDelayResponse.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/randomDelayRequest.h
+/home/umar/catkin_ws/devel/include/beb/randomDelayRequest.h
 string
 -
 vector
@@ -352,7 +352,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/devel/include/beb/randomDelayResponse.h
+/home/umar/catkin_ws/devel/include/beb/randomDelayResponse.h
 string
 -
 vector
@@ -368,7 +368,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/chuggi/catkin_ws/src/Global_bebop/src/beb.cpp
+/home/umar/catkin_ws/src/Global_bebop/src/beb.cpp
 ros/ros.h
 -
 geometry_msgs/Twist.h
@@ -386,23 +386,23 @@ tf/transform_listener.h
 tf/transform_broadcaster.h
 -
 beb/Complete.h
-/home/chuggi/catkin_ws/src/Global_bebop/src/beb/Complete.h
+/home/umar/catkin_ws/src/Global_bebop/src/beb/Complete.h
 beb/Optimized.h
-/home/chuggi/catkin_ws/src/Global_bebop/src/beb/Optimized.h
+/home/umar/catkin_ws/src/Global_bebop/src/beb/Optimized.h
 beb/Next_trajectory.h
-/home/chuggi/catkin_ws/src/Global_bebop/src/beb/Next_trajectory.h
+/home/umar/catkin_ws/src/Global_bebop/src/beb/Next_trajectory.h
 beb/randomDelay.h
-/home/chuggi/catkin_ws/src/Global_bebop/src/beb/randomDelay.h
+/home/umar/catkin_ws/src/Global_bebop/src/beb/randomDelay.h
 beb/CheckLearn.h
-/home/chuggi/catkin_ws/src/Global_bebop/src/beb/CheckLearn.h
+/home/umar/catkin_ws/src/Global_bebop/src/beb/CheckLearn.h
 beb/Estimate.h
-/home/chuggi/catkin_ws/src/Global_bebop/src/beb/Estimate.h
+/home/umar/catkin_ws/src/Global_bebop/src/beb/Estimate.h
 beb/SendDelayLogic.h
-/home/chuggi/catkin_ws/src/Global_bebop/src/beb/SendDelayLogic.h
+/home/umar/catkin_ws/src/Global_bebop/src/beb/SendDelayLogic.h
 beb/TrReady.h
-/home/chuggi/catkin_ws/src/Global_bebop/src/beb/TrReady.h
+/home/umar/catkin_ws/src/Global_bebop/src/beb/TrReady.h
 beb/broadReady.h
-/home/chuggi/catkin_ws/src/Global_bebop/src/beb/broadReady.h
+/home/umar/catkin_ws/src/Global_bebop/src/beb/broadReady.h
 iostream
 -
 std_srvs/Empty.h
@@ -416,9 +416,9 @@ ros/console.h
 math.h
 -
 path.h
-/home/chuggi/catkin_ws/src/Global_bebop/src/path.h
+/home/umar/catkin_ws/src/Global_bebop/src/path.h
 pid.hpp
-/home/chuggi/catkin_ws/src/Global_bebop/src/pid.hpp
+/home/umar/catkin_ws/src/Global_bebop/src/pid.hpp
 time.h
 -
 string
@@ -428,31 +428,75 @@ cstdlib
 vector
 -
 
-/home/chuggi/catkin_ws/src/Global_bebop/src/path.h
+/home/umar/catkin_ws/src/Global_bebop/src/path.h
 ros/ros.h
 -
 
-/home/chuggi/catkin_ws/src/Global_bebop/src/pid.hpp
+/home/umar/catkin_ws/src/Global_bebop/src/pid.hpp
 ros/ros.h
 -
 
-/opt/ros/jade/include/XmlRpcDecl.h
-ros/macros.h
+/opt/ros/kinetic/include/boost_161_condition_variable.h
+boost/thread/detail/platform.hpp
+-
+boost/thread/win32/condition_variable.hpp
+-
+boost_161_pthread_condition_variable.h
+/opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
+
+/opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
+boost_161_pthread_condition_variable_fwd.h
+/opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
+boost/thread/pthread/timespec.hpp
+-
+boost/thread/pthread/pthread_mutex_scoped_lock.hpp
+-
+boost/thread/pthread/thread_data.hpp
+-
+boost/chrono/system_clocks.hpp
+-
+boost/chrono/ceil.hpp
+-
+boost/thread/detail/delete.hpp
+-
+boost/config/abi_prefix.hpp
+-
+boost/config/abi_suffix.hpp
 -
 
-/opt/ros/jade/include/XmlRpcValue.h
-XmlRpcDecl.h
-/opt/ros/jade/include/XmlRpcDecl.h
-map
+/opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
+boost/assert.hpp
 -
-string
+boost/throw_exception.hpp
 -
-vector
+pthread.h
 -
-time.h
+boost/thread/cv_status.hpp
+-
+boost/thread/mutex.hpp
+-
+boost/thread/lock_types.hpp
+-
+boost/thread/thread_time.hpp
+-
+boost/thread/pthread/timespec.hpp
+-
+boost/thread/xtime.hpp
+-
+boost/chrono/system_clocks.hpp
+-
+boost/chrono/ceil.hpp
+-
+boost/thread/detail/delete.hpp
+-
+boost/date_time/posix_time/posix_time_duration.hpp
+-
+boost/config/abi_prefix.hpp
+-
+boost/config/abi_suffix.hpp
 -
 
-/opt/ros/jade/include/geometry_msgs/Point.h
+/opt/ros/kinetic/include/geometry_msgs/Point.h
 string
 -
 vector
@@ -468,7 +512,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/geometry_msgs/Point32.h
+/opt/ros/kinetic/include/geometry_msgs/Point32.h
 string
 -
 vector
@@ -484,7 +528,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/geometry_msgs/PointStamped.h
+/opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 string
 -
 vector
@@ -504,7 +548,7 @@ std_msgs/Header.h
 geometry_msgs/Point.h
 -
 
-/opt/ros/jade/include/geometry_msgs/Pose.h
+/opt/ros/kinetic/include/geometry_msgs/Pose.h
 string
 -
 vector
@@ -524,7 +568,7 @@ geometry_msgs/Point.h
 geometry_msgs/Quaternion.h
 -
 
-/opt/ros/jade/include/geometry_msgs/PoseArray.h
+/opt/ros/kinetic/include/geometry_msgs/PoseArray.h
 string
 -
 vector
@@ -544,7 +588,7 @@ std_msgs/Header.h
 geometry_msgs/Pose.h
 -
 
-/opt/ros/jade/include/geometry_msgs/PoseStamped.h
+/opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
 string
 -
 vector
@@ -564,7 +608,7 @@ std_msgs/Header.h
 geometry_msgs/Pose.h
 -
 
-/opt/ros/jade/include/geometry_msgs/Quaternion.h
+/opt/ros/kinetic/include/geometry_msgs/Quaternion.h
 string
 -
 vector
@@ -580,7 +624,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/geometry_msgs/QuaternionStamped.h
+/opt/ros/kinetic/include/geometry_msgs/QuaternionStamped.h
 string
 -
 vector
@@ -600,7 +644,7 @@ std_msgs/Header.h
 geometry_msgs/Quaternion.h
 -
 
-/opt/ros/jade/include/geometry_msgs/Transform.h
+/opt/ros/kinetic/include/geometry_msgs/Transform.h
 string
 -
 vector
@@ -620,7 +664,7 @@ geometry_msgs/Vector3.h
 geometry_msgs/Quaternion.h
 -
 
-/opt/ros/jade/include/geometry_msgs/TransformStamped.h
+/opt/ros/kinetic/include/geometry_msgs/TransformStamped.h
 string
 -
 vector
@@ -640,7 +684,7 @@ std_msgs/Header.h
 geometry_msgs/Transform.h
 -
 
-/opt/ros/jade/include/geometry_msgs/Twist.h
+/opt/ros/kinetic/include/geometry_msgs/Twist.h
 string
 -
 vector
@@ -660,7 +704,7 @@ geometry_msgs/Vector3.h
 geometry_msgs/Vector3.h
 -
 
-/opt/ros/jade/include/geometry_msgs/TwistStamped.h
+/opt/ros/kinetic/include/geometry_msgs/TwistStamped.h
 string
 -
 vector
@@ -680,7 +724,7 @@ std_msgs/Header.h
 geometry_msgs/Twist.h
 -
 
-/opt/ros/jade/include/geometry_msgs/Vector3.h
+/opt/ros/kinetic/include/geometry_msgs/Vector3.h
 string
 -
 vector
@@ -696,7 +740,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/geometry_msgs/Vector3Stamped.h
+/opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h
 string
 -
 vector
@@ -716,56 +760,62 @@ std_msgs/Header.h
 geometry_msgs/Vector3.h
 -
 
-/opt/ros/jade/include/ros/advertise_options.h
+/opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/message_traits.h
-/opt/ros/jade/include/ros/ros/message_traits.h
+/opt/ros/kinetic/include/ros/ros/message_traits.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 
-/opt/ros/jade/include/ros/advertise_service_options.h
+/opt/ros/kinetic/include/ros/advertise_service_options.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/service_callback_helper.h
-/opt/ros/jade/include/ros/ros/service_callback_helper.h
+/opt/ros/kinetic/include/ros/ros/service_callback_helper.h
 ros/service_traits.h
-/opt/ros/jade/include/ros/ros/service_traits.h
+/opt/ros/kinetic/include/ros/ros/service_traits.h
 ros/message_traits.h
-/opt/ros/jade/include/ros/ros/message_traits.h
+/opt/ros/kinetic/include/ros/ros/message_traits.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 
-/opt/ros/jade/include/ros/assert.h
+/opt/ros/kinetic/include/ros/assert.h
 ros/console.h
-/opt/ros/jade/include/ros/ros/console.h
+/opt/ros/kinetic/include/ros/ros/console.h
 ros/static_assert.h
-/opt/ros/jade/include/ros/ros/static_assert.h
+/opt/ros/kinetic/include/ros/ros/static_assert.h
 ros/platform.h
 -
 stdlib.h
 -
 
-/opt/ros/jade/include/ros/builtin_message_traits.h
+/opt/ros/kinetic/include/ros/builtin_message_traits.h
 message_traits.h
-/opt/ros/jade/include/ros/message_traits.h
+/opt/ros/kinetic/include/ros/message_traits.h
 ros/time.h
-/opt/ros/jade/include/ros/ros/time.h
+/opt/ros/kinetic/include/ros/ros/time.h
 
-/opt/ros/jade/include/ros/callback_queue.h
+/opt/ros/kinetic/include/ros/callback_queue.h
+boost/version.hpp
+-
+boost_161_condition_variable.h
+/opt/ros/kinetic/include/ros/boost_161_condition_variable.h
+boost/thread/condition_variable.hpp
+-
+boost/thread/condition_variable.hpp
+-
 ros/callback_queue_interface.h
-/opt/ros/jade/include/ros/ros/callback_queue_interface.h
+/opt/ros/kinetic/include/ros/ros/callback_queue_interface.h
 ros/time.h
-/opt/ros/jade/include/ros/ros/time.h
+/opt/ros/kinetic/include/ros/ros/time.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 boost/shared_ptr.hpp
 -
 boost/thread/mutex.hpp
 -
 boost/thread/shared_mutex.hpp
--
-boost/thread/condition_variable.hpp
 -
 boost/thread/tss.hpp
 -
@@ -774,15 +824,15 @@ list
 deque
 -
 
-/opt/ros/jade/include/ros/callback_queue_interface.h
+/opt/ros/kinetic/include/ros/callback_queue_interface.h
 boost/shared_ptr.hpp
 -
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 ros/types.h
-/opt/ros/jade/include/ros/ros/types.h
+/opt/ros/kinetic/include/ros/ros/types.h
 
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 stdint.h
 -
 assert.h
@@ -792,19 +842,19 @@ stddef.h
 string
 -
 ros/assert.h
-/opt/ros/jade/include/ros/ros/assert.h
+/opt/ros/kinetic/include/ros/ros/assert.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/serialized_message.h
-/opt/ros/jade/include/ros/ros/serialized_message.h
+/opt/ros/kinetic/include/ros/ros/serialized_message.h
 boost/shared_array.hpp
 -
 ros/macros.h
 -
 
-/opt/ros/jade/include/ros/console.h
+/opt/ros/kinetic/include/ros/console.h
 console_backend.h
-/opt/ros/jade/include/ros/console_backend.h
+/opt/ros/kinetic/include/ros/console_backend.h
 cstdio
 -
 sstream
@@ -820,13 +870,13 @@ map
 vector
 -
 log4cxx/level.h
-/opt/ros/jade/include/ros/log4cxx/level.h
+/opt/ros/kinetic/include/ros/log4cxx/level.h
 rosconsole/macros_generated.h
-/opt/ros/jade/include/ros/rosconsole/macros_generated.h
+/opt/ros/kinetic/include/ros/rosconsole/macros_generated.h
 
-/opt/ros/jade/include/ros/console_backend.h
+/opt/ros/kinetic/include/ros/console_backend.h
 
-/opt/ros/jade/include/ros/datatypes.h
+/opt/ros/kinetic/include/ros/datatypes.h
 string
 -
 vector
@@ -840,7 +890,7 @@ list
 boost/shared_ptr.hpp
 -
 
-/opt/ros/jade/include/ros/duration.h
+/opt/ros/kinetic/include/ros/duration.h
 iostream
 -
 math.h
@@ -852,17 +902,17 @@ climits
 stdint.h
 -
 rostime_decl.h
-/opt/ros/jade/include/ros/rostime_decl.h
+/opt/ros/kinetic/include/ros/rostime_decl.h
 
-/opt/ros/jade/include/ros/exception.h
+/opt/ros/kinetic/include/ros/exception.h
 stdexcept
 -
 
-/opt/ros/jade/include/ros/exceptions.h
+/opt/ros/kinetic/include/ros/exceptions.h
 ros/exception.h
 -
 
-/opt/ros/jade/include/ros/forwards.h
+/opt/ros/kinetic/include/ros/forwards.h
 string
 -
 vector
@@ -886,33 +936,33 @@ ros/time.h
 ros/macros.h
 -
 exceptions.h
-/opt/ros/jade/include/ros/exceptions.h
+/opt/ros/kinetic/include/ros/exceptions.h
 ros/datatypes.h
-/opt/ros/jade/include/ros/ros/datatypes.h
+/opt/ros/kinetic/include/ros/ros/datatypes.h
 
-/opt/ros/jade/include/ros/init.h
+/opt/ros/kinetic/include/ros/init.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/spinner.h
-/opt/ros/jade/include/ros/ros/spinner.h
+/opt/ros/kinetic/include/ros/ros/spinner.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 
-/opt/ros/jade/include/ros/macros.h
+/opt/ros/kinetic/include/ros/macros.h
 
-/opt/ros/jade/include/ros/master.h
+/opt/ros/kinetic/include/ros/master.h
 forwards.h
-/opt/ros/jade/include/ros/forwards.h
-XmlRpcValue.h
-/opt/ros/jade/include/ros/XmlRpcValue.h
+/opt/ros/kinetic/include/ros/forwards.h
+xmlrpcpp/XmlRpcValue.h
+/opt/ros/kinetic/include/ros/xmlrpcpp/XmlRpcValue.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 
-/opt/ros/jade/include/ros/message.h
+/opt/ros/kinetic/include/ros/message.h
 ros/macros.h
-/opt/ros/jade/include/ros/ros/macros.h
+/opt/ros/kinetic/include/ros/ros/macros.h
 ros/assert.h
-/opt/ros/jade/include/ros/ros/assert.h
+/opt/ros/kinetic/include/ros/ros/assert.h
 string
 -
 string.h
@@ -924,9 +974,9 @@ boost/array.hpp
 stdint.h
 -
 
-/opt/ros/jade/include/ros/message_event.h
+/opt/ros/kinetic/include/ros/message_event.h
 ros/time.h
-/opt/ros/jade/include/ros/ros/time.h
+/opt/ros/kinetic/include/ros/ros/time.h
 ros/datatypes.h
 -
 ros/message_traits.h
@@ -948,19 +998,19 @@ boost/function.hpp
 boost/make_shared.hpp
 -
 
-/opt/ros/jade/include/ros/message_forward.h
+/opt/ros/kinetic/include/ros/message_forward.h
 cstddef
 -
 memory
 -
 
-/opt/ros/jade/include/ros/message_operations.h
+/opt/ros/kinetic/include/ros/message_operations.h
 ostream
 -
 
-/opt/ros/jade/include/ros/message_traits.h
+/opt/ros/kinetic/include/ros/message_traits.h
 message_forward.h
-/opt/ros/jade/include/ros/message_forward.h
+/opt/ros/kinetic/include/ros/message_forward.h
 ros/time.h
 -
 string
@@ -972,69 +1022,71 @@ boost/type_traits/remove_const.hpp
 boost/type_traits/remove_reference.hpp
 -
 
-/opt/ros/jade/include/ros/names.h
+/opt/ros/kinetic/include/ros/names.h
 forwards.h
-/opt/ros/jade/include/ros/forwards.h
+/opt/ros/kinetic/include/ros/forwards.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 
-/opt/ros/jade/include/ros/node_handle.h
+/opt/ros/kinetic/include/ros/node_handle.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/publisher.h
-/opt/ros/jade/include/ros/ros/publisher.h
+/opt/ros/kinetic/include/ros/ros/publisher.h
 ros/subscriber.h
-/opt/ros/jade/include/ros/ros/subscriber.h
+/opt/ros/kinetic/include/ros/ros/subscriber.h
 ros/service_server.h
-/opt/ros/jade/include/ros/ros/service_server.h
+/opt/ros/kinetic/include/ros/ros/service_server.h
 ros/service_client.h
-/opt/ros/jade/include/ros/ros/service_client.h
+/opt/ros/kinetic/include/ros/ros/service_client.h
 ros/timer.h
-/opt/ros/jade/include/ros/ros/timer.h
+/opt/ros/kinetic/include/ros/ros/timer.h
 ros/rate.h
-/opt/ros/jade/include/ros/ros/rate.h
+/opt/ros/kinetic/include/ros/ros/rate.h
 ros/wall_timer.h
-/opt/ros/jade/include/ros/ros/wall_timer.h
+/opt/ros/kinetic/include/ros/ros/wall_timer.h
+ros/steady_timer.h
+/opt/ros/kinetic/include/ros/ros/steady_timer.h
 ros/advertise_options.h
-/opt/ros/jade/include/ros/ros/advertise_options.h
+/opt/ros/kinetic/include/ros/ros/advertise_options.h
 ros/advertise_service_options.h
-/opt/ros/jade/include/ros/ros/advertise_service_options.h
+/opt/ros/kinetic/include/ros/ros/advertise_service_options.h
 ros/subscribe_options.h
-/opt/ros/jade/include/ros/ros/subscribe_options.h
+/opt/ros/kinetic/include/ros/ros/subscribe_options.h
 ros/service_client_options.h
-/opt/ros/jade/include/ros/ros/service_client_options.h
+/opt/ros/kinetic/include/ros/ros/service_client_options.h
 ros/timer_options.h
-/opt/ros/jade/include/ros/ros/timer_options.h
+/opt/ros/kinetic/include/ros/ros/timer_options.h
 ros/wall_timer_options.h
-/opt/ros/jade/include/ros/ros/wall_timer_options.h
+/opt/ros/kinetic/include/ros/ros/wall_timer_options.h
 ros/spinner.h
-/opt/ros/jade/include/ros/ros/spinner.h
+/opt/ros/kinetic/include/ros/ros/spinner.h
 ros/init.h
-/opt/ros/jade/include/ros/ros/init.h
+/opt/ros/kinetic/include/ros/ros/init.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 boost/bind.hpp
 -
-XmlRpcValue.h
+xmlrpcpp/XmlRpcValue.h
 -
 
-/opt/ros/jade/include/ros/param.h
+/opt/ros/kinetic/include/ros/param.h
 forwards.h
-/opt/ros/jade/include/ros/forwards.h
+/opt/ros/kinetic/include/ros/forwards.h
 common.h
-/opt/ros/jade/include/ros/common.h
-XmlRpcValue.h
-/opt/ros/jade/include/ros/XmlRpcValue.h
+/opt/ros/kinetic/include/ros/common.h
+xmlrpcpp/XmlRpcValue.h
+/opt/ros/kinetic/include/ros/xmlrpcpp/XmlRpcValue.h
 vector
 -
 map
 -
 
-/opt/ros/jade/include/ros/parameter_adapter.h
+/opt/ros/kinetic/include/ros/parameter_adapter.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/message_event.h
-/opt/ros/jade/include/ros/ros/message_event.h
+/opt/ros/kinetic/include/ros/ros/message_event.h
 ros/static_assert.h
 -
 boost/type_traits/add_const.hpp
@@ -1044,7 +1096,7 @@ boost/type_traits/remove_const.hpp
 boost/type_traits/remove_reference.hpp
 -
 
-/opt/ros/jade/include/ros/platform.h
+/opt/ros/kinetic/include/ros/platform.h
 windows.h
 -
 stdlib.h
@@ -1052,87 +1104,87 @@ stdlib.h
 string
 -
 
-/opt/ros/jade/include/ros/publisher.h
+/opt/ros/kinetic/include/ros/publisher.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/common.h
-/opt/ros/jade/include/ros/ros/common.h
+/opt/ros/kinetic/include/ros/ros/common.h
 ros/message.h
-/opt/ros/jade/include/ros/ros/message.h
+/opt/ros/kinetic/include/ros/ros/message.h
 ros/serialization.h
-/opt/ros/jade/include/ros/ros/serialization.h
+/opt/ros/kinetic/include/ros/ros/serialization.h
 boost/bind.hpp
 -
 
-/opt/ros/jade/include/ros/rate.h
+/opt/ros/kinetic/include/ros/rate.h
 ros/time.h
-/opt/ros/jade/include/ros/ros/time.h
+/opt/ros/kinetic/include/ros/ros/time.h
 rostime_decl.h
-/opt/ros/jade/include/ros/rostime_decl.h
+/opt/ros/kinetic/include/ros/rostime_decl.h
 
-/opt/ros/jade/include/ros/ros.h
+/opt/ros/kinetic/include/ros/ros.h
 ros/time.h
-/opt/ros/jade/include/ros/ros/time.h
+/opt/ros/kinetic/include/ros/ros/time.h
 ros/rate.h
-/opt/ros/jade/include/ros/ros/rate.h
+/opt/ros/kinetic/include/ros/ros/rate.h
 ros/console.h
-/opt/ros/jade/include/ros/ros/console.h
+/opt/ros/kinetic/include/ros/ros/console.h
 ros/assert.h
-/opt/ros/jade/include/ros/ros/assert.h
+/opt/ros/kinetic/include/ros/ros/assert.h
 ros/common.h
-/opt/ros/jade/include/ros/ros/common.h
+/opt/ros/kinetic/include/ros/ros/common.h
 ros/types.h
-/opt/ros/jade/include/ros/ros/types.h
+/opt/ros/kinetic/include/ros/ros/types.h
 ros/node_handle.h
-/opt/ros/jade/include/ros/ros/node_handle.h
+/opt/ros/kinetic/include/ros/ros/node_handle.h
 ros/publisher.h
-/opt/ros/jade/include/ros/ros/publisher.h
+/opt/ros/kinetic/include/ros/ros/publisher.h
 ros/single_subscriber_publisher.h
-/opt/ros/jade/include/ros/ros/single_subscriber_publisher.h
+/opt/ros/kinetic/include/ros/ros/single_subscriber_publisher.h
 ros/service_server.h
-/opt/ros/jade/include/ros/ros/service_server.h
+/opt/ros/kinetic/include/ros/ros/service_server.h
 ros/subscriber.h
-/opt/ros/jade/include/ros/ros/subscriber.h
+/opt/ros/kinetic/include/ros/ros/subscriber.h
 ros/service.h
-/opt/ros/jade/include/ros/ros/service.h
+/opt/ros/kinetic/include/ros/ros/service.h
 ros/init.h
-/opt/ros/jade/include/ros/ros/init.h
+/opt/ros/kinetic/include/ros/ros/init.h
 ros/master.h
-/opt/ros/jade/include/ros/ros/master.h
+/opt/ros/kinetic/include/ros/ros/master.h
 ros/this_node.h
-/opt/ros/jade/include/ros/ros/this_node.h
+/opt/ros/kinetic/include/ros/ros/this_node.h
 ros/param.h
-/opt/ros/jade/include/ros/ros/param.h
+/opt/ros/kinetic/include/ros/ros/param.h
 ros/topic.h
-/opt/ros/jade/include/ros/ros/topic.h
+/opt/ros/kinetic/include/ros/ros/topic.h
 ros/names.h
-/opt/ros/jade/include/ros/ros/names.h
+/opt/ros/kinetic/include/ros/ros/names.h
 
-/opt/ros/jade/include/ros/roscpp_serialization_macros.h
+/opt/ros/kinetic/include/ros/roscpp_serialization_macros.h
 ros/macros.h
 -
 
-/opt/ros/jade/include/ros/rostime_decl.h
+/opt/ros/kinetic/include/ros/rostime_decl.h
 ros/macros.h
 -
 
-/opt/ros/jade/include/ros/serialization.h
+/opt/ros/kinetic/include/ros/serialization.h
 roscpp_serialization_macros.h
-/opt/ros/jade/include/ros/roscpp_serialization_macros.h
+/opt/ros/kinetic/include/ros/roscpp_serialization_macros.h
 ros/types.h
 -
 ros/time.h
 -
 serialized_message.h
-/opt/ros/jade/include/ros/serialized_message.h
+/opt/ros/kinetic/include/ros/serialized_message.h
 ros/message_traits.h
-/opt/ros/jade/include/ros/ros/message_traits.h
+/opt/ros/kinetic/include/ros/ros/message_traits.h
 ros/builtin_message_traits.h
-/opt/ros/jade/include/ros/ros/builtin_message_traits.h
+/opt/ros/kinetic/include/ros/ros/builtin_message_traits.h
 ros/exception.h
-/opt/ros/jade/include/ros/ros/exception.h
+/opt/ros/kinetic/include/ros/ros/exception.h
 ros/datatypes.h
-/opt/ros/jade/include/ros/ros/datatypes.h
+/opt/ros/kinetic/include/ros/ros/datatypes.h
 vector
 -
 map
@@ -1152,139 +1204,153 @@ boost/mpl/not.hpp
 cstring
 -
 
-/opt/ros/jade/include/ros/serialized_message.h
+/opt/ros/kinetic/include/ros/serialized_message.h
 roscpp_serialization_macros.h
-/opt/ros/jade/include/ros/roscpp_serialization_macros.h
+/opt/ros/kinetic/include/ros/roscpp_serialization_macros.h
 boost/shared_array.hpp
 -
 boost/shared_ptr.hpp
 -
 
-/opt/ros/jade/include/ros/service.h
+/opt/ros/kinetic/include/ros/service.h
 string
 -
 ros/common.h
-/opt/ros/jade/include/ros/ros/common.h
+/opt/ros/kinetic/include/ros/ros/common.h
 ros/message.h
-/opt/ros/jade/include/ros/ros/message.h
+/opt/ros/kinetic/include/ros/ros/message.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/node_handle.h
-/opt/ros/jade/include/ros/ros/node_handle.h
+/opt/ros/kinetic/include/ros/ros/node_handle.h
 ros/service_traits.h
-/opt/ros/jade/include/ros/ros/service_traits.h
+/opt/ros/kinetic/include/ros/ros/service_traits.h
 ros/names.h
-/opt/ros/jade/include/ros/ros/names.h
+/opt/ros/kinetic/include/ros/ros/names.h
 boost/shared_ptr.hpp
 -
 
-/opt/ros/jade/include/ros/service_callback_helper.h
+/opt/ros/kinetic/include/ros/service_callback_helper.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/common.h
-/opt/ros/jade/include/ros/ros/common.h
+/opt/ros/kinetic/include/ros/ros/common.h
 ros/message.h
-/opt/ros/jade/include/ros/ros/message.h
+/opt/ros/kinetic/include/ros/ros/message.h
 ros/message_traits.h
-/opt/ros/jade/include/ros/ros/message_traits.h
+/opt/ros/kinetic/include/ros/ros/message_traits.h
 ros/service_traits.h
-/opt/ros/jade/include/ros/ros/service_traits.h
+/opt/ros/kinetic/include/ros/ros/service_traits.h
 ros/serialization.h
-/opt/ros/jade/include/ros/ros/serialization.h
+/opt/ros/kinetic/include/ros/ros/serialization.h
 boost/type_traits/is_base_of.hpp
 -
 boost/utility/enable_if.hpp
 -
 
-/opt/ros/jade/include/ros/service_client.h
+/opt/ros/kinetic/include/ros/service_client.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/common.h
-/opt/ros/jade/include/ros/ros/common.h
+/opt/ros/kinetic/include/ros/ros/common.h
 ros/service_traits.h
-/opt/ros/jade/include/ros/ros/service_traits.h
+/opt/ros/kinetic/include/ros/ros/service_traits.h
 ros/serialization.h
-/opt/ros/jade/include/ros/ros/serialization.h
+/opt/ros/kinetic/include/ros/ros/serialization.h
 
-/opt/ros/jade/include/ros/service_client_options.h
+/opt/ros/kinetic/include/ros/service_client_options.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 ros/service_traits.h
-/opt/ros/jade/include/ros/ros/service_traits.h
+/opt/ros/kinetic/include/ros/ros/service_traits.h
 
-/opt/ros/jade/include/ros/service_server.h
+/opt/ros/kinetic/include/ros/service_server.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 
-/opt/ros/jade/include/ros/service_traits.h
+/opt/ros/kinetic/include/ros/service_traits.h
 boost/type_traits/remove_reference.hpp
 -
 boost/type_traits/remove_const.hpp
 -
 
-/opt/ros/jade/include/ros/single_subscriber_publisher.h
+/opt/ros/kinetic/include/ros/single_subscriber_publisher.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/serialization.h
-/opt/ros/jade/include/ros/ros/serialization.h
+/opt/ros/kinetic/include/ros/ros/serialization.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 boost/utility.hpp
 -
 
-/opt/ros/jade/include/ros/spinner.h
+/opt/ros/kinetic/include/ros/spinner.h
 ros/types.h
-/opt/ros/jade/include/ros/ros/types.h
+/opt/ros/kinetic/include/ros/ros/types.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 boost/shared_ptr.hpp
 -
 
-/opt/ros/jade/include/ros/static_assert.h
+/opt/ros/kinetic/include/ros/static_assert.h
 boost/static_assert.hpp
 -
 
-/opt/ros/jade/include/ros/subscribe_options.h
-ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/steady_timer.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
+forwards.h
+/opt/ros/kinetic/include/ros/forwards.h
+steady_timer_options.h
+/opt/ros/kinetic/include/ros/steady_timer_options.h
+
+/opt/ros/kinetic/include/ros/steady_timer_options.h
+common.h
+/opt/ros/kinetic/include/ros/common.h
+ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
+
+/opt/ros/kinetic/include/ros/subscribe_options.h
+ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
+common.h
+/opt/ros/kinetic/include/ros/common.h
 ros/transport_hints.h
-/opt/ros/jade/include/ros/ros/transport_hints.h
+/opt/ros/kinetic/include/ros/ros/transport_hints.h
 ros/message_traits.h
-/opt/ros/jade/include/ros/ros/message_traits.h
+/opt/ros/kinetic/include/ros/ros/message_traits.h
 subscription_callback_helper.h
-/opt/ros/jade/include/ros/subscription_callback_helper.h
+/opt/ros/kinetic/include/ros/subscription_callback_helper.h
 
-/opt/ros/jade/include/ros/subscriber.h
+/opt/ros/kinetic/include/ros/subscriber.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/subscription_callback_helper.h
-/opt/ros/jade/include/ros/ros/subscription_callback_helper.h
+/opt/ros/kinetic/include/ros/ros/subscription_callback_helper.h
 
-/opt/ros/jade/include/ros/subscription_callback_helper.h
+/opt/ros/kinetic/include/ros/subscription_callback_helper.h
 typeinfo
 -
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 ros/parameter_adapter.h
-/opt/ros/jade/include/ros/ros/parameter_adapter.h
+/opt/ros/kinetic/include/ros/ros/parameter_adapter.h
 ros/message_traits.h
-/opt/ros/jade/include/ros/ros/message_traits.h
+/opt/ros/kinetic/include/ros/ros/message_traits.h
 ros/builtin_message_traits.h
-/opt/ros/jade/include/ros/ros/builtin_message_traits.h
+/opt/ros/kinetic/include/ros/ros/builtin_message_traits.h
 ros/serialization.h
-/opt/ros/jade/include/ros/ros/serialization.h
+/opt/ros/kinetic/include/ros/ros/serialization.h
 ros/message_event.h
-/opt/ros/jade/include/ros/ros/message_event.h
+/opt/ros/kinetic/include/ros/ros/message_event.h
 ros/static_assert.h
 -
 boost/type_traits/add_const.hpp
@@ -1300,13 +1366,13 @@ boost/utility/enable_if.hpp
 boost/make_shared.hpp
 -
 
-/opt/ros/jade/include/ros/this_node.h
+/opt/ros/kinetic/include/ros/this_node.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 forwards.h
-/opt/ros/jade/include/ros/forwards.h
+/opt/ros/kinetic/include/ros/forwards.h
 
-/opt/ros/jade/include/ros/time.h
+/opt/ros/kinetic/include/ros/time.h
 ros/platform.h
 -
 iostream
@@ -1316,67 +1382,67 @@ cmath
 ros/exception.h
 -
 duration.h
-/opt/ros/jade/include/ros/duration.h
+/opt/ros/kinetic/include/ros/duration.h
 boost/math/special_functions/round.hpp
 -
 rostime_decl.h
-/opt/ros/jade/include/ros/rostime_decl.h
+/opt/ros/kinetic/include/ros/rostime_decl.h
 sys/timeb.h
 -
 sys/time.h
 -
 
-/opt/ros/jade/include/ros/timer.h
+/opt/ros/kinetic/include/ros/timer.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 forwards.h
-/opt/ros/jade/include/ros/forwards.h
+/opt/ros/kinetic/include/ros/forwards.h
 timer_options.h
-/opt/ros/jade/include/ros/timer_options.h
+/opt/ros/kinetic/include/ros/timer_options.h
 
-/opt/ros/jade/include/ros/timer_options.h
+/opt/ros/kinetic/include/ros/timer_options.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 
-/opt/ros/jade/include/ros/topic.h
+/opt/ros/kinetic/include/ros/topic.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 node_handle.h
-/opt/ros/jade/include/ros/node_handle.h
+/opt/ros/kinetic/include/ros/node_handle.h
 boost/shared_ptr.hpp
 -
 
-/opt/ros/jade/include/ros/transport_hints.h
+/opt/ros/kinetic/include/ros/transport_hints.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 boost/lexical_cast.hpp
 -
 
-/opt/ros/jade/include/ros/types.h
+/opt/ros/kinetic/include/ros/types.h
 stdint.h
 -
 
-/opt/ros/jade/include/ros/wall_timer.h
+/opt/ros/kinetic/include/ros/wall_timer.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 forwards.h
-/opt/ros/jade/include/ros/forwards.h
+/opt/ros/kinetic/include/ros/forwards.h
 wall_timer_options.h
-/opt/ros/jade/include/ros/wall_timer_options.h
+/opt/ros/kinetic/include/ros/wall_timer_options.h
 
-/opt/ros/jade/include/ros/wall_timer_options.h
+/opt/ros/kinetic/include/ros/wall_timer_options.h
 common.h
-/opt/ros/jade/include/ros/common.h
+/opt/ros/kinetic/include/ros/common.h
 ros/forwards.h
-/opt/ros/jade/include/ros/ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 
-/opt/ros/jade/include/rosconsole/macros_generated.h
+/opt/ros/kinetic/include/rosconsole/macros_generated.h
 
-/opt/ros/jade/include/sensor_msgs/ChannelFloat32.h
+/opt/ros/kinetic/include/sensor_msgs/ChannelFloat32.h
 string
 -
 vector
@@ -1392,7 +1458,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/sensor_msgs/PointCloud.h
+/opt/ros/kinetic/include/sensor_msgs/PointCloud.h
 string
 -
 vector
@@ -1414,7 +1480,7 @@ geometry_msgs/Point32.h
 sensor_msgs/ChannelFloat32.h
 -
 
-/opt/ros/jade/include/std_msgs/Bool.h
+/opt/ros/kinetic/include/std_msgs/Bool.h
 string
 -
 vector
@@ -1430,7 +1496,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/std_msgs/Empty.h
+/opt/ros/kinetic/include/std_msgs/Empty.h
 string
 -
 vector
@@ -1446,7 +1512,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/std_msgs/Float32.h
+/opt/ros/kinetic/include/std_msgs/Float32.h
 string
 -
 vector
@@ -1462,7 +1528,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/std_msgs/Float64.h
+/opt/ros/kinetic/include/std_msgs/Float64.h
 string
 -
 vector
@@ -1478,7 +1544,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/std_msgs/Header.h
+/opt/ros/kinetic/include/std_msgs/Header.h
 string
 -
 vector
@@ -1494,7 +1560,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/std_srvs/Empty.h
+/opt/ros/kinetic/include/std_srvs/Empty.h
 ros/service_traits.h
 -
 std_srvs/EmptyRequest.h
@@ -1502,7 +1568,7 @@ std_srvs/EmptyRequest.h
 std_srvs/EmptyResponse.h
 -
 
-/opt/ros/jade/include/std_srvs/EmptyRequest.h
+/opt/ros/kinetic/include/std_srvs/EmptyRequest.h
 string
 -
 vector
@@ -1518,7 +1584,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/std_srvs/EmptyResponse.h
+/opt/ros/kinetic/include/std_srvs/EmptyResponse.h
 string
 -
 vector
@@ -1534,7 +1600,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/tf/FrameGraph.h
+/opt/ros/kinetic/include/tf/FrameGraph.h
 ros/service_traits.h
 -
 tf/FrameGraphRequest.h
@@ -1542,7 +1608,7 @@ tf/FrameGraphRequest.h
 tf/FrameGraphResponse.h
 -
 
-/opt/ros/jade/include/tf/FrameGraphRequest.h
+/opt/ros/kinetic/include/tf/FrameGraphRequest.h
 string
 -
 vector
@@ -1558,7 +1624,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/tf/FrameGraphResponse.h
+/opt/ros/kinetic/include/tf/FrameGraphResponse.h
 string
 -
 vector
@@ -1574,29 +1640,29 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/tf/LinearMath/Matrix3x3.h
+/opt/ros/kinetic/include/tf/LinearMath/Matrix3x3.h
 Vector3.h
-/opt/ros/jade/include/tf/LinearMath/Vector3.h
+/opt/ros/kinetic/include/tf/LinearMath/Vector3.h
 Quaternion.h
-/opt/ros/jade/include/tf/LinearMath/Quaternion.h
+/opt/ros/kinetic/include/tf/LinearMath/Quaternion.h
 
-/opt/ros/jade/include/tf/LinearMath/MinMax.h
+/opt/ros/kinetic/include/tf/LinearMath/MinMax.h
 
-/opt/ros/jade/include/tf/LinearMath/QuadWord.h
+/opt/ros/kinetic/include/tf/LinearMath/QuadWord.h
 Scalar.h
-/opt/ros/jade/include/tf/LinearMath/Scalar.h
+/opt/ros/kinetic/include/tf/LinearMath/Scalar.h
 MinMax.h
-/opt/ros/jade/include/tf/LinearMath/MinMax.h
+/opt/ros/kinetic/include/tf/LinearMath/MinMax.h
 altivec.h
 -
 
-/opt/ros/jade/include/tf/LinearMath/Quaternion.h
+/opt/ros/kinetic/include/tf/LinearMath/Quaternion.h
 Vector3.h
-/opt/ros/jade/include/tf/LinearMath/Vector3.h
+/opt/ros/kinetic/include/tf/LinearMath/Vector3.h
 QuadWord.h
-/opt/ros/jade/include/tf/LinearMath/QuadWord.h
+/opt/ros/kinetic/include/tf/LinearMath/QuadWord.h
 
-/opt/ros/jade/include/tf/LinearMath/Scalar.h
+/opt/ros/kinetic/include/tf/LinearMath/Scalar.h
 math.h
 -
 stdlib.h
@@ -1618,23 +1684,23 @@ assert.h
 assert.h
 -
 
-/opt/ros/jade/include/tf/LinearMath/Transform.h
+/opt/ros/kinetic/include/tf/LinearMath/Transform.h
 Matrix3x3.h
-/opt/ros/jade/include/tf/LinearMath/Matrix3x3.h
+/opt/ros/kinetic/include/tf/LinearMath/Matrix3x3.h
 
-/opt/ros/jade/include/tf/LinearMath/Vector3.h
+/opt/ros/kinetic/include/tf/LinearMath/Vector3.h
 Scalar.h
-/opt/ros/jade/include/tf/LinearMath/Scalar.h
+/opt/ros/kinetic/include/tf/LinearMath/Scalar.h
 MinMax.h
-/opt/ros/jade/include/tf/LinearMath/MinMax.h
+/opt/ros/kinetic/include/tf/LinearMath/MinMax.h
 
-/opt/ros/jade/include/tf/exceptions.h
+/opt/ros/kinetic/include/tf/exceptions.h
 stdexcept
 -
 tf2/exceptions.h
 -
 
-/opt/ros/jade/include/tf/tf.h
+/opt/ros/kinetic/include/tf/tf.h
 iostream
 -
 iomanip
@@ -1650,17 +1716,17 @@ map
 tf/exceptions.h
 -
 tf/time_cache.h
-/opt/ros/jade/include/tf/tf/time_cache.h
+/opt/ros/kinetic/include/tf/tf/time_cache.h
 boost/unordered_map.hpp
 -
 boost/signals2.hpp
 -
 geometry_msgs/TwistStamped.h
-/opt/ros/jade/include/tf/geometry_msgs/TwistStamped.h
+/opt/ros/kinetic/include/tf/geometry_msgs/TwistStamped.h
 tf2_ros/buffer.h
 -
 
-/opt/ros/jade/include/tf/tfMessage.h
+/opt/ros/kinetic/include/tf/tfMessage.h
 string
 -
 vector
@@ -1678,93 +1744,93 @@ ros/message_operations.h
 geometry_msgs/TransformStamped.h
 -
 
-/opt/ros/jade/include/tf/time_cache.h
+/opt/ros/kinetic/include/tf/time_cache.h
 set
 -
 boost/thread/mutex.hpp
 -
 tf/transform_datatypes.h
-/opt/ros/jade/include/tf/tf/transform_datatypes.h
+/opt/ros/kinetic/include/tf/tf/transform_datatypes.h
 tf/exceptions.h
-/opt/ros/jade/include/tf/tf/exceptions.h
+/opt/ros/kinetic/include/tf/tf/exceptions.h
 tf/LinearMath/Transform.h
-/opt/ros/jade/include/tf/tf/LinearMath/Transform.h
+/opt/ros/kinetic/include/tf/tf/LinearMath/Transform.h
 sstream
 -
 
-/opt/ros/jade/include/tf/transform_broadcaster.h
+/opt/ros/kinetic/include/tf/transform_broadcaster.h
 tf/tf.h
-/opt/ros/jade/include/tf/tf/tf.h
+/opt/ros/kinetic/include/tf/tf/tf.h
 tf/tfMessage.h
-/opt/ros/jade/include/tf/tf/tfMessage.h
+/opt/ros/kinetic/include/tf/tf/tfMessage.h
 tf2_ros/transform_broadcaster.h
 -
 
-/opt/ros/jade/include/tf/transform_datatypes.h
+/opt/ros/kinetic/include/tf/transform_datatypes.h
 string
 -
 geometry_msgs/PointStamped.h
-/opt/ros/jade/include/tf/geometry_msgs/PointStamped.h
+/opt/ros/kinetic/include/tf/geometry_msgs/PointStamped.h
 geometry_msgs/Vector3Stamped.h
-/opt/ros/jade/include/tf/geometry_msgs/Vector3Stamped.h
+/opt/ros/kinetic/include/tf/geometry_msgs/Vector3Stamped.h
 geometry_msgs/QuaternionStamped.h
-/opt/ros/jade/include/tf/geometry_msgs/QuaternionStamped.h
+/opt/ros/kinetic/include/tf/geometry_msgs/QuaternionStamped.h
 geometry_msgs/TransformStamped.h
-/opt/ros/jade/include/tf/geometry_msgs/TransformStamped.h
+/opt/ros/kinetic/include/tf/geometry_msgs/TransformStamped.h
 geometry_msgs/PoseStamped.h
-/opt/ros/jade/include/tf/geometry_msgs/PoseStamped.h
+/opt/ros/kinetic/include/tf/geometry_msgs/PoseStamped.h
 tf/LinearMath/Transform.h
-/opt/ros/jade/include/tf/tf/LinearMath/Transform.h
+/opt/ros/kinetic/include/tf/tf/LinearMath/Transform.h
 ros/time.h
-/opt/ros/jade/include/tf/ros/time.h
+/opt/ros/kinetic/include/tf/ros/time.h
 ros/console.h
-/opt/ros/jade/include/tf/ros/console.h
+/opt/ros/kinetic/include/tf/ros/console.h
 
-/opt/ros/jade/include/tf/transform_listener.h
+/opt/ros/kinetic/include/tf/transform_listener.h
 sensor_msgs/PointCloud.h
-/opt/ros/jade/include/tf/sensor_msgs/PointCloud.h
+/opt/ros/kinetic/include/tf/sensor_msgs/PointCloud.h
 std_msgs/Empty.h
-/opt/ros/jade/include/tf/std_msgs/Empty.h
+/opt/ros/kinetic/include/tf/std_msgs/Empty.h
 tf/tfMessage.h
-/opt/ros/jade/include/tf/tf/tfMessage.h
+/opt/ros/kinetic/include/tf/tf/tfMessage.h
 tf/tf.h
-/opt/ros/jade/include/tf/tf/tf.h
+/opt/ros/kinetic/include/tf/tf/tf.h
 ros/ros.h
-/opt/ros/jade/include/tf/ros/ros.h
+/opt/ros/kinetic/include/tf/ros/ros.h
 ros/callback_queue.h
-/opt/ros/jade/include/tf/ros/callback_queue.h
+/opt/ros/kinetic/include/tf/ros/callback_queue.h
 tf/FrameGraph.h
-/opt/ros/jade/include/tf/tf/FrameGraph.h
+/opt/ros/kinetic/include/tf/tf/FrameGraph.h
 boost/thread.hpp
-/opt/ros/jade/include/tf/boost/thread.hpp
+/opt/ros/kinetic/include/tf/boost/thread.hpp
 tf2_ros/transform_listener.h
 -
 
-/opt/ros/jade/include/tf2/LinearMath/Quaternion.h
+/opt/ros/kinetic/include/tf2/LinearMath/Quaternion.h
 Vector3.h
-/opt/ros/jade/include/tf2/LinearMath/Vector3.h
+/opt/ros/kinetic/include/tf2/LinearMath/Vector3.h
 QuadWord.h
-/opt/ros/jade/include/tf2/LinearMath/QuadWord.h
+/opt/ros/kinetic/include/tf2/LinearMath/QuadWord.h
 
-/opt/ros/jade/include/tf2/LinearMath/Vector3.h
+/opt/ros/kinetic/include/tf2/LinearMath/Vector3.h
 Scalar.h
-/opt/ros/jade/include/tf2/LinearMath/Scalar.h
+/opt/ros/kinetic/include/tf2/LinearMath/Scalar.h
 MinMax.h
-/opt/ros/jade/include/tf2/LinearMath/MinMax.h
+/opt/ros/kinetic/include/tf2/LinearMath/MinMax.h
 
-/opt/ros/jade/include/tf2/buffer_core.h
+/opt/ros/kinetic/include/tf2/buffer_core.h
 transform_storage.h
-/opt/ros/jade/include/tf2/transform_storage.h
+/opt/ros/kinetic/include/tf2/transform_storage.h
 boost/signals2.hpp
 -
 string
 -
 ros/duration.h
-/opt/ros/jade/include/tf2/ros/duration.h
+/opt/ros/kinetic/include/tf2/ros/duration.h
 ros/time.h
-/opt/ros/jade/include/tf2/ros/time.h
+/opt/ros/kinetic/include/tf2/ros/time.h
 geometry_msgs/TransformStamped.h
-/opt/ros/jade/include/tf2/geometry_msgs/TransformStamped.h
+/opt/ros/kinetic/include/tf2/geometry_msgs/TransformStamped.h
 boost/unordered_map.hpp
 -
 boost/thread/mutex.hpp
@@ -1774,7 +1840,7 @@ boost/function.hpp
 boost/shared_ptr.hpp
 -
 
-/opt/ros/jade/include/tf2/convert.h
+/opt/ros/kinetic/include/tf2/convert.h
 tf2/transform_datatypes.h
 -
 tf2/exceptions.h
@@ -1784,19 +1850,19 @@ geometry_msgs/TransformStamped.h
 tf2/impl/convert.h
 -
 
-/opt/ros/jade/include/tf2/exceptions.h
+/opt/ros/kinetic/include/tf2/exceptions.h
 stdexcept
 -
 
-/opt/ros/jade/include/tf2/impl/convert.h
+/opt/ros/kinetic/include/tf2/impl/convert.h
 
-/opt/ros/jade/include/tf2/transform_datatypes.h
+/opt/ros/kinetic/include/tf2/transform_datatypes.h
 string
 -
 ros/time.h
-/opt/ros/jade/include/tf2/ros/time.h
+/opt/ros/kinetic/include/tf2/ros/time.h
 
-/opt/ros/jade/include/tf2/transform_storage.h
+/opt/ros/kinetic/include/tf2/transform_storage.h
 tf2/LinearMath/Vector3.h
 -
 tf2/LinearMath/Quaternion.h
@@ -1808,7 +1874,7 @@ ros/time.h
 ros/types.h
 -
 
-/opt/ros/jade/include/tf2_msgs/FrameGraph.h
+/opt/ros/kinetic/include/tf2_msgs/FrameGraph.h
 ros/service_traits.h
 -
 tf2_msgs/FrameGraphRequest.h
@@ -1816,7 +1882,7 @@ tf2_msgs/FrameGraphRequest.h
 tf2_msgs/FrameGraphResponse.h
 -
 
-/opt/ros/jade/include/tf2_msgs/FrameGraphRequest.h
+/opt/ros/kinetic/include/tf2_msgs/FrameGraphRequest.h
 string
 -
 vector
@@ -1832,7 +1898,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/tf2_msgs/FrameGraphResponse.h
+/opt/ros/kinetic/include/tf2_msgs/FrameGraphResponse.h
 string
 -
 vector
@@ -1848,7 +1914,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/opt/ros/jade/include/tf2_msgs/TFMessage.h
+/opt/ros/kinetic/include/tf2_msgs/TFMessage.h
 string
 -
 vector
@@ -1866,7 +1932,7 @@ ros/message_operations.h
 geometry_msgs/TransformStamped.h
 -
 
-/opt/ros/jade/include/tf2_ros/buffer.h
+/opt/ros/kinetic/include/tf2_ros/buffer.h
 tf2_ros/buffer_interface.h
 -
 tf2/buffer_core.h
@@ -1878,7 +1944,7 @@ ros/ros.h
 tf2/convert.h
 -
 
-/opt/ros/jade/include/tf2_ros/buffer_interface.h
+/opt/ros/kinetic/include/tf2_ros/buffer_interface.h
 tf2/buffer_core.h
 -
 tf2/transform_datatypes.h
@@ -1892,23 +1958,39 @@ sstream
 tf2/convert.h
 -
 
-/opt/ros/jade/include/tf2_ros/transform_broadcaster.h
+/opt/ros/kinetic/include/tf2_ros/transform_broadcaster.h
 ros/ros.h
-/opt/ros/jade/include/tf2_ros/ros/ros.h
+/opt/ros/kinetic/include/tf2_ros/ros/ros.h
 geometry_msgs/TransformStamped.h
-/opt/ros/jade/include/tf2_ros/geometry_msgs/TransformStamped.h
+/opt/ros/kinetic/include/tf2_ros/geometry_msgs/TransformStamped.h
 
-/opt/ros/jade/include/tf2_ros/transform_listener.h
+/opt/ros/kinetic/include/tf2_ros/transform_listener.h
 std_msgs/Empty.h
-/opt/ros/jade/include/tf2_ros/std_msgs/Empty.h
+/opt/ros/kinetic/include/tf2_ros/std_msgs/Empty.h
 tf2_msgs/TFMessage.h
-/opt/ros/jade/include/tf2_ros/tf2_msgs/TFMessage.h
+/opt/ros/kinetic/include/tf2_ros/tf2_msgs/TFMessage.h
 ros/ros.h
-/opt/ros/jade/include/tf2_ros/ros/ros.h
+/opt/ros/kinetic/include/tf2_ros/ros/ros.h
 ros/callback_queue.h
-/opt/ros/jade/include/tf2_ros/ros/callback_queue.h
+/opt/ros/kinetic/include/tf2_ros/ros/callback_queue.h
 tf2_ros/buffer.h
-/opt/ros/jade/include/tf2_ros/tf2_ros/buffer.h
+/opt/ros/kinetic/include/tf2_ros/tf2_ros/buffer.h
 boost/thread.hpp
-/opt/ros/jade/include/tf2_ros/boost/thread.hpp
+/opt/ros/kinetic/include/tf2_ros/boost/thread.hpp
+
+/opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
+ros/macros.h
+-
+
+/opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
+xmlrpcpp/XmlRpcDecl.h
+/opt/ros/kinetic/include/xmlrpcpp/xmlrpcpp/XmlRpcDecl.h
+map
+-
+string
+-
+vector
+-
+time.h
+-
 

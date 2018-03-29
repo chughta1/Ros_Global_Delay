@@ -120,18 +120,15 @@ string frame_id
     """
     try:
       _x = self
-      buff.write(_struct_3I.pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
+      buff.write(_get_struct_3I().pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
       _x = self.header.frame_id
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
-      if python3:
-        buff.write(struct.pack('<I%sB'%length, length, *_x))
-      else:
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_4B.pack(_x.phase, _x.rate, _x.intensity, _x.fullChargingTime))
+      buff.write(_get_struct_4B().pack(_x.phase, _x.rate, _x.intensity, _x.fullChargingTime))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -147,7 +144,7 @@ string frame_id
       _x = self
       start = end
       end += 12
-      (_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs,) = _struct_3I.unpack(str[start:end])
+      (_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs,) = _get_struct_3I().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -160,7 +157,7 @@ string frame_id
       _x = self
       start = end
       end += 4
-      (_x.phase, _x.rate, _x.intensity, _x.fullChargingTime,) = _struct_4B.unpack(str[start:end])
+      (_x.phase, _x.rate, _x.intensity, _x.fullChargingTime,) = _get_struct_4B().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -174,18 +171,15 @@ string frame_id
     """
     try:
       _x = self
-      buff.write(_struct_3I.pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
+      buff.write(_get_struct_3I().pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
       _x = self.header.frame_id
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
-      if python3:
-        buff.write(struct.pack('<I%sB'%length, length, *_x))
-      else:
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_4B.pack(_x.phase, _x.rate, _x.intensity, _x.fullChargingTime))
+      buff.write(_get_struct_4B().pack(_x.phase, _x.rate, _x.intensity, _x.fullChargingTime))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -202,7 +196,7 @@ string frame_id
       _x = self
       start = end
       end += 12
-      (_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs,) = _struct_3I.unpack(str[start:end])
+      (_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs,) = _get_struct_3I().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -215,11 +209,24 @@ string frame_id
       _x = self
       start = end
       end += 4
-      (_x.phase, _x.rate, _x.intensity, _x.fullChargingTime,) = _struct_4B.unpack(str[start:end])
+      (_x.phase, _x.rate, _x.intensity, _x.fullChargingTime,) = _get_struct_4B().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_3I = struct.Struct("<3I")
-_struct_4B = struct.Struct("<4B")
+def _get_struct_I():
+    global _struct_I
+    return _struct_I
+_struct_3I = None
+def _get_struct_3I():
+    global _struct_3I
+    if _struct_3I is None:
+        _struct_3I = struct.Struct("<3I")
+    return _struct_3I
+_struct_4B = None
+def _get_struct_4B():
+    global _struct_4B
+    if _struct_4B is None:
+        _struct_4B = struct.Struct("<4B")
+    return _struct_4B

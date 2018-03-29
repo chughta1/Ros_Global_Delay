@@ -46,7 +46,6 @@ double pt = 0.0;
 double TimeCount = 0.0;
 double AvgTime = 0.0;
 bool delaycheck = false;
-float delay;
 int clock_iter = 1;
 double delay_interval = 0.5;
 double this_time;
@@ -88,8 +87,10 @@ public:
   Controller(
         const std::string& worldFrame,
         const std::string& frame,
+        const double& Delay,
         const ros::NodeHandle& n):
         m_worldFrame(worldFrame)
+        , delay(Delay)
         , m_frame(frame)
         , m_pubNav()
         , m_error()
@@ -188,13 +189,13 @@ private:
     }
 
 
-  void GetDelay(const float dl)
+/*  void GetDelay(const float dl)
   {
     delaycheck = true;
     delay = dl;
     ROS_ERROR_STREAM("DELAY: "<< delay);
   }
-
+*/
 
     bool land(
         std_srvs::Empty::Request& req,
@@ -264,10 +265,11 @@ private:
 
 
 
+
   this_time = ros::Time::now().toSec();
 
+  //ROS_ERROR_STREAM("Delay" << delay);
 
-delay = 0.3;
 
   delTime2 = ros::Time::now().toNSec();
 
@@ -302,7 +304,8 @@ bool_delay.publish(gdl);
                 geometry_msgs::Vector3 Follow;
                targetWorld.header.stamp = transform.stamp_;
                targetWorld.header.frame_id = m_worldFrame;
-               targetWorld.pose.orientation.x = 0;
+               targetWorld.pose.orientation.x = 0;                
+
                targetWorld.pose.orientation.y = 0;
                targetWorld.pose.orientation.z = 0;
                targetWorld.pose.orientation.w = 1;
@@ -318,9 +321,11 @@ bool_delay.publish(gdl);
 
                if(!TrajectoryComplete)
                 { begin = true;
-                  ROS_INFO("Holding Position");
-                  TempGoals.pose.position.x = 0.3;
-                  TempGoals.pose.position.y = 0.0;
+             //     ROS_INFO("Holding Positionz");
+               //   TempGoals.pose.position.x = 0.3;
+               //   TempGoals.pose.position.y = 0.0;
+                //  Follow.x = 0.3;
+                //  Follow.y = 0.0;
                   TempGoals.pose.position.z = 1;
                   TempGoals.pose.orientation = targetWorld.pose.orientation;
                 }
@@ -333,7 +338,7 @@ bool_delay.publish(gdl);
                   std::vector<double> ptFollow(0, 0);
                   if (ClientOpt.exists())
                     {
-                      ROS_ERROR_STREAM("Calling index");
+                    //  ROS_ERROR_STREAM("Calling index");
                       if (ClientOpt.call(OptPoint))
                       {   
                                               
@@ -401,12 +406,14 @@ bool_delay.publish(gdl);
                 dtime = ros::Time::now().toSec();
                 dtime1 = ros::Time::now().toSec();
                // if(delaycheck && BroadCastReady)
+
                 if(delaycheck)
                 {
                   while(dtime1 - dtime <= delay)
                   {
                   m_pubNav.publish(msg);
                   dtime1 = ros::Time::now().toSec();
+          
                   }
                 }
 
@@ -416,7 +423,7 @@ bool_delay.publish(gdl);
                   m_pubNav.publish(msg);
                 }
 
-
+                
                 }
               
                 else if(norm < goalDist)
@@ -434,6 +441,7 @@ bool_delay.publish(gdl);
 private:
     std::string m_worldFrame;
     std::string m_frame;
+    double delay;
     ros::Publisher m_pubNav;
     ros::Publisher m_error;
     ros::Publisher ch_pose;
@@ -504,8 +512,10 @@ int main(int argc, char **argv) {
   n.param<std::string>("frame", frame);
 
   double frequency;
+  double delay;
   n.getParam("frame", frame);
   n.param("frequency", frequency, 50.0);
+  n.getParam("delay",delay);
      
   
      //Sets the loop to publish at a rate of 10Hz
@@ -523,7 +533,7 @@ int main(int argc, char **argv) {
           //Delays untill it is time to send another message
 
   
-        Controller controller(worldFrame, frame, n);
+        Controller controller(worldFrame,frame,delay,n);
         controller.run(frequency);
 
 

@@ -43,22 +43,25 @@ struct CommonCommonStateProductModel_
   _model_type model;
 
 
-    enum { model_RS_TRAVIS = 0u };
-     enum { model_RS_MARS = 1u };
-     enum { model_RS_SWAT = 2u };
-     enum { model_RS_MCLANE = 3u };
-     enum { model_RS_BLAZE = 4u };
-     enum { model_RS_ORAK = 5u };
-     enum { model_RS_NEWZ = 6u };
-     enum { model_JS_MARSHALL = 7u };
-     enum { model_JS_DIESEL = 8u };
-     enum { model_JS_BUZZ = 9u };
-     enum { model_JS_MAX = 10u };
-     enum { model_JS_JETT = 11u };
-     enum { model_JS_TUKTUK = 12u };
-     enum { model_SW_BLACK = 13u };
-     enum { model_SW_WHITE = 14u };
- 
+
+  enum {
+    model_RS_TRAVIS = 0u,
+    model_RS_MARS = 1u,
+    model_RS_SWAT = 2u,
+    model_RS_MCLANE = 3u,
+    model_RS_BLAZE = 4u,
+    model_RS_ORAK = 5u,
+    model_RS_NEWZ = 6u,
+    model_JS_MARSHALL = 7u,
+    model_JS_DIESEL = 8u,
+    model_JS_BUZZ = 9u,
+    model_JS_MAX = 10u,
+    model_JS_JETT = 11u,
+    model_JS_TUKTUK = 12u,
+    model_SW_BLACK = 13u,
+    model_SW_WHITE = 14u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::CommonCommonStateProductModel_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::CommonCommonStateProductModel_<ContainerAllocator> const> ConstPtr;
@@ -121,7 +124,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

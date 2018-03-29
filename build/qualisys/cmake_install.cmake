@@ -1,8 +1,8 @@
-# Install script for directory: /home/chuggi/catkin_ws/src/qualisys
+# Install script for directory: /home/umar/catkin_ws/src/qualisys
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chuggi/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/umar/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,52 +34,56 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/qualisys/msg" TYPE FILE FILES
-    "/home/chuggi/catkin_ws/src/qualisys/msg/Marker.msg"
-    "/home/chuggi/catkin_ws/src/qualisys/msg/Markers.msg"
-    "/home/chuggi/catkin_ws/src/qualisys/msg/Subject.msg"
+    "/home/umar/catkin_ws/src/qualisys/msg/Marker.msg"
+    "/home/umar/catkin_ws/src/qualisys/msg/Markers.msg"
+    "/home/umar/catkin_ws/src/qualisys/msg/Subject.msg"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/qualisys/cmake" TYPE FILE FILES "/home/chuggi/catkin_ws/build/qualisys/catkin_generated/installspace/qualisys-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/qualisys/cmake" TYPE FILE FILES "/home/umar/catkin_ws/build/qualisys/catkin_generated/installspace/qualisys-msg-paths.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/chuggi/catkin_ws/devel/include/qualisys")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/umar/catkin_ws/devel/include/qualisys")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/chuggi/catkin_ws/devel/share/roseus/ros/qualisys")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/umar/catkin_ws/devel/share/roseus/ros/qualisys")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/chuggi/catkin_ws/devel/share/common-lisp/ros/qualisys")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/umar/catkin_ws/devel/share/common-lisp/ros/qualisys")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/qualisys")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/umar/catkin_ws/devel/share/gennodejs/ros/qualisys")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/qualisys")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/qualisys")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/chuggi/catkin_ws/build/qualisys/catkin_generated/installspace/qualisys.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/qualisys")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/qualisys/cmake" TYPE FILE FILES "/home/chuggi/catkin_ws/build/qualisys/catkin_generated/installspace/qualisys-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/umar/catkin_ws/build/qualisys/catkin_generated/installspace/qualisys.pc")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/qualisys/cmake" TYPE FILE FILES "/home/umar/catkin_ws/build/qualisys/catkin_generated/installspace/qualisys-msg-extras.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/qualisys/cmake" TYPE FILE FILES
-    "/home/chuggi/catkin_ws/build/qualisys/catkin_generated/installspace/qualisysConfig.cmake"
-    "/home/chuggi/catkin_ws/build/qualisys/catkin_generated/installspace/qualisysConfig-version.cmake"
+    "/home/umar/catkin_ws/build/qualisys/catkin_generated/installspace/qualisysConfig.cmake"
+    "/home/umar/catkin_ws/build/qualisys/catkin_generated/installspace/qualisysConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/qualisys" TYPE FILE FILES "/home/chuggi/catkin_ws/src/qualisys/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/qualisys" TYPE FILE FILES "/home/umar/catkin_ws/src/qualisys/package.xml")
 endif()
 

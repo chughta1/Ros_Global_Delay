@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/qualisys_generate_messages_cpp"
-  "/home/chuggi/catkin_ws/devel/include/qualisys/Markers.h"
-  "/home/chuggi/catkin_ws/devel/include/qualisys/Marker.h"
-  "/home/chuggi/catkin_ws/devel/include/qualisys/Subject.h"
+  "/home/umar/catkin_ws/devel/include/qualisys/Subject.h"
+  "/home/umar/catkin_ws/devel/include/qualisys/Marker.h"
+  "/home/umar/catkin_ws/devel/include/qualisys/Markers.h"
 )
 
 # Per-language clean rules from dependency scanning.

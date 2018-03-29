@@ -1,8 +1,0 @@
-prefix=/home/chuggi/catkin_ws/devel
-
-Name: pub_pose
-Description: Description of pub_pose
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/chuggi/catkin_ws/devel/lib 
-Requires: 

@@ -103,7 +103,7 @@ def getPoints(req):
     if(req.ask == True and NotOccupied):
      # NotOccupied = False
       AskT = req.ask
-      print("Sending Trajectory")
+      #print("Sending Trajectory")
       #plot_pub.publish(plot_data)
       testArray = np.reshape(testArray,2*(2*steps + 1))
       return Next_trajectoryResponse((testArray))

@@ -48,15 +48,18 @@ struct Ardrone3MediaRecordStateVideoResolutionState_
   _recording_type recording;
 
 
-    enum { streaming_res360p = 0u };
-     enum { streaming_res480p = 1u };
-     enum { streaming_res720p = 2u };
-     enum { streaming_res1080p = 3u };
-     enum { recording_res360p = 0u };
-     enum { recording_res480p = 1u };
-     enum { recording_res720p = 2u };
-     enum { recording_res1080p = 3u };
- 
+
+  enum {
+    streaming_res360p = 0u,
+    streaming_res480p = 1u,
+    streaming_res720p = 2u,
+    streaming_res1080p = 3u,
+    recording_res360p = 0u,
+    recording_res480p = 1u,
+    recording_res720p = 2u,
+    recording_res1080p = 3u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::Ardrone3MediaRecordStateVideoResolutionState_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::Ardrone3MediaRecordStateVideoResolutionState_<ContainerAllocator> const> ConstPtr;
@@ -105,7 +108,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

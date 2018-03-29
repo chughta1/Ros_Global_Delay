@@ -34,123 +34,123 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chuggi/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/umar/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chuggi/catkin_ws/build
+CMAKE_BINARY_DIR = /home/umar/catkin_ws/build
 
 # Utility rule file for beb_generate_messages_py.
 
 # Include the progress variables for this target.
 include Global_bebop/CMakeFiles/beb_generate_messages_py.dir/progress.make
 
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_TrReady.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_land.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_CheckLearn.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Next_trajectory.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_path.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_randomDelay.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_broadReady.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Complete.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Optimized.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_SendDelayLogic.py
-Global_bebop/CMakeFiles/beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_SendDelayLogic.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_broadReady.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Optimized.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_TrReady.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_randomDelay.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Next_trajectory.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_land.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Complete.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_CheckLearn.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_path.py
+Global_bebop/CMakeFiles/beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py
 
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_TrReady.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_TrReady.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/TrReady.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV beb/TrReady"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/TrReady.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py: /home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py: /opt/ros/kinetic/share/geometry_msgs/msg/Vector3.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV beb/Estimate"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_land.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_land.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/land.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV beb/land"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/land.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_SendDelayLogic.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_SendDelayLogic.py: /home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV beb/SendDelayLogic"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_CheckLearn.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_CheckLearn.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/CheckLearn.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV beb/CheckLearn"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/CheckLearn.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_broadReady.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_broadReady.py: /home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV beb/broadReady"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/Estimate.srv
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py: /opt/ros/jade/share/geometry_msgs/msg/Vector3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV beb/Estimate"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/Estimate.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Optimized.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Optimized.py: /home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV beb/Optimized"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Next_trajectory.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Next_trajectory.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV beb/Next_trajectory"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_TrReady.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_TrReady.py: /home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV beb/TrReady"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_path.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_path.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/path.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python code from SRV beb/path"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/path.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_randomDelay.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_randomDelay.py: /home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python code from SRV beb/randomDelay"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_randomDelay.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_randomDelay.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/randomDelay.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python code from SRV beb/randomDelay"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/randomDelay.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Next_trajectory.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Next_trajectory.py: /home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python code from SRV beb/Next_trajectory"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_broadReady.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_broadReady.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/broadReady.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python code from SRV beb/broadReady"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/broadReady.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_land.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_land.py: /home/umar/catkin_ws/src/Global_bebop/srv/land.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python code from SRV beb/land"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/land.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Complete.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Complete.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/Complete.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Python code from SRV beb/Complete"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/Complete.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Complete.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Complete.py: /home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Python code from SRV beb/Complete"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Optimized.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Optimized.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/Optimized.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Python code from SRV beb/Optimized"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/Optimized.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_CheckLearn.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_CheckLearn.py: /home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Python code from SRV beb/CheckLearn"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_SendDelayLogic.py: /opt/ros/jade/lib/genpy/gensrv_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_SendDelayLogic.py: /home/chuggi/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating Python code from SRV beb/SendDelayLogic"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/chuggi/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/jade/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/chuggi/catkin_ws/src/bebop_msgs/msg -p beb -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_path.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_path.py: /home/umar/catkin_ws/src/Global_bebop/srv/path.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating Python code from SRV beb/path"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/umar/catkin_ws/src/Global_bebop/srv/path.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv
 
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /opt/ros/jade/lib/genpy/genmsg_py.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_TrReady.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_land.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_CheckLearn.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Next_trajectory.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_path.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_randomDelay.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_broadReady.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Complete.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Optimized.py
-/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_SendDelayLogic.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chuggi/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating Python srv __init__.py for beb"
-	cd /home/chuggi/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv --initpy
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_SendDelayLogic.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_broadReady.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Optimized.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_TrReady.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_randomDelay.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Next_trajectory.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_land.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Complete.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_CheckLearn.py
+/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_path.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating Python srv __init__.py for beb"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv --initpy
 
 beb_generate_messages_py: Global_bebop/CMakeFiles/beb_generate_messages_py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_TrReady.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_land.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_CheckLearn.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Next_trajectory.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_path.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_randomDelay.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_broadReady.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Complete.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Optimized.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_SendDelayLogic.py
-beb_generate_messages_py: /home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Estimate.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_SendDelayLogic.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_broadReady.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Optimized.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_TrReady.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_randomDelay.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Next_trajectory.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_land.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_Complete.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_CheckLearn.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/_path.py
+beb_generate_messages_py: /home/umar/catkin_ws/devel/lib/python2.7/dist-packages/beb/srv/__init__.py
 beb_generate_messages_py: Global_bebop/CMakeFiles/beb_generate_messages_py.dir/build.make
 
 .PHONY : beb_generate_messages_py
@@ -161,10 +161,10 @@ Global_bebop/CMakeFiles/beb_generate_messages_py.dir/build: beb_generate_message
 .PHONY : Global_bebop/CMakeFiles/beb_generate_messages_py.dir/build
 
 Global_bebop/CMakeFiles/beb_generate_messages_py.dir/clean:
-	cd /home/chuggi/catkin_ws/build/Global_bebop && $(CMAKE_COMMAND) -P CMakeFiles/beb_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/umar/catkin_ws/build/Global_bebop && $(CMAKE_COMMAND) -P CMakeFiles/beb_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : Global_bebop/CMakeFiles/beb_generate_messages_py.dir/clean
 
 Global_bebop/CMakeFiles/beb_generate_messages_py.dir/depend:
-	cd /home/chuggi/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chuggi/catkin_ws/src /home/chuggi/catkin_ws/src/Global_bebop /home/chuggi/catkin_ws/build /home/chuggi/catkin_ws/build/Global_bebop /home/chuggi/catkin_ws/build/Global_bebop/CMakeFiles/beb_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/umar/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/umar/catkin_ws/src /home/umar/catkin_ws/src/Global_bebop /home/umar/catkin_ws/build /home/umar/catkin_ws/build/Global_bebop /home/umar/catkin_ws/build/Global_bebop/CMakeFiles/beb_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Global_bebop/CMakeFiles/beb_generate_messages_py.dir/depend
 

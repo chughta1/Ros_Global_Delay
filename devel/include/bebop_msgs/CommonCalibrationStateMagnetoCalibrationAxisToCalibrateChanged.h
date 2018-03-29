@@ -43,11 +43,14 @@ struct CommonCalibrationStateMagnetoCalibrationAxisToCalibrateChanged_
   _axis_type axis;
 
 
-    enum { axis_xAxis = 0u };
-     enum { axis_yAxis = 1u };
-     enum { axis_zAxis = 2u };
-     enum { axis_none = 3u };
- 
+
+  enum {
+    axis_xAxis = 0u,
+    axis_yAxis = 1u,
+    axis_zAxis = 2u,
+    axis_none = 3u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::CommonCalibrationStateMagnetoCalibrationAxisToCalibrateChanged_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::CommonCalibrationStateMagnetoCalibrationAxisToCalibrateChanged_<ContainerAllocator> const> ConstPtr;
@@ -88,7 +91,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

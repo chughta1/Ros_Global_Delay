@@ -10,4 +10,7 @@ set(beb_EXEC_DEPENDS "python-numpy" "std" "roscpp" "rospy" "geometry_msgs" "joy"
 set(beb_RUN_DEPENDS "python-numpy" "std" "roscpp" "rospy" "geometry_msgs" "joy" "tf" "message_runtime" "bebop_msgs" "rosbag")
 set(beb_TEST_DEPENDS )
 set(beb_DOC_DEPENDS )
+set(beb_URL_WEBSITE "http://ros.org/wiki/turtlebot_teleop")
+set(beb_URL_BUGTRACKER "https://github.com/turtlebot/turtlebot/issues")
+set(beb_URL_REPOSITORY "https://github.com/turtlebot/turtlebot")
 set(beb_DEPRECATED "")

@@ -48,17 +48,20 @@ struct CommonChargerStateCurrentChargeStateChanged_
   _phase_type phase;
 
 
-    enum { status_DISCHARGING = 0u };
-     enum { status_CHARGING_SLOW = 1u };
-     enum { status_CHARGING_MODERATE = 2u };
-     enum { status_CHARGING_FAST = 3u };
-     enum { status_BATTERY_FULL = 4u };
-     enum { phase_UNKNOWN = 0u };
-     enum { phase_CONSTANT_CURRENT_1 = 1u };
-     enum { phase_CONSTANT_CURRENT_2 = 2u };
-     enum { phase_CONSTANT_VOLTAGE = 3u };
-     enum { phase_CHARGED = 4u };
- 
+
+  enum {
+    status_DISCHARGING = 0u,
+    status_CHARGING_SLOW = 1u,
+    status_CHARGING_MODERATE = 2u,
+    status_CHARGING_FAST = 3u,
+    status_BATTERY_FULL = 4u,
+    phase_UNKNOWN = 0u,
+    phase_CONSTANT_CURRENT_1 = 1u,
+    phase_CONSTANT_CURRENT_2 = 2u,
+    phase_CONSTANT_VOLTAGE = 3u,
+    phase_CHARGED = 4u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::CommonChargerStateCurrentChargeStateChanged_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::CommonChargerStateCurrentChargeStateChanged_<ContainerAllocator> const> ConstPtr;
@@ -111,7 +114,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

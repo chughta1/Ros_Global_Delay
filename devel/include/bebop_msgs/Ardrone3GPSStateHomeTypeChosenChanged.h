@@ -43,11 +43,14 @@ struct Ardrone3GPSStateHomeTypeChosenChanged_
   _type_type type;
 
 
-    enum { type_TAKEOFF = 0u };
-     enum { type_PILOT = 1u };
-     enum { type_FIRST_FIX = 2u };
-     enum { type_FOLLOWEE = 3u };
- 
+
+  enum {
+    type_TAKEOFF = 0u,
+    type_PILOT = 1u,
+    type_FIRST_FIX = 2u,
+    type_FOLLOWEE = 3u,
+  };
+
 
   typedef boost::shared_ptr< ::bebop_msgs::Ardrone3GPSStateHomeTypeChosenChanged_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::bebop_msgs::Ardrone3GPSStateHomeTypeChosenChanged_<ContainerAllocator> const> ConstPtr;
@@ -88,7 +91,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'std_msgs': ['/opt/ros/jade/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/chuggi/catkin_ws/src/bebop_msgs/msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg'], 'bebop_msgs': ['/home/umar/catkin_ws/src/bebop_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 

@@ -35,6 +35,7 @@ RadiusOfCurvature = 0.3
 ApproachAngle = 45
 steps = 150
 
+GoalInp = rospy.Publisher('GoalInput',Vector3,queue_size=1)
 
 CurrentPoint = np.zeros((1,2))
 
@@ -47,6 +48,7 @@ def getInputs(Inp):
 	global RadiusOfCurvature
 	global ApproachAngle
 	ToSend = np.array([0,0],dtype = np.float64)
+	GlInp = Vector3()
 	if(TrajValid):
 		PointMem = ConfirmTrajectory()
 		if(Inp.ask):
@@ -54,6 +56,10 @@ def getInputs(Inp):
 			ind = getApproachArc(ind,RadiusOfCurvature,mt.radians(ApproachAngle))
 			ToSend[0] = PointMem[ind,0]
 			ToSend[1] = PointMem[ind,1]
+			GlInp.x = ToSend[0]
+			GlInp.y = ToSend[1]
+			GlInp.z = 1
+			GoalInp.publish(GlInp)
 		#	print("The index")
 	#		print(ind)
 	#		print("The Points")
@@ -76,7 +82,7 @@ def getApproachArc(index,Radius,Angle):
 
 def GetTrajectory():
 	rospy.wait_for_service('trajectory')
-	print("Asking....")
+	#print("Asking....")
 	try:
 		GetTraj = rospy.ServiceProxy('trajectory', Next_trajectory)
 		resp1 = GetTraj(True)
@@ -113,6 +119,7 @@ def Optimize():
 	frame = rospy.get_param('~frame')
 	listener = tf.TransformListener()
 	OptimizeDist = rospy.Service('OptimizeDistance',Optimized,getInputs)
+	
 
 	rate = rospy.Rate(50.0)
 

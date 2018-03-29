@@ -74,21 +74,15 @@ float64 z
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
-      if python3:
-        buff.write(struct.pack('<I%sB'%length, length, *_x))
-      else:
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self.subject_name
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
-      if python3:
-        buff.write(struct.pack('<I%sB'%length, length, *_x))
-      else:
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_3dB.pack(_x.position.x, _x.position.y, _x.position.z, _x.occluded))
+      buff.write(_get_struct_3dB().pack(_x.position.x, _x.position.y, _x.position.z, _x.occluded))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -122,7 +116,7 @@ float64 z
       _x = self
       start = end
       end += 25
-      (_x.position.x, _x.position.y, _x.position.z, _x.occluded,) = _struct_3dB.unpack(str[start:end])
+      (_x.position.x, _x.position.y, _x.position.z, _x.occluded,) = _get_struct_3dB().unpack(str[start:end])
       self.occluded = bool(self.occluded)
       return self
     except struct.error as e:
@@ -141,21 +135,15 @@ float64 z
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
-      if python3:
-        buff.write(struct.pack('<I%sB'%length, length, *_x))
-      else:
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self.subject_name
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
-      if python3:
-        buff.write(struct.pack('<I%sB'%length, length, *_x))
-      else:
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_3dB.pack(_x.position.x, _x.position.y, _x.position.z, _x.occluded))
+      buff.write(_get_struct_3dB().pack(_x.position.x, _x.position.y, _x.position.z, _x.occluded))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -190,11 +178,19 @@ float64 z
       _x = self
       start = end
       end += 25
-      (_x.position.x, _x.position.y, _x.position.z, _x.occluded,) = _struct_3dB.unpack(str[start:end])
+      (_x.position.x, _x.position.y, _x.position.z, _x.occluded,) = _get_struct_3dB().unpack(str[start:end])
       self.occluded = bool(self.occluded)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_3dB = struct.Struct("<3dB")
+def _get_struct_I():
+    global _struct_I
+    return _struct_I
+_struct_3dB = None
+def _get_struct_3dB():
+    global _struct_3dB
+    if _struct_3dB is None:
+        _struct_3dB = struct.Struct("<3dB")
+    return _struct_3dB

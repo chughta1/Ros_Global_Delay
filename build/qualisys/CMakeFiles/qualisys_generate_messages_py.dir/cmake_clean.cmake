@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/qualisys_generate_messages_py"
-  "/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/qualisys/msg/_Markers.py"
-  "/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/qualisys/msg/_Marker.py"
-  "/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/qualisys/msg/_Subject.py"
-  "/home/chuggi/catkin_ws/devel/lib/python2.7/dist-packages/qualisys/msg/__init__.py"
+  "/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/qualisys/msg/_Subject.py"
+  "/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/qualisys/msg/_Marker.py"
+  "/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/qualisys/msg/_Markers.py"
+  "/home/umar/catkin_ws/devel/lib/python2.7/dist-packages/qualisys/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -114,27 +114,21 @@ bool occluded
     """
     try:
       _x = self
-      buff.write(_struct_3I.pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
+      buff.write(_get_struct_3I().pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
       _x = self.header.frame_id
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
-      if python3:
-        buff.write(struct.pack('<I%sB'%length, length, *_x))
-      else:
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self.name
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
-      if python3:
-        buff.write(struct.pack('<I%sB'%length, length, *_x))
-      else:
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_B7d.pack(_x.occluded, _x.position.x, _x.position.y, _x.position.z, _x.orientation.x, _x.orientation.y, _x.orientation.z, _x.orientation.w))
+      buff.write(_get_struct_B7d().pack(_x.occluded, _x.position.x, _x.position.y, _x.position.z, _x.orientation.x, _x.orientation.y, _x.orientation.z, _x.orientation.w))
       length = len(self.markers)
       buff.write(_struct_I.pack(length))
       for val1 in self.markers:
@@ -143,23 +137,17 @@ bool occluded
         if python3 or type(_x) == unicode:
           _x = _x.encode('utf-8')
           length = len(_x)
-        if python3:
-          buff.write(struct.pack('<I%sB'%length, length, *_x))
-        else:
-          buff.write(struct.pack('<I%ss'%length, length, _x))
+        buff.write(struct.pack('<I%ss'%length, length, _x))
         _x = val1.subject_name
         length = len(_x)
         if python3 or type(_x) == unicode:
           _x = _x.encode('utf-8')
           length = len(_x)
-        if python3:
-          buff.write(struct.pack('<I%sB'%length, length, *_x))
-        else:
-          buff.write(struct.pack('<I%ss'%length, length, _x))
+        buff.write(struct.pack('<I%ss'%length, length, _x))
         _v1 = val1.position
         _x = _v1
-        buff.write(_struct_3d.pack(_x.x, _x.y, _x.z))
-        buff.write(_struct_B.pack(val1.occluded))
+        buff.write(_get_struct_3d().pack(_x.x, _x.y, _x.z))
+        buff.write(_get_struct_B().pack(val1.occluded))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -181,7 +169,7 @@ bool occluded
       _x = self
       start = end
       end += 12
-      (_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs,) = _struct_3I.unpack(str[start:end])
+      (_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs,) = _get_struct_3I().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -203,7 +191,7 @@ bool occluded
       _x = self
       start = end
       end += 57
-      (_x.occluded, _x.position.x, _x.position.y, _x.position.z, _x.orientation.x, _x.orientation.y, _x.orientation.z, _x.orientation.w,) = _struct_B7d.unpack(str[start:end])
+      (_x.occluded, _x.position.x, _x.position.y, _x.position.z, _x.orientation.x, _x.orientation.y, _x.orientation.z, _x.orientation.w,) = _get_struct_B7d().unpack(str[start:end])
       self.occluded = bool(self.occluded)
       start = end
       end += 4
@@ -233,10 +221,10 @@ bool occluded
         _x = _v2
         start = end
         end += 24
-        (_x.x, _x.y, _x.z,) = _struct_3d.unpack(str[start:end])
+        (_x.x, _x.y, _x.z,) = _get_struct_3d().unpack(str[start:end])
         start = end
         end += 1
-        (val1.occluded,) = _struct_B.unpack(str[start:end])
+        (val1.occluded,) = _get_struct_B().unpack(str[start:end])
         val1.occluded = bool(val1.occluded)
         self.markers.append(val1)
       return self
@@ -252,27 +240,21 @@ bool occluded
     """
     try:
       _x = self
-      buff.write(_struct_3I.pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
+      buff.write(_get_struct_3I().pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
       _x = self.header.frame_id
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
-      if python3:
-        buff.write(struct.pack('<I%sB'%length, length, *_x))
-      else:
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self.name
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
-      if python3:
-        buff.write(struct.pack('<I%sB'%length, length, *_x))
-      else:
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_B7d.pack(_x.occluded, _x.position.x, _x.position.y, _x.position.z, _x.orientation.x, _x.orientation.y, _x.orientation.z, _x.orientation.w))
+      buff.write(_get_struct_B7d().pack(_x.occluded, _x.position.x, _x.position.y, _x.position.z, _x.orientation.x, _x.orientation.y, _x.orientation.z, _x.orientation.w))
       length = len(self.markers)
       buff.write(_struct_I.pack(length))
       for val1 in self.markers:
@@ -281,23 +263,17 @@ bool occluded
         if python3 or type(_x) == unicode:
           _x = _x.encode('utf-8')
           length = len(_x)
-        if python3:
-          buff.write(struct.pack('<I%sB'%length, length, *_x))
-        else:
-          buff.write(struct.pack('<I%ss'%length, length, _x))
+        buff.write(struct.pack('<I%ss'%length, length, _x))
         _x = val1.subject_name
         length = len(_x)
         if python3 or type(_x) == unicode:
           _x = _x.encode('utf-8')
           length = len(_x)
-        if python3:
-          buff.write(struct.pack('<I%sB'%length, length, *_x))
-        else:
-          buff.write(struct.pack('<I%ss'%length, length, _x))
+        buff.write(struct.pack('<I%ss'%length, length, _x))
         _v3 = val1.position
         _x = _v3
-        buff.write(_struct_3d.pack(_x.x, _x.y, _x.z))
-        buff.write(_struct_B.pack(val1.occluded))
+        buff.write(_get_struct_3d().pack(_x.x, _x.y, _x.z))
+        buff.write(_get_struct_B().pack(val1.occluded))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -320,7 +296,7 @@ bool occluded
       _x = self
       start = end
       end += 12
-      (_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs,) = _struct_3I.unpack(str[start:end])
+      (_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs,) = _get_struct_3I().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -342,7 +318,7 @@ bool occluded
       _x = self
       start = end
       end += 57
-      (_x.occluded, _x.position.x, _x.position.y, _x.position.z, _x.orientation.x, _x.orientation.y, _x.orientation.z, _x.orientation.w,) = _struct_B7d.unpack(str[start:end])
+      (_x.occluded, _x.position.x, _x.position.y, _x.position.z, _x.orientation.x, _x.orientation.y, _x.orientation.z, _x.orientation.w,) = _get_struct_B7d().unpack(str[start:end])
       self.occluded = bool(self.occluded)
       start = end
       end += 4
@@ -372,10 +348,10 @@ bool occluded
         _x = _v4
         start = end
         end += 24
-        (_x.x, _x.y, _x.z,) = _struct_3d.unpack(str[start:end])
+        (_x.x, _x.y, _x.z,) = _get_struct_3d().unpack(str[start:end])
         start = end
         end += 1
-        (val1.occluded,) = _struct_B.unpack(str[start:end])
+        (val1.occluded,) = _get_struct_B().unpack(str[start:end])
         val1.occluded = bool(val1.occluded)
         self.markers.append(val1)
       return self
@@ -383,7 +359,30 @@ bool occluded
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_3I = struct.Struct("<3I")
-_struct_B = struct.Struct("<B")
-_struct_B7d = struct.Struct("<B7d")
-_struct_3d = struct.Struct("<3d")
+def _get_struct_I():
+    global _struct_I
+    return _struct_I
+_struct_3I = None
+def _get_struct_3I():
+    global _struct_3I
+    if _struct_3I is None:
+        _struct_3I = struct.Struct("<3I")
+    return _struct_3I
+_struct_B = None
+def _get_struct_B():
+    global _struct_B
+    if _struct_B is None:
+        _struct_B = struct.Struct("<B")
+    return _struct_B
+_struct_B7d = None
+def _get_struct_B7d():
+    global _struct_B7d
+    if _struct_B7d is None:
+        _struct_B7d = struct.Struct("<B7d")
+    return _struct_B7d
+_struct_3d = None
+def _get_struct_3d():
+    global _struct_3d
+    if _struct_3d is None:
+        _struct_3d = struct.Struct("<3d")
+    return _struct_3d
