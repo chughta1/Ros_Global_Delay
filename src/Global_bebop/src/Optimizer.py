@@ -25,13 +25,14 @@ global Proceed
 global RadiusOfCurvature # Radius of Trajectory in Meters
 global ApproachAngle # Angle the drone approaches the trajectory curvature with in Degrees
 global frame
+global delay
 
 
 FirstHit = True
 TrajRecieved = True
 TrajValid = True
 Proceed = False
-RadiusOfCurvature = 0.3
+
 ApproachAngle = 45
 steps = 150
 
@@ -47,6 +48,7 @@ def getInputs(Inp):
 	global FirstHit
 	global RadiusOfCurvature
 	global ApproachAngle
+	global delay
 	ToSend = np.array([0,0],dtype = np.float64)
 	GlInp = Vector3()
 	if(TrajValid):
@@ -59,6 +61,7 @@ def getInputs(Inp):
 			GlInp.x = ToSend[0]
 			GlInp.y = ToSend[1]
 			GlInp.z = 1
+			rospy.sleep(delay)
 			GoalInp.publish(GlInp)
 		#	print("The index")
 	#		print(ind)
@@ -114,9 +117,15 @@ def ConfirmTrajectory():
 def Optimize():
 	global CurrentPoint
 	global frame
-	
+	global RadiusOfCurvature
+	global delay
 	rospy.init_node('Optimizer', anonymous=True)
 	frame = rospy.get_param('~frame')
+	delay = rospy.get_param('~delay')
+	delay = float(delay)
+	WorldFrame = rospy.get_param('~worldFrame')
+	RadiusOfCurvature = rospy.get_param('~radius')
+	RadiusOfCurvature = float(RadiusOfCurvature)
 	listener = tf.TransformListener()
 	OptimizeDist = rospy.Service('OptimizeDistance',Optimized,getInputs)
 	
@@ -125,7 +134,7 @@ def Optimize():
 
 	while not rospy.is_shutdown():
 		try:
-		 	(trans,rot) = listener.lookupTransform('/world', frame, rospy.Time(0))
+		 	(trans,rot) = listener.lookupTransform(WorldFrame, frame, rospy.Time(0))
 		 	CurrentPoint[0,0] = trans[0]
 			CurrentPoint[0,1] = trans[1]
 		except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):

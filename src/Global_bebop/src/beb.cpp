@@ -15,9 +15,14 @@
 #include "beb/SendDelayLogic.h"
 #include "beb/TrReady.h"
 #include "beb/broadReady.h"
+#include "beb/Commence.h"
+#include "beb/takeoff.h"
+#include "beb/StartGP.h"
 #include <iostream>
 #include <std_srvs/Empty.h>
+#include <std_srvs/Trigger.h>
 #include <std_msgs/Float32.h>
+#include <std_msgs/Int64.h>
 #include <std_msgs/Empty.h>
 #include <ros/console.h>
 #include <math.h>
@@ -61,6 +66,9 @@ double delTime2;
 bool wantGlobalDelay = false;
 double goalDist = 0.05; //change this for goal threshold
 bool TrajectoryComplete = false;
+bool CommenceLogic = false;
+bool StartGPFilter = false;
+bool Rotation_check = false;
 
 bool kick_bool;
 
@@ -147,19 +155,27 @@ public:
         m_pubNav = nh.advertise<geometry_msgs::Twist>("bebop/cmd_vel", 1);
         plot_Train = nh.advertise<geometry_msgs::Vector3>("TrainPlot", 1);
         m_error = nh.advertise<geometry_msgs::Vector3>("error", 1);
+        Confirm_Commence = nh.advertise<std_msgs::Int64>("ConfrimCommencment", 1);
+        StartGpfilter = nh.advertise<std_msgs::Int64>("StartingGPFilter", 1);
         //m_subscribeGoal = nh.subscribe("MPC", 1, &Controller::goalChanged, this);//////////////////////callback=goalChanged
         ch_pose = nh.advertise<geometry_msgs::PoseStamped>("pos_check",1);
         initpos = nh.advertise<geometry_msgs::Vector3>("error_check",1);
         Land = nh.advertise<std_msgs::Empty>("bebop/land", 1);
+        Takeoff = nh.advertise<std_msgs::Empty>("bebop/takeoff", 1);
         Client_delay = nh.serviceClient<beb::randomDelay>("DelayGen");
         Client_Estimate = nh.serviceClient<beb::Estimate>("EstGen");
         Client_Learn = nh.serviceClient<beb::CheckLearn>("LearnLogic");
         Client_Train = nh.serviceClient<beb::TrReady>("TrainingReady");
         Client_BroadCast = nh.serviceClient<beb::broadReady>("BroadReady");
+        ClientCommence = nh.advertiseService("Commencement", &Controller::GetCommence, this);
         m_serviceLand = nh.advertiseService("land", &Controller::land, this);
+        m_serviceTakeoff = nh.advertiseService("takeoff", &Controller::takeoff, this);
+        m_serviceStartGP = nh.advertiseService("StartGP", &Controller::StartGP, this);
         DelayLogic = nh.advertiseService("Delaylog", &Controller::DelayL, this);
         bool_delay = nh.advertise<std_msgs::Bool>("BoolLog", 1);
         BR_Logic = nh.subscribe("DelLogic", 1, &Controller::gdlgdl, this);
+        Rot_Logic = nh.subscribe("Rot_Check", 1, &Controller::Rotation, this);
+        
         begin = false;
         NtOccupied = true;
         last_time = ros::Time::now().toSec();
@@ -188,6 +204,22 @@ private:
         
     }
 
+    void Rotation(const std_msgs::Int64 msg)
+    {
+      if(msg.data)
+      {
+        Rotation_check = true;
+      }
+    }
+
+    bool GetCommence(
+        std_srvs::Empty::Request& req,
+        std_srvs::Empty::Response& res)
+    {
+        ROS_INFO("Commencing");//////////////////////////////////////////////////////////////////same
+        CommenceLogic = true;
+        return true;
+    }
 
 /*  void GetDelay(const float dl)
   {
@@ -196,6 +228,16 @@ private:
     ROS_ERROR_STREAM("DELAY: "<< delay);
   }
 */
+    bool takeoff(
+        std_srvs::Empty::Request& req,
+        std_srvs::Empty::Response& res)
+    {
+        std_msgs::Empty takeoffmsg;
+        ROS_INFO("Taking off");//////////////////////////////////////////////////////////////////same
+        Takeoff.publish(takeoffmsg);
+        return true;
+    }
+
 
     bool land(
         std_srvs::Empty::Request& req,
@@ -206,6 +248,18 @@ private:
         while(true)
         {Land.publish(landmsg);}
 
+        return true;
+    }
+
+    bool StartGP(
+        std_srvs::Empty::Request& req,
+        std_srvs::Empty::Response& res)
+    {
+        std_msgs::Int64 StartGPmsg;
+        StartGPmsg.data = 1;
+        ROS_INFO("Starting GP Filter");//////////////////////////////////////////////////////////////////same
+        StartGpfilter.publish(StartGPmsg);
+        StartGPFilter = true;
         return true;
     }
 
@@ -261,9 +315,14 @@ private:
   beb::broadReady brR;
   beb::Complete CheckTraj;
   geometry_msgs::Pose HoldPose;
+  std_msgs::Empty landmsg;
+  std_msgs::Int64 ConfrimComm;
+  geometry_msgs::Twist Hover;
+  Hover.linear.x = 0;
+  Hover.linear.y = 0;
+  Hover.linear.z = 0;
+  Hover.angular.z = 0;
   int indexToFollow;
-
-
 
 
   this_time = ros::Time::now().toSec();
@@ -286,16 +345,53 @@ private:
 
 bool_delay.publish(gdl);
 
-
-                ch_pose.publish(TempGoals);
-                tf::TransformBroadcaster br;
                 tf::StampedTransform transform;
                 try{
-                m_listener.lookupTransform( m_worldFrame,m_frame, ros::Time(0), transform);}
+                //  ROS_ERROR_STREAM("Looking up");
+                m_listener.lookupTransform( m_worldFrame,m_frame, ros::Time(0), transform);
+                  }
                 catch (tf::TransformException &ex)
                 {
-                  ROS_ERROR("%s",ex.what());
+                ROS_ERROR("%s",ex.what());
+                ROS_ERROR_STREAM("Mocap Issue, Landing");
+              //  while(true)
+                {Land.publish(landmsg);}
                 }
+                
+           //     if(CommenceLogic)
+         //       {
+                ConfrimComm.data = 1;
+                Confirm_Commence.publish(ConfrimComm);
+                ch_pose.publish(TempGoals);
+                tf::TransformBroadcaster br;
+              //  tf::StampedTransform transform;
+
+                /*if(!StartGPFilter){
+                try{
+                m_listener.lookupTransform( m_worldFrame,m_frame, ros::Time(0), transform);
+                  }
+                catch (tf::TransformException &ex)
+                {
+                ROS_ERROR("%s",ex.what());
+                ROS_ERROR_STREAM("Mocap Issue, Landing");
+              //  while(true)
+                {Land.publish(landmsg);}
+                }
+              }
+              else{
+                try{
+                m_listener.lookupTransform( m_worldFrame,"GP_Frame", ros::Time(0), transform);
+                  }
+                catch (tf::TransformException &ex)
+                {
+                ROS_ERROR("%s",ex.what());
+                ROS_ERROR_STREAM("Lookup Issue, Landing");
+
+                Land.publish(landmsg);
+                //m_pubNav.publish(Hover);
+                }
+              }*/
+
 
                 geometry_msgs::Twist msg2;
                 geometry_msgs::Vector3 initps;
@@ -324,8 +420,8 @@ bool_delay.publish(gdl);
              //     ROS_INFO("Holding Positionz");
                //   TempGoals.pose.position.x = 0.3;
                //   TempGoals.pose.position.y = 0.0;
-                //  Follow.x = 0.3;
-                //  Follow.y = 0.0;
+                  Follow.x = 0.3;
+                  Follow.y = 0.0;
                   TempGoals.pose.position.z = 1;
                   TempGoals.pose.orientation = targetWorld.pose.orientation;
                 }
@@ -407,7 +503,7 @@ bool_delay.publish(gdl);
                 dtime1 = ros::Time::now().toSec();
                // if(delaycheck && BroadCastReady)
 
-                if(delaycheck)
+                if(delaycheck && !StartGPFilter)
                 {
                   while(dtime1 - dtime <= delay)
                   {
@@ -422,7 +518,7 @@ bool_delay.publish(gdl);
                   WrapperTwist = msg;
                   m_pubNav.publish(msg);
                 }
-
+              //m_pubNav.publish(msg);
                 
                 }
               
@@ -434,6 +530,9 @@ bool_delay.publish(gdl);
                     CallNext = true;
                   }
                  }
+
+
+              //   }
 
             
   
@@ -447,8 +546,11 @@ private:
     ros::Publisher ch_pose;
     ros::Publisher initpos;
     ros::Publisher Land;
+    ros::Publisher Takeoff;
     ros::Publisher plot_Train;
     ros::Publisher bool_delay;
+    ros::Publisher Confirm_Commence;
+    ros::Publisher StartGpfilter;
     bool begin;
     bool hover;
     double checkTime;
@@ -480,7 +582,11 @@ private:
     ros::Subscriber m_subscribeGoals;
     ros::Subscriber ch_delay;
     ros::Subscriber BR_Logic;
+    ros::Subscriber Rot_Logic;
+    ros::ServiceServer ClientCommence;
     ros::ServiceServer m_serviceLand;
+    ros::ServiceServer m_serviceTakeoff;
+    ros::ServiceServer m_serviceStartGP;
   //  ros::ServiceServer AskforNext;
     ros::ServiceServer DelayLogic;
     ros::ServiceClient ClientAsk;
@@ -502,10 +608,7 @@ int main(int argc, char **argv) {
      ros::NodeHandle n("~");
     
 
-     
-     //Ceates the publisher, and tells it to publish
-     //to the husky/cmd_vel topic, with a queue size of 100
-    // ros::Publisher pub=nh.advertise<geometry_msgs::Twist>("bebop/cmd_vel", 1);
+  
   std::string worldFrame;
   n.param<std::string>("worldFrame", worldFrame, "/world");
   std::string frame;
@@ -514,23 +617,11 @@ int main(int argc, char **argv) {
   double frequency;
   double delay;
   n.getParam("frame", frame);
+//  n.getParam("Prediction", frame);
   n.param("frequency", frequency, 50.0);
   n.getParam("delay",delay);
      
   
-     //Sets the loop to publish at a rate of 10Hz
-
-
-            //Declares the message to be sent
-          //  geometry_msgs::Twist msg;
-          
-        //   msg.linear.x=0.1;
-           
-          // msg.angular.z=6*double(rand())/double(RAND_MAX)-3;
-           //Publish the message
-        //   pub.publish(msg);
-
-          //Delays untill it is time to send another message
 
   
         Controller controller(worldFrame,frame,delay,n);

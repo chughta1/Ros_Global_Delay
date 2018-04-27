@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv;/home/umar/catkin_ws/src/Global_bebop/srv/land.srv;/home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv;/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv;/home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv;/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv;/home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv;/home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv;/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv;/home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv;/home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv"
+services_str = "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv;/home/umar/catkin_ws/src/Global_bebop/srv/land.srv;/home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv;/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv;/home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv;/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv;/home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv;/home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv;/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv;/home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv;/home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv;/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv;/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv;/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv"
 pkg_name = "beb"
 dependencies_str = "std_msgs;geometry_msgs;bebop_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

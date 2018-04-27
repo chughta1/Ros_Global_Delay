@@ -23,13 +23,14 @@ global StartLog
 global Odm
 global DataStep
 global InpPos
+InpPos = Vector3()
 
 
 StartWrite = False
 StartLog = False
 
-bag = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest7.bag','w')
-
+#bag = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest13.bag','w')
+bag = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightDataNoisy.bag','w')
 
 def getOdom(odo):
 	global Odm
@@ -39,16 +40,22 @@ def getOdom(odo):
 def getInp(Inp):
 	global InpPos
 	InpPos = Vector3()
-	InpPos = Inp
+	if(Inp is not None):
+		InpPos = Inp
 
 
-def WriteBag():
+def WritePoseBag():
 	global Odm
 	global InpPos
 	od = Odometry()
 	od = Odm
-	bag.write('/Parrot/',od)
-	bag.write('/GoalPoint/',InpPos)
+	if(InpPos is not None):
+		bag.write('/Parrot/',od)
+		
+
+def WriteInpBag(InpP):
+	if(InpP is not None):
+		bag.write('/GoalPoint/',InpP)
 
 
 def checkIntersection(radius):
@@ -79,6 +86,7 @@ def BagOps():
 	global StartLog
 	global StartWrite
 	global DataStep
+	global InpPos
 
 	rospy.init_node('BagOperations', anonymous=True)
 	delay = rospy.get_param('~delay')
@@ -91,22 +99,27 @@ def BagOps():
 	rospy.Subscriber("GoalInput", Vector3, getInp)
 	rospy.Subscriber("Rot_Check", Int64, StartLogging)
 	rospy.Subscriber("bebop/land", Empty, LandOut)
-	t1 = rospy.get_rostime()
-	t1 = t1.nsecs
+	t1 = rospy.Time.now()
+	t2 = rospy.Time.now()
+	rate = rospy.Rate(50.0)
+	ValidWrite = False
 	while not rospy.is_shutdown():
+		if(InpPos.x == 0 and InpPos.y == 0):
+			ValidWrite = False
+		else:
+			ValidWrite = True
 		if(StartLog):
 			gT = False
 			if not(StartWrite):
 				StartWrite = checkIntersection(radius)
-			if(StartWrite):
-				t2 = rospy.get_rostime()
-				t2 = t2.nsecs
-				if(abs(t2 - t1) > DataStep):
-					gT = True
-					t1 = rospy.get_rostime()
-					t1 = t1.nsecs
-				if(gT):
-					WriteBag()
+			if(StartWrite):	
+				if(ValidWrite):
+					#print(InpPos)
+					# WriteInpBag(InpPos)
+					# while(abs(t2 - t1) < rospy.Duration(delay)):
+					# 	t2 = rospy.Time.now()
+					# t1 = rospy.Time.now()
+					WritePoseBag()
 if __name__ == '__main__':
    try:
        BagOps()

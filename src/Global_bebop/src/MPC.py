@@ -68,6 +68,8 @@ global plot_data
 plot_data = Vector3()
 global AskT
 global steps
+global CheckingLogic
+CheckingLogic = Int64()
 AskT = False
 
 X_tr = 0
@@ -109,10 +111,11 @@ def getPoints(req):
       return Next_trajectoryResponse((testArray))
 
 def Completion(chk):
-	if(chk.check and NotOccupied):
-		return CompleteResponse(True)
-	else:
-		return CompleteResponse(False)
+  
+  if(chk.check and NotOccupied):
+    return CompleteResponse(True)
+  else:
+    return CompleteResponse(False)
 
 
 
@@ -212,6 +215,12 @@ def CalcInput(A, B, C, x, u,tar):
     #  print(prob.status)
     return u, x, prob.value
 
+
+def GetCommence(GC):
+  global CheckingLogic
+  CheckingLogic.data = GC.data
+
+
 def GetListFromMatrix(x):
     return np.array(x).flatten().tolist()
 
@@ -232,7 +241,7 @@ def talker():
       global AskT
       global testArray
       global steps
-
+      global CheckingLogic
 
       freq = 50.0
       roll = 0.0 
@@ -263,6 +272,7 @@ def talker():
       AskforNext = rospy.Service('trajectory',Next_trajectory,getPoints)
       ConfirmCompletion = rospy.Service('complete',Complete,Completion)
       Rotation_check = rospy.Publisher('Rot_Check',Int64,queue_size = 1)
+      rospy.Subscriber("ConfrimCommencment", Int64, GetCommence)
       th0 = th
       rad = rospy.get_param('~radius')
       rad = float(rad)
@@ -278,97 +288,99 @@ def talker():
       while not rospy.is_shutdown():
         plot_pub.publish(plot_data)
         pub_th.publish(th)
-        if not (NotOccupied):
-          ch.data=0
-          Rotation_check.publish(ch)
-          #print("I am here")
-          Active = True
-          th0 = th
-          if (th <= 2*mt.pi):   # Addition 08/12/2017
-          	th = th + step
-          #yaw = mt.pi/2 + th
-          yaw = 0
-          #yaw = mt.atan2(x[1,0],x[0,0]) # rect addition
-          
-          xstar1 = xstar
-          
-          
-          target = [rad*np.cos(th), rad*np.sin(th)]
-          Vf = GetListFromMatrix(xstar1.value[2, T])
-          x0 = np.matrix([rad*np.cos(th0), rad*np.sin(th0), Vf[0], th0]).T  # [x,y,v theta]
-          x = x0
-          u = np.matrix([0.0, 0.00]).T  # [a,beta]
-          #plt.figure(num=None, figsize=(12, 12))
-
-          mincost = 100000
-
-          for i in range(1000):
-              A, B, C = LinealizeCarModel(x, u, dt, lr)
-              ustar, xstar, cost = CalcInput(A, B, C, x, u,target)
-              xstar1 = xstar
-              u[0, 0] = GetListFromMatrix(ustar.value[0, :])[0]
-              u[1, 0] = float(ustar[1, 0].value)
-
-              x = A * x + B * u
-              X_tr=xstar.value[0, T]
-              Y_tr=xstar.value[1, T]
-              Vf = GetListFromMatrix(xstar.value[2, T])
-              dis = np.linalg.norm([x[0] - target[0], x[1] - target[1]])
-              if (dis < 0.1):
-                  #print("Goal")
-                  #print(xstar.value)
-                  break
-          #plt.plot(X_tr, Y_tr, '-r')
-          L_u = np.zeros((4,2))
-          L_u = np.mat(A)*np.mat(B)
-          L_ustar = np.zeros((2,T))
-          L_ustar[0,:] = ustar.value[0,:]
-          L_ustar[1,:] = ustar.value[1,:]
-
-          L_u = np.mat(L_u)*np.mat(L_ustar)
-          L_u_new = np.zeros((4,1))
-          x_amazing = np.mat(A)*np.mat(x)
-          L_u_new[0,0] = np.sum(L_u[0,:])
-          L_u_new[1,0] = np.sum(L_u[1,:])
-          L_u_new[2,0] = np.sum(L_u[2,:])
-          L_u_new[3,0] = np.sum(L_u[3,:])
-          #print(np.sum(L_u[0,0]))
-          #print(np.sum(L_u[1,0]))
-          xSend = x_amazing + L_u_new
-          send_u = TwistStamped()
-          send_u.twist.linear.x=(L_u_new[0,0]) #send x-coord
-          send_u.twist.linear.y=(L_u_new[1,0]) #send y-coord
-          send_u.twist.linear.z=(L_u_new[2,0]) #send V
-          send_u.twist.angular.z=(L_u_new[3,0]) #send Theta
-          Goals_new.pose.position.x = X_tr
-          Goals_new.pose.position.y = Y_tr
-          plot_data.x = X_tr
-          plot_data.y = Y_tr
-          plot_data.z = th
-          Goals_new.pose.position.z = 1.0
-          quat = tf.transformations.quaternion_from_euler(roll, pitch, yaw)
-          Goals_new.pose.orientation.x = quat[0]
-          Goals_new.pose.orientation.y = quat[1]
-          Goals_new.pose.orientation.z = quat[2]
-          Goals_new.pose.orientation.w = quat[3]
-          predict.publish(send_u)
-          #l_theta.publish(th)
-          Points = Goals_new
-          FullTraj.poses.append(Goals_new.pose)
-        #  print("Goals x")
-        #  print(Goals_new.pose.position.x)
-        #  print("Goals y")
-        #  print(Goals_new.pose.position.y)
-          tt = np.array([Goals_new.pose.position.x,Goals_new.pose.position.y],dtype=np.float64)
-          testArray[len(FullTraj.poses)-1,:] = tt
-        #  FullTraj.poses.append(Goals_new.pose)
-        #  print("Size & Content of trajectory:")
-        #  print(len(testArray))
-        #  print(testArray)
-          if(th>2*mt.pi):
-            NotOccupied = True
-            ch.data = 1
+        #print(CheckingLogic.data)
+        if(CheckingLogic.data):
+          if not (NotOccupied):
+            ch.data=0
             Rotation_check.publish(ch)
+            #print("I am here")
+            Active = True
+            th0 = th
+            if (th <= 2*mt.pi):   # Addition 08/12/2017
+            	th = th + step
+            #yaw = mt.pi/2 + th
+            yaw = 0
+            #yaw = mt.atan2(x[1,0],x[0,0]) # rect addition
+            
+            xstar1 = xstar
+            
+            
+            target = [rad*np.cos(th), rad*np.sin(th)]
+            Vf = GetListFromMatrix(xstar1.value[2, T])
+            x0 = np.matrix([rad*np.cos(th0), rad*np.sin(th0), Vf[0], th0]).T  # [x,y,v theta]
+            x = x0
+            u = np.matrix([0.0, 0.00]).T  # [a,beta]
+            #plt.figure(num=None, figsize=(12, 12))
+
+            mincost = 100000
+
+            for i in range(1000):
+                A, B, C = LinealizeCarModel(x, u, dt, lr)
+                ustar, xstar, cost = CalcInput(A, B, C, x, u,target)
+                xstar1 = xstar
+                u[0, 0] = GetListFromMatrix(ustar.value[0, :])[0]
+                u[1, 0] = float(ustar[1, 0].value)
+
+                x = A * x + B * u
+                X_tr=xstar.value[0, T]
+                Y_tr=xstar.value[1, T]
+                Vf = GetListFromMatrix(xstar.value[2, T])
+                dis = np.linalg.norm([x[0] - target[0], x[1] - target[1]])
+                if (dis < 0.1):
+                    #print("Goal")
+                    #print(xstar.value)
+                    break
+            #plt.plot(X_tr, Y_tr, '-r')
+            L_u = np.zeros((4,2))
+            L_u = np.mat(A)*np.mat(B)
+            L_ustar = np.zeros((2,T))
+            L_ustar[0,:] = ustar.value[0,:]
+            L_ustar[1,:] = ustar.value[1,:]
+
+            L_u = np.mat(L_u)*np.mat(L_ustar)
+            L_u_new = np.zeros((4,1))
+            x_amazing = np.mat(A)*np.mat(x)
+            L_u_new[0,0] = np.sum(L_u[0,:])
+            L_u_new[1,0] = np.sum(L_u[1,:])
+            L_u_new[2,0] = np.sum(L_u[2,:])
+            L_u_new[3,0] = np.sum(L_u[3,:])
+            #print(np.sum(L_u[0,0]))
+            #print(np.sum(L_u[1,0]))
+            xSend = x_amazing + L_u_new
+            send_u = TwistStamped()
+            send_u.twist.linear.x=(L_u_new[0,0]) #send x-coord
+            send_u.twist.linear.y=(L_u_new[1,0]) #send y-coord
+            send_u.twist.linear.z=(L_u_new[2,0]) #send V
+            send_u.twist.angular.z=(L_u_new[3,0]) #send Theta
+            Goals_new.pose.position.x = X_tr
+            Goals_new.pose.position.y = Y_tr
+            plot_data.x = X_tr
+            plot_data.y = Y_tr
+            plot_data.z = th
+            Goals_new.pose.position.z = 1.0
+            quat = tf.transformations.quaternion_from_euler(roll, pitch, yaw)
+            Goals_new.pose.orientation.x = quat[0]
+            Goals_new.pose.orientation.y = quat[1]
+            Goals_new.pose.orientation.z = quat[2]
+            Goals_new.pose.orientation.w = quat[3]
+            predict.publish(send_u)
+            #l_theta.publish(th)
+            Points = Goals_new
+            FullTraj.poses.append(Goals_new.pose)
+          #  print("Goals x")
+          #  print(Goals_new.pose.position.x)
+          #  print("Goals y")
+          #  print(Goals_new.pose.position.y)
+            tt = np.array([Goals_new.pose.position.x,Goals_new.pose.position.y],dtype=np.float64)
+            testArray[len(FullTraj.poses)-1,:] = tt
+          #  FullTraj.poses.append(Goals_new.pose)
+          #  print("Size & Content of trajectory:")
+          #  print(len(testArray))
+          #  print(testArray)
+            if(th>2*mt.pi):
+              NotOccupied = True
+              ch.data = 1
+              Rotation_check.publish(ch)
  
       
 

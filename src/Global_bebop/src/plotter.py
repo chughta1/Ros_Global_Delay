@@ -60,10 +60,11 @@ def GP_pred(pr):
 	yp = pr.y
 	plt.plot(xp, yp, 'go')
 
-def Tr_plot(tra):
-	xt = tra.x
-	yt = tra.y
-	plt.plot(xt,yt,'go')
+
+def Plot_Del(Dp):
+	xd = Dp.x
+	yd = Dp.y
+	plt.plot(xd, yd, 'go')
 
 
 def plotter():
@@ -84,8 +85,8 @@ def plotter():
 	frameod = '/'+frame+'/odom'
 	rospy.Subscriber("plotting_data", Vector3, plot_callback)
 	rospy.Subscriber(frameod, Odometry, getPos)
-	#rospy.Subscriber("/GP_Prediction", Vector3, GP_pred)
-	rospy.Subscriber("TrainPlot", Vector3, Tr_plot)
+	rospy.Subscriber("GP_Est",Vector3, GP_pred)
+	#rospy.Subscriber("DelPub",Vector3, Plot_Del)
 
 	#plt.show()
 	plt.subplot(1, 1, 1)

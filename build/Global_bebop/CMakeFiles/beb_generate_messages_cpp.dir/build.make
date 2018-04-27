@@ -53,12 +53,15 @@ CMAKE_BINARY_DIR = /home/umar/catkin_ws/build
 # Include the progress variables for this target.
 include Global_bebop/CMakeFiles/beb_generate_messages_cpp.dir/progress.make
 
+Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/Commence.h
 Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/Estimate.h
 Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/SendDelayLogic.h
 Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/broadReady.h
 Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/Optimized.h
 Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/TrReady.h
 Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/randomDelay.h
+Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/takeoff.h
+Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/StartGP.h
 Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/Next_trajectory.h
 Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/land.h
 Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/Complete.h
@@ -66,91 +69,115 @@ Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/in
 Global_bebop/CMakeFiles/beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/path.h
 
 
+/home/umar/catkin_ws/devel/include/beb/Commence.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/umar/catkin_ws/devel/include/beb/Commence.h: /home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv
+/home/umar/catkin_ws/devel/include/beb/Commence.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/umar/catkin_ws/devel/include/beb/Commence.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from beb/Commence.srv"
+	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 /home/umar/catkin_ws/devel/include/beb/Estimate.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/Estimate.h: /home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv
 /home/umar/catkin_ws/devel/include/beb/Estimate.h: /opt/ros/kinetic/share/geometry_msgs/msg/Vector3.msg
 /home/umar/catkin_ws/devel/include/beb/Estimate.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/Estimate.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from beb/Estimate.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from beb/Estimate.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/umar/catkin_ws/devel/include/beb/SendDelayLogic.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/SendDelayLogic.h: /home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv
 /home/umar/catkin_ws/devel/include/beb/SendDelayLogic.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/SendDelayLogic.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from beb/SendDelayLogic.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from beb/SendDelayLogic.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/umar/catkin_ws/devel/include/beb/broadReady.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/broadReady.h: /home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv
 /home/umar/catkin_ws/devel/include/beb/broadReady.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/broadReady.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from beb/broadReady.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from beb/broadReady.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/umar/catkin_ws/devel/include/beb/Optimized.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/Optimized.h: /home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv
 /home/umar/catkin_ws/devel/include/beb/Optimized.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/Optimized.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from beb/Optimized.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from beb/Optimized.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/umar/catkin_ws/devel/include/beb/TrReady.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/TrReady.h: /home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv
 /home/umar/catkin_ws/devel/include/beb/TrReady.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/TrReady.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from beb/TrReady.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from beb/TrReady.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/umar/catkin_ws/devel/include/beb/randomDelay.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/randomDelay.h: /home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv
 /home/umar/catkin_ws/devel/include/beb/randomDelay.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/randomDelay.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from beb/randomDelay.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from beb/randomDelay.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/umar/catkin_ws/devel/include/beb/takeoff.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/umar/catkin_ws/devel/include/beb/takeoff.h: /home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv
+/home/umar/catkin_ws/devel/include/beb/takeoff.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/umar/catkin_ws/devel/include/beb/takeoff.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from beb/takeoff.srv"
+	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/umar/catkin_ws/devel/include/beb/StartGP.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/umar/catkin_ws/devel/include/beb/StartGP.h: /home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv
+/home/umar/catkin_ws/devel/include/beb/StartGP.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/umar/catkin_ws/devel/include/beb/StartGP.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from beb/StartGP.srv"
+	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/umar/catkin_ws/devel/include/beb/Next_trajectory.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/Next_trajectory.h: /home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv
 /home/umar/catkin_ws/devel/include/beb/Next_trajectory.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/Next_trajectory.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from beb/Next_trajectory.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating C++ code from beb/Next_trajectory.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/umar/catkin_ws/devel/include/beb/land.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/land.h: /home/umar/catkin_ws/src/Global_bebop/srv/land.srv
 /home/umar/catkin_ws/devel/include/beb/land.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/land.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from beb/land.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating C++ code from beb/land.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/land.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/umar/catkin_ws/devel/include/beb/Complete.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/Complete.h: /home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv
 /home/umar/catkin_ws/devel/include/beb/Complete.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/Complete.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from beb/Complete.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating C++ code from beb/Complete.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/umar/catkin_ws/devel/include/beb/CheckLearn.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/CheckLearn.h: /home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv
 /home/umar/catkin_ws/devel/include/beb/CheckLearn.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/CheckLearn.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating C++ code from beb/CheckLearn.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating C++ code from beb/CheckLearn.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/umar/catkin_ws/devel/include/beb/path.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/umar/catkin_ws/devel/include/beb/path.h: /home/umar/catkin_ws/src/Global_bebop/srv/path.srv
 /home/umar/catkin_ws/devel/include/beb/path.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/umar/catkin_ws/devel/include/beb/path.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating C++ code from beb/path.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating C++ code from beb/path.srv"
 	cd /home/umar/catkin_ws/src/Global_bebop && /home/umar/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/umar/catkin_ws/src/Global_bebop/srv/path.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/include/beb -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 beb_generate_messages_cpp: Global_bebop/CMakeFiles/beb_generate_messages_cpp
+beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/Commence.h
 beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/Estimate.h
 beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/SendDelayLogic.h
 beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/broadReady.h
 beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/Optimized.h
 beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/TrReady.h
 beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/randomDelay.h
+beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/takeoff.h
+beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/StartGP.h
 beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/Next_trajectory.h
 beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/land.h
 beb_generate_messages_cpp: /home/umar/catkin_ws/devel/include/beb/Complete.h

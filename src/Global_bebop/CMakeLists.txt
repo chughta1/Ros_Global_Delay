@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   message_generation
   bebop_msgs
-rosbag
+  rosbag
 )
 
 ## System dependencies are found with CMake's conventions
@@ -67,6 +67,9 @@ add_service_files(
   broadReady.srv
   Optimized.srv
   Complete.srv
+  Commence.srv
+  takeoff.srv
+  StartGP.srv
 )
 
 ## Generate actions in the 'action' folder

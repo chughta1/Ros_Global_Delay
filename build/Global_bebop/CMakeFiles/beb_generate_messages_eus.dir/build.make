@@ -53,12 +53,15 @@ CMAKE_BINARY_DIR = /home/umar/catkin_ws/build
 # Include the progress variables for this target.
 include Global_bebop/CMakeFiles/beb_generate_messages_eus.dir/progress.make
 
+Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Commence.l
 Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Estimate.l
 Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/SendDelayLogic.l
 Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/broadReady.l
 Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Optimized.l
 Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/TrReady.l
 Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/randomDelay.l
+Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/takeoff.l
+Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/StartGP.l
 Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Next_trajectory.l
 Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/land.l
 Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Complete.l
@@ -67,73 +70,91 @@ Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/sh
 Global_bebop/CMakeFiles/beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/manifest.l
 
 
+/home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Commence.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Commence.l: /home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from beb/Commence.srv"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
+
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Estimate.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Estimate.l: /home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Estimate.l: /opt/ros/kinetic/share/geometry_msgs/msg/Vector3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from beb/Estimate.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from beb/Estimate.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/SendDelayLogic.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/SendDelayLogic.l: /home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from beb/SendDelayLogic.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from beb/SendDelayLogic.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/broadReady.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/broadReady.l: /home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from beb/broadReady.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from beb/broadReady.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Optimized.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Optimized.l: /home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from beb/Optimized.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from beb/Optimized.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/TrReady.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/TrReady.l: /home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from beb/TrReady.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp code from beb/TrReady.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/randomDelay.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/randomDelay.l: /home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp code from beb/randomDelay.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating EusLisp code from beb/randomDelay.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
+
+/home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/takeoff.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/takeoff.l: /home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating EusLisp code from beb/takeoff.srv"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
+
+/home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/StartGP.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/StartGP.l: /home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating EusLisp code from beb/StartGP.srv"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Next_trajectory.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Next_trajectory.l: /home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating EusLisp code from beb/Next_trajectory.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating EusLisp code from beb/Next_trajectory.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/land.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/land.l: /home/umar/catkin_ws/src/Global_bebop/srv/land.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating EusLisp code from beb/land.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating EusLisp code from beb/land.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/land.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Complete.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Complete.l: /home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating EusLisp code from beb/Complete.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating EusLisp code from beb/Complete.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/CheckLearn.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/CheckLearn.l: /home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating EusLisp code from beb/CheckLearn.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating EusLisp code from beb/CheckLearn.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/path.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/path.l: /home/umar/catkin_ws/src/Global_bebop/srv/path.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating EusLisp code from beb/path.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating EusLisp code from beb/path.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/umar/catkin_ws/src/Global_bebop/srv/path.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/roseus/ros/beb/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating EusLisp manifest code for beb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating EusLisp manifest code for beb"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/umar/catkin_ws/devel/share/roseus/ros/beb beb std_msgs geometry_msgs bebop_msgs
 
 beb_generate_messages_eus: Global_bebop/CMakeFiles/beb_generate_messages_eus
+beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Commence.l
 beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Estimate.l
 beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/SendDelayLogic.l
 beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/broadReady.l
 beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Optimized.l
 beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/TrReady.l
 beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/randomDelay.l
+beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/takeoff.l
+beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/StartGP.l
 beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Next_trajectory.l
 beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/land.l
 beb_generate_messages_eus: /home/umar/catkin_ws/devel/share/roseus/ros/beb/srv/Complete.l

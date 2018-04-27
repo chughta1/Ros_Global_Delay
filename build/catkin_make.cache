@@ -1,2 +1,2 @@
-Global_bebop:bebop_msgs:qualisys
+Global_bebop:bebop_msgs:mavros/libmavconn:mavros/mavros:mavros/mavros_extras:mavros/mavros_msgs:mavros/test_mavros:qualisys
 -DCATKIN_DEVEL_PREFIX=/home/umar/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/umar/catkin_ws/install -G Unix Makefiles

@@ -45,6 +45,9 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv"
     "/home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv"
     "/home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv"
+    "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv"
     )
 endif()
 

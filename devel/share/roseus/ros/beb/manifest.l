@@ -8,6 +8,7 @@
 (ros::load-ros-package "actionlib")
 (ros::load-ros-package "actionlib_msgs")
 (ros::load-ros-package "bebop_msgs")
+(ros::load-ros-package "diagnostic_msgs")
 (ros::load-ros-package "geometry_msgs")
 (ros::load-ros-package "roscpp")
 (ros::load-ros-package "rosgraph_msgs")

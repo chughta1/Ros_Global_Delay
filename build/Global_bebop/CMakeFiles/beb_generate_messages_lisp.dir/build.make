@@ -53,12 +53,15 @@ CMAKE_BINARY_DIR = /home/umar/catkin_ws/build
 # Include the progress variables for this target.
 include Global_bebop/CMakeFiles/beb_generate_messages_lisp.dir/progress.make
 
+Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Commence.lisp
 Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Estimate.lisp
 Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/SendDelayLogic.lisp
 Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/broadReady.lisp
 Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Optimized.lisp
 Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/TrReady.lisp
 Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/randomDelay.lisp
+Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/takeoff.lisp
+Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/StartGP.lisp
 Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Next_trajectory.lisp
 Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/land.lisp
 Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Complete.lisp
@@ -66,69 +69,87 @@ Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/s
 Global_bebop/CMakeFiles/beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/path.lisp
 
 
+/home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Commence.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+/home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Commence.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from beb/Commence.srv"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
+
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Estimate.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Estimate.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Estimate.lisp: /opt/ros/kinetic/share/geometry_msgs/msg/Vector3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from beb/Estimate.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from beb/Estimate.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/SendDelayLogic.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/SendDelayLogic.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from beb/SendDelayLogic.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from beb/SendDelayLogic.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/broadReady.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/broadReady.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from beb/broadReady.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from beb/broadReady.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Optimized.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Optimized.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from beb/Optimized.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from beb/Optimized.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/TrReady.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/TrReady.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from beb/TrReady.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from beb/TrReady.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/TrReady.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/randomDelay.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/randomDelay.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from beb/randomDelay.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Lisp code from beb/randomDelay.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
+
+/home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/takeoff.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+/home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/takeoff.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Lisp code from beb/takeoff.srv"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
+
+/home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/StartGP.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+/home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/StartGP.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Lisp code from beb/StartGP.srv"
+	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Next_trajectory.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Next_trajectory.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Lisp code from beb/Next_trajectory.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Lisp code from beb/Next_trajectory.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/land.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/land.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/land.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Lisp code from beb/land.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating Lisp code from beb/land.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/land.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Complete.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Complete.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Lisp code from beb/Complete.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating Lisp code from beb/Complete.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/Complete.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/CheckLearn.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/CheckLearn.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Lisp code from beb/CheckLearn.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating Lisp code from beb/CheckLearn.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/path.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
 /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/path.lisp: /home/umar/catkin_ws/src/Global_bebop/srv/path.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating Lisp code from beb/path.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/umar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating Lisp code from beb/path.srv"
 	cd /home/umar/catkin_ws/build/Global_bebop && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/umar/catkin_ws/src/Global_bebop/srv/path.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg -p beb -o /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv
 
 beb_generate_messages_lisp: Global_bebop/CMakeFiles/beb_generate_messages_lisp
+beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Commence.lisp
 beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Estimate.lisp
 beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/SendDelayLogic.lisp
 beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/broadReady.lisp
 beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Optimized.lisp
 beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/TrReady.lisp
 beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/randomDelay.lisp
+beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/takeoff.lisp
+beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/StartGP.lisp
 beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Next_trajectory.lisp
 beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/land.lisp
 beb_generate_messages_lisp: /home/umar/catkin_ws/devel/share/common-lisp/ros/beb/srv/Complete.lisp

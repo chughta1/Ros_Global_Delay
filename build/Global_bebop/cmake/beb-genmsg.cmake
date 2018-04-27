@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "beb: 0 messages, 11 services")
+message(STATUS "beb: 0 messages, 14 services")
 
 set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg;-Ibebop_msgs:/home/umar/catkin_ws/src/bebop_msgs/msg")
 
@@ -17,6 +17,11 @@ add_custom_target(beb_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv" NAME_WE)
+add_custom_target(_beb_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beb" "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv" ""
+)
+
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv" NAME_WE)
 add_custom_target(_beb_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beb" "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv" "geometry_msgs/Vector3"
@@ -30,6 +35,11 @@ add_custom_target(_beb_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv" NAME_WE)
 add_custom_target(_beb_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beb" "/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv" ""
+)
+
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
+add_custom_target(_beb_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beb" "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" ""
 )
 
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv" NAME_WE)
@@ -47,6 +57,11 @@ add_custom_target(_beb_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beb" "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv" ""
 )
 
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv" NAME_WE)
+add_custom_target(_beb_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beb" "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv" ""
+)
+
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv" NAME_WE)
 add_custom_target(_beb_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beb" "/home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv" ""
@@ -57,9 +72,9 @@ add_custom_target(_beb_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beb" "/home/umar/catkin_ws/src/Global_bebop/srv/land.srv" ""
 )
 
-get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv" NAME_WE)
 add_custom_target(_beb_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beb" "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beb" "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv" ""
 )
 
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv" NAME_WE)
@@ -80,6 +95,12 @@ add_custom_target(_beb_generate_messages_check_deps_${_filename}
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_cpp(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beb
+)
 _generate_srv_cpp(beb
   "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv"
   "${MSG_I_FLAGS}"
@@ -112,6 +133,18 @@ _generate_srv_cpp(beb
 )
 _generate_srv_cpp(beb
   "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beb
+)
+_generate_srv_cpp(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beb
+)
+_generate_srv_cpp(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beb
@@ -159,11 +192,15 @@ add_custom_target(beb_generate_messages_cpp
 add_dependencies(beb_generate_messages beb_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv" NAME_WE)
+add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv" NAME_WE)
 add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv" NAME_WE)
 add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv" NAME_WE)
+add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
 add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv" NAME_WE)
 add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
@@ -171,11 +208,13 @@ get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/TrRe
 add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv" NAME_WE)
 add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv" NAME_WE)
+add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv" NAME_WE)
 add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/land.srv" NAME_WE)
 add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv" NAME_WE)
 add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv" NAME_WE)
 add_dependencies(beb_generate_messages_cpp _beb_generate_messages_check_deps_${_filename})
@@ -193,6 +232,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beb_generate_messages_cpp)
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_eus(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beb
+)
 _generate_srv_eus(beb
   "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv"
   "${MSG_I_FLAGS}"
@@ -225,6 +270,18 @@ _generate_srv_eus(beb
 )
 _generate_srv_eus(beb
   "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beb
+)
+_generate_srv_eus(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beb
+)
+_generate_srv_eus(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beb
@@ -272,11 +329,15 @@ add_custom_target(beb_generate_messages_eus
 add_dependencies(beb_generate_messages beb_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv" NAME_WE)
+add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv" NAME_WE)
 add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv" NAME_WE)
 add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv" NAME_WE)
+add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
 add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv" NAME_WE)
 add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
@@ -284,11 +345,13 @@ get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/TrRe
 add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv" NAME_WE)
 add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv" NAME_WE)
+add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv" NAME_WE)
 add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/land.srv" NAME_WE)
 add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv" NAME_WE)
 add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv" NAME_WE)
 add_dependencies(beb_generate_messages_eus _beb_generate_messages_check_deps_${_filename})
@@ -306,6 +369,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beb_generate_messages_eus)
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_lisp(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beb
+)
 _generate_srv_lisp(beb
   "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv"
   "${MSG_I_FLAGS}"
@@ -338,6 +407,18 @@ _generate_srv_lisp(beb
 )
 _generate_srv_lisp(beb
   "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beb
+)
+_generate_srv_lisp(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beb
+)
+_generate_srv_lisp(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beb
@@ -385,11 +466,15 @@ add_custom_target(beb_generate_messages_lisp
 add_dependencies(beb_generate_messages beb_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv" NAME_WE)
+add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv" NAME_WE)
 add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv" NAME_WE)
 add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv" NAME_WE)
+add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
 add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv" NAME_WE)
 add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
@@ -397,11 +482,13 @@ get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/TrRe
 add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv" NAME_WE)
 add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv" NAME_WE)
+add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv" NAME_WE)
 add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/land.srv" NAME_WE)
 add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv" NAME_WE)
 add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv" NAME_WE)
 add_dependencies(beb_generate_messages_lisp _beb_generate_messages_check_deps_${_filename})
@@ -419,6 +506,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beb_generate_messages_lisp)
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_nodejs(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beb
+)
 _generate_srv_nodejs(beb
   "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv"
   "${MSG_I_FLAGS}"
@@ -451,6 +544,18 @@ _generate_srv_nodejs(beb
 )
 _generate_srv_nodejs(beb
   "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beb
+)
+_generate_srv_nodejs(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beb
+)
+_generate_srv_nodejs(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beb
@@ -498,11 +603,15 @@ add_custom_target(beb_generate_messages_nodejs
 add_dependencies(beb_generate_messages beb_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv" NAME_WE)
+add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv" NAME_WE)
 add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv" NAME_WE)
 add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv" NAME_WE)
+add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
 add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv" NAME_WE)
 add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
@@ -510,11 +619,13 @@ get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/TrRe
 add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv" NAME_WE)
 add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv" NAME_WE)
+add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv" NAME_WE)
 add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/land.srv" NAME_WE)
 add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv" NAME_WE)
 add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv" NAME_WE)
 add_dependencies(beb_generate_messages_nodejs _beb_generate_messages_check_deps_${_filename})
@@ -532,6 +643,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beb_generate_messages_nodejs)
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_py(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beb
+)
 _generate_srv_py(beb
   "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv"
   "${MSG_I_FLAGS}"
@@ -564,6 +681,18 @@ _generate_srv_py(beb
 )
 _generate_srv_py(beb
   "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beb
+)
+_generate_srv_py(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beb
+)
+_generate_srv_py(beb
+  "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beb
@@ -611,11 +740,15 @@ add_custom_target(beb_generate_messages_py
 add_dependencies(beb_generate_messages beb_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/takeoff.srv" NAME_WE)
+add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Estimate.srv" NAME_WE)
 add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/SendDelayLogic.srv" NAME_WE)
 add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/broadReady.srv" NAME_WE)
+add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
 add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Optimized.srv" NAME_WE)
 add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
@@ -623,11 +756,13 @@ get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/TrRe
 add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/randomDelay.srv" NAME_WE)
 add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/StartGP.srv" NAME_WE)
+add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Next_trajectory.srv" NAME_WE)
 add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/land.srv" NAME_WE)
 add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/path.srv" NAME_WE)
+get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/Commence.srv" NAME_WE)
 add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/umar/catkin_ws/src/Global_bebop/srv/CheckLearn.srv" NAME_WE)
 add_dependencies(beb_generate_messages_py _beb_generate_messages_check_deps_${_filename})
