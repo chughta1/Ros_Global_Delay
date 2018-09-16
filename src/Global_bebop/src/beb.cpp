@@ -34,12 +34,13 @@
 #include <vector>
 
 
-///////////// New code(11/12/2017) change the goals here to PoseStamped  
-///////////// New code(15/01/2018) Implement a service that gives you the PoseArray goals
+///////////// New code(21/06/2018) Fix the path following algorithm, major hell is breaking loose. Changed optimizer function as well 
 
 using namespace std;
 
 #define _USE_MATH_DEFINES
+
+#define PI 3.14159265
 
 bool started = false;
 bool glcheck = false;
@@ -64,7 +65,7 @@ bool CallNext = false;
 double delTime1;
 double delTime2;
 bool wantGlobalDelay = false;
-double goalDist = 0.05; //change this for goal threshold
+double goalDist = 0.02; //change this for goal threshold
 bool TrajectoryComplete = false;
 bool CommenceLogic = false;
 bool StartGPFilter = false;
@@ -175,7 +176,8 @@ public:
         bool_delay = nh.advertise<std_msgs::Bool>("BoolLog", 1);
         BR_Logic = nh.subscribe("DelLogic", 1, &Controller::gdlgdl, this);
         Rot_Logic = nh.subscribe("Rot_Check", 1, &Controller::Rotation, this);
-        
+        DelayDrone = nh.advertise<std_msgs::Int64>("DelayDrone", 1);
+
         begin = false;
         NtOccupied = true;
         last_time = ros::Time::now().toSec();
@@ -221,13 +223,7 @@ private:
         return true;
     }
 
-/*  void GetDelay(const float dl)
-  {
-    delaycheck = true;
-    delay = dl;
-    ROS_ERROR_STREAM("DELAY: "<< delay);
-  }
-*/
+
     bool takeoff(
         std_srvs::Empty::Request& req,
         std_srvs::Empty::Response& res)
@@ -263,13 +259,14 @@ private:
         return true;
     }
 
-   bool DelayL(beb::SendDelayLogic::Request& req,beb::SendDelayLogic::Response& res)
+    bool DelayL(
+              std_srvs::Empty::Request& req,
+              std_srvs::Empty::Response& res)
     {
-        if(req.askdb)
-        {
-          res.senddb = delaycheck;
+                
+          delaycheck = true;
           return true;
-        }
+        
     }
   
   
@@ -317,6 +314,7 @@ private:
   geometry_msgs::Pose HoldPose;
   std_msgs::Empty landmsg;
   std_msgs::Int64 ConfrimComm;
+  std_msgs::Int64 ConfirmDelay;
   geometry_msgs::Twist Hover;
   Hover.linear.x = 0;
   Hover.linear.y = 0;
@@ -324,63 +322,33 @@ private:
   Hover.angular.z = 0;
   int indexToFollow;
 
-
-  this_time = ros::Time::now().toSec();
-
-  //ROS_ERROR_STREAM("Delay" << delay);
-
-
-  delTime2 = ros::Time::now().toNSec();
-
-  if(abs(delTime2 - delTime1) < delay*pow(10,9)) // Commented this out
-  {
-    //delaycheck = true;
-    gdl.data = true;
-  }
-  else{//delaycheck = false;
-    gdl.data = false;
-  } 
+  bool direction;
     
 //bool_delay.publish(gdl);  this has been moved to the try-catch condition below!!
 
 bool_delay.publish(gdl);
+                if(delaycheck)
+                {
+                  ConfirmDelay.data = 1;
+                }
+
+                DelayDrone.publish(ConfirmDelay);
 
                 tf::StampedTransform transform;
-                try{
-                //  ROS_ERROR_STREAM("Looking up");
-                m_listener.lookupTransform( m_worldFrame,m_frame, ros::Time(0), transform);
-                  }
-                catch (tf::TransformException &ex)
-                {
-                ROS_ERROR("%s",ex.what());
-                ROS_ERROR_STREAM("Mocap Issue, Landing");
-              //  while(true)
-                {Land.publish(landmsg);}
-                }
+   
                 
-           //     if(CommenceLogic)
-         //       {
+                if(CommenceLogic)
+                {
                 ConfrimComm.data = 1;
                 Confirm_Commence.publish(ConfrimComm);
                 ch_pose.publish(TempGoals);
                 tf::TransformBroadcaster br;
               //  tf::StampedTransform transform;
 
-                /*if(!StartGPFilter){
+                OldPos = NewPos;
+
                 try{
                 m_listener.lookupTransform( m_worldFrame,m_frame, ros::Time(0), transform);
-                  }
-                catch (tf::TransformException &ex)
-                {
-                ROS_ERROR("%s",ex.what());
-                ROS_ERROR_STREAM("Mocap Issue, Landing");
-              //  while(true)
-                {Land.publish(landmsg);}
-                }
-              }
-              else{
-                try{
-                m_listener.lookupTransform( m_worldFrame,"GP_Frame", ros::Time(0), transform);
                   }
                 catch (tf::TransformException &ex)
                 {
@@ -390,14 +358,27 @@ bool_delay.publish(gdl);
                 Land.publish(landmsg);
                 //m_pubNav.publish(Hover);
                 }
-              }*/
+
+                NewPos.x = transform.getOrigin().x();
+                NewPos.y = transform.getOrigin().y();
+
+                double dir1 = atan2(OldPos.y,OldPos.x);
+                double dir2 = atan2(NewPos.y,NewPos.x);
+
+                // if(dir2 - dir1>0)
+                //   {direction = false;}
+                // else
+                //   {direction = true;
+                //    // ROS_INFO("WRONG DIRECTION");
+                //   }
+
 
 
                 geometry_msgs::Twist msg2;
                 geometry_msgs::Vector3 initps;
                 geometry_msgs::Vector3 gl;
                 geometry_msgs::PoseStamped targetWorld;
-                geometry_msgs::Vector3 Follow;
+                
                targetWorld.header.stamp = transform.stamp_;
                targetWorld.header.frame_id = m_worldFrame;
                targetWorld.pose.orientation.x = 0;                
@@ -417,35 +398,28 @@ bool_delay.publish(gdl);
 
                if(!TrajectoryComplete)
                 { begin = true;
-             //     ROS_INFO("Holding Positionz");
-               //   TempGoals.pose.position.x = 0.3;
-               //   TempGoals.pose.position.y = 0.0;
                   Follow.x = 0.3;
                   Follow.y = 0.0;
                   TempGoals.pose.position.z = 1;
                   TempGoals.pose.orientation = targetWorld.pose.orientation;
                 }
-                else
+                else if(CallNext)
                 {
 
                   begin = true;
-                  delaycheck = true;
                   OptPoint.request.ask = true;
                   std::vector<double> ptFollow(0, 0);
                   if (ClientOpt.exists())
                     {
-                    //  ROS_ERROR_STREAM("Calling index");
+              
                       if (ClientOpt.call(OptPoint))
                       {   
-                                              
+                              
                         ptFollow = OptPoint.response.done;
                         Follow.x = ptFollow.at(0);
                         Follow.y = ptFollow.at(1);
                       }
                     }
-                    //geometry_msgs::PoseStamped gola;
-                //    ROS_ERROR_STREAM("Vector Position: " << Follow);
-                 //   ROS_ERROR_STREAM("Vector Point y: " << ptFollow(0));
                 }
                 
                 
@@ -453,20 +427,22 @@ bool_delay.publish(gdl);
           
                 // Uncomment above 13/11/2017
           
-         // delaycheck = kick_bool; // Uncommented on 04/12/2017, something to do with the above condition
+         
                if(begin){
-            //    ROS_INFO("Inside outer loop");
+            
                 NtOccupied = false;
+          
                 TempGoals.pose.position.x = Follow.x;
                 TempGoals.pose.position.y = Follow.y;
+                TempGoals.pose.position.z = 1;
                 targetWorld.pose = TempGoals.pose;
                 msg2.linear.x = targetWorld.pose.position.x-transform.getOrigin().x();
                msg2.linear.y = targetWorld.pose.position.y-transform.getOrigin().y();
-               norm = sqrt(msg2.linear.x*msg2.linear.x + msg2.linear.y*msg2.linear.y);
+               msg2.linear.z = targetWorld.pose.position.z-transform.getOrigin().z();
+               norm = sqrt(msg2.linear.x*msg2.linear.x + msg2.linear.y*msg2.linear.y + msg2.linear.z*msg2.linear.z);
               
-       
                 if(norm > goalDist){
-                //   ROS_INFO("Inside inner loop ");
+                
                   NtOccupied = false;
                   hover = false;
                   CallNext = false;
@@ -474,14 +450,21 @@ bool_delay.publish(gdl);
                 geometry_msgs::PoseStamped targetDrone;
                 checkTime = ros::Time::now().toSec();
 
-        
-
+              try{
                 m_listener.transformPose(m_frame, targetWorld, targetDrone);
-    
+                  }
+              catch (tf::TransformException &ex)
+                {
+                ROS_ERROR("%s",ex.what());
+                ROS_ERROR_STREAM("Lookup Issue, Landing");
+                Land.publish(landmsg);
+                }
+          
                { msg2.linear.x = targetWorld.pose.position.x-transform.getOrigin().x();
                msg2.linear.y = targetWorld.pose.position.y-transform.getOrigin().y();
-               norm = sqrt(msg2.linear.x*msg2.linear.x + msg2.linear.y*msg2.linear.y);}
-
+               msg2.linear.z = targetWorld.pose.position.z-transform.getOrigin().z();
+               norm = sqrt(msg2.linear.x*msg2.linear.x + msg2.linear.y*msg2.linear.y+ msg2.linear.z*msg2.linear.z);}
+              // ROS_ERROR_STREAM("Getting info 3");
                 tfScalar roll, pitch, yaw;
                 tf::Matrix3x3(
                     tf::Quaternion(
@@ -501,17 +484,18 @@ bool_delay.publish(gdl);
                 // New Addition 05/12/2017
                 dtime = ros::Time::now().toSec();
                 dtime1 = ros::Time::now().toSec();
-               // if(delaycheck && BroadCastReady)
-
-                if(delaycheck && !StartGPFilter)
-                {
+                m_pubNav.publish(msg);
+                 if(delaycheck)
+                 {
                   while(dtime1 - dtime <= delay)
-                  {
-                  m_pubNav.publish(msg);
+                   {
+                     m_pubNav.publish(msg);
                   dtime1 = ros::Time::now().toSec();
-          
                   }
-                }
+                  NtOccupied = true;
+                  begin = false;
+                  CallNext = true;
+                 }
 
                 else
                 {
@@ -521,10 +505,12 @@ bool_delay.publish(gdl);
               //m_pubNav.publish(msg);
                 
                 }
-              
-                else if(norm < goalDist)
+
+
+                  else 
                   {
-     
+         //           ROS_ERROR_STREAM(direction);
+        //            m_pubNav.publish(Hover);
                     NtOccupied = true;
                     begin = false;
                     CallNext = true;
@@ -532,7 +518,7 @@ bool_delay.publish(gdl);
                  }
 
 
-              //   }
+                 } // If loop Commence
 
             
   
@@ -551,6 +537,7 @@ private:
     ros::Publisher bool_delay;
     ros::Publisher Confirm_Commence;
     ros::Publisher StartGpfilter;
+    ros::Publisher DelayDrone;
     bool begin;
     bool hover;
     double checkTime;
@@ -574,6 +561,9 @@ private:
     geometry_msgs::PoseStamped WrapperGoal;
     geometry_msgs::Twist WrapperTwist;
     geometry_msgs::Twist WrapTwist;
+    geometry_msgs::Vector3 Follow;
+    geometry_msgs::Vector3 OldPos;
+    geometry_msgs::Vector3 NewPos;
     std_msgs::Bool gdl;
     std_msgs::Bool BroadCastReady2;
     ros::Subscriber Postf;
@@ -587,8 +577,8 @@ private:
     ros::ServiceServer m_serviceLand;
     ros::ServiceServer m_serviceTakeoff;
     ros::ServiceServer m_serviceStartGP;
-  //  ros::ServiceServer AskforNext;
     ros::ServiceServer DelayLogic;
+    
     ros::ServiceClient ClientAsk;
     ros::ServiceClient Client_delay; 
     ros::ServiceClient Client_Learn;

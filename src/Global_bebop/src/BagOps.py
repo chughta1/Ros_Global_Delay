@@ -23,6 +23,10 @@ global StartLog
 global Odm
 global DataStep
 global InpPos
+global checkDelay
+global FirstCall
+FirstCall = True
+checkDelay = False
 InpPos = Vector3()
 
 
@@ -30,7 +34,7 @@ StartWrite = False
 StartLog = False
 
 #bag = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest13.bag','w')
-bag = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightDataNoisy.bag','w')
+bag = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightReWrite5.bag','w')
 
 def getOdom(odo):
 	global Odm
@@ -71,6 +75,20 @@ def checkIntersection(radius):
 	else:
 		return False
 
+
+def checkLap(x_old,y_old):
+	global Odm
+	global FirstCall
+	FirstCall = False
+	x_new = Odm.pose.pose.position.x
+	y_new = Odm.pose.pose.position.y
+	ang_old = mt.atan2(y_old,x_old)
+	ang_new = mt.atan2(y_new,x_new)
+	if(ang_old < 0 and ang_new > 0):
+		return True
+
+
+
 def StartLogging(ch):
 	global StartLog
 	if(ch.data):
@@ -82,16 +100,25 @@ def LandOut(L):
 		rospy.signal_shutdown("Landed")
 
 
+def DelayLogic(DelayValue):
+	global checkDelay
+	if(DelayValue.data):
+		checkDelay = True
+
+
 def BagOps():
 	global StartLog
 	global StartWrite
 	global DataStep
 	global InpPos
+	global checkDelay
+	global Odm
+	global FirstCall
 
 	rospy.init_node('BagOperations', anonymous=True)
-	delay = rospy.get_param('~delay')
+	delay = (1/120)
 	delay = float(delay)
-	DataStep = delay*(10**9)
+	#DataStep = (1/120)*(10**9)
 	frame = rospy.get_param('~frame')
 	frameod = '/'+frame+'/odom'
 	radius = rospy.get_param('~radius')
@@ -99,6 +126,7 @@ def BagOps():
 	rospy.Subscriber("GoalInput", Vector3, getInp)
 	rospy.Subscriber("Rot_Check", Int64, StartLogging)
 	rospy.Subscriber("bebop/land", Empty, LandOut)
+	rospy.Subscriber("DelayDrone", Int64, DelayLogic)
 	t1 = rospy.Time.now()
 	t2 = rospy.Time.now()
 	rate = rospy.Rate(50.0)
@@ -114,12 +142,21 @@ def BagOps():
 				StartWrite = checkIntersection(radius)
 			if(StartWrite):	
 				if(ValidWrite):
+					x_check = Odm.pose.pose.position.x
+					y_check = Odm.pose.pose.position.y
 					#print(InpPos)
 					# WriteInpBag(InpPos)
-					# while(abs(t2 - t1) < rospy.Duration(delay)):
-					# 	t2 = rospy.Time.now()
-					# t1 = rospy.Time.now()
-					WritePoseBag()
+					while(abs(t2 - t1) < rospy.Duration(delay)):
+					 	t2 = rospy.Time.now()
+					t1 = rospy.Time.now()
+					if(checkDelay):
+						print("Writing")
+						WritePoseBag()
+					cL = checkLap(x_check,y_check)
+					if(cL and checkDelay and not FirstCall):
+						print("Shutting Down")
+						rospy.signal_shutdown("Circle Complete")
+
 if __name__ == '__main__':
    try:
        BagOps()

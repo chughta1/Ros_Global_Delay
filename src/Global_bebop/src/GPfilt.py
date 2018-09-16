@@ -22,18 +22,15 @@ from std_msgs.msg import Int64
 #Different batteries give different entropies
 # Change bag 9
 
-bag1 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest1.bag','r')
-bag2 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest2.bag','r')
-bag3 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest3.bag','r')
-bag4 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest4.bag','r')
-bag5 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest5.bag','r')
-bag6 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest6.bag','r')
-bag7 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest7.bag','r')
-bag8 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest8.bag','r')
-bag9 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest9.bag','r')
-bag10 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest10.bag','r')
-bag11 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest11.bag','r')
-bag12 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightTest12.bag','r')
+bag1 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightReWrite.bag','r')
+bag2 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightReWrite1.bag','r')
+bag3 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightReWrite2.bag','r')
+bag4 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightReWrite3.bag','r')
+bag5 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightReWrite4.bag','r')
+bag6 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightReWrite5.bag','r')
+bag7 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightReWrite6.bag','r')
+bag8 = rosbag.Bag('/home/umar/catkin_ws/src/Global_bebop/src/BagFiles/FlightReWrite7.bag','r')
+
 
 global Bilbo
 global numBags
@@ -58,7 +55,7 @@ yInp = []
 xPos = [] 
 yPos = []
 
-Bilbo = [bag1, bag2, bag3, bag4, bag5, bag6, bag7, bag8, bag9, bag10, bag11, bag12]
+Bilbo = [bag1, bag2, bag3, bag4, bag5, bag6, bag7, bag8]#, bag9, bag10, bag11]#, bag12]
 numBags = len(Bilbo)
 #Bilbo = [bag7]
 
@@ -72,7 +69,7 @@ def Baggins(nBags):
 		for topic, msg, t in bag.read_messages(topics=['/GoalPoint/']):
 			xInp.append(msg.x)
 			yInp.append(msg.y)
-		print(len(xInp))
+		print(len(xPos))
 	Y = np.zeros((len(xPos),2))
 	X = np.zeros((len(xInp),2))
 	for k in range(0,len(Y)):
@@ -108,13 +105,13 @@ def SendEstimate(SE):
 	global mean
 	global TrajCheck
 	global MeanEst
-	Est_pos = Vector3()
+	
 	if(SE.askEstimate and TrajCheck and StartGP):
 		Est_pos.x = MeanEst[0,0]
 		Est_pos.y = MeanEst[0,1]
 		Est_pos.z = 1.0
 		if(np.linalg.norm(MeanEst)>0):
-			GP_Es.publish(Est_pos)
+			
 			return EstimateResponse(Est_pos)
 
 def TrajComplete(Comp):
@@ -144,19 +141,24 @@ def ShowPrediction():
 	Start = False
 	rate = rospy.Rate(50.0)
 	while not rospy.is_shutdown():
+		Est_pos = Vector3()
 		v = np.zeros((1,2))
 		v[0,0] = InpPos.x
 		v[0,1] = InpPos.y
 		CheckValidInputs = np.linalg.norm(v)
 		if(CheckValidInputs > 0):
 			Start = True
-		if(TrajCheck and Start and StartGP):
+		if(TrajCheck and Start):
 			xt = np.zeros((1,2))
 			xt[0,0] = InpPos.x
 			xt[0,1] = InpPos.y
 			mean, var = Model.predict_y(xt)
 			MeanEst[0,0] = mean[0,0]
 			MeanEst[0,1] = mean[0,1]
+			Est_pos.x = MeanEst[0,0]
+			Est_pos.y = MeanEst[0,1]
+			Est_pos.z = 1.0
+			GP_Es.publish(Est_pos)
 		rate.sleep()
 
 if __name__ == '__main__':

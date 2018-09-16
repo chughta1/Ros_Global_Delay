@@ -1,21 +1,23 @@
 <?xml version="1.0"?>
 <launch>
   <!-- <rosparam command="load" file="$(find beb)/src/bebop2.yaml" />  -->
-  <arg name="frame" default = "Parrot_umar"/>
+  <arg name="frame" default = "umar_test1"/>
   <arg name="worldFrame" default="world"/>
   <arg name="radius" default="0.3"/>
   <arg name="trajectory" default="circle"/>
-  <arg name="delay" default="0.3"/>
+  <arg name="delay" default="0.15"/>
   <arg name="Prediction" default="GP_Frame"/>
+
+  <!--
  
- <!--    <node name="PlotOperations" pkg="beb" type="PlotOps.py" output="screen">
+     <node name="PlotOperations" pkg="beb" type="PlotOps.py" output="screen">
     </node> 
        
    <node name="TrainOps" pkg="beb" type="TrainingOps.py" output="screen">
     </node> 
--->
 
-<!-- 
+
+
     
     <node name="GP_Predicter" pkg="beb" type="GPfilt.py" output="screen">
     </node> 
@@ -31,14 +33,14 @@
     <param name="frame" value="$(arg frame)" />
     </node> 
 
-    
+  
+
 
     <node name="fixed_tf_broadcaster" pkg="beb" type="PredictionBroadcast.py" output="screen">
     <param name="frame" value="$(arg frame)" />
     <param name="worldFrame" value="$(arg worldFrame)" />
     <param name="Prediction" value="$(arg Prediction)" />
     </node>
--->
 
     <node name="random_bebop_commands" pkg="beb" type="beb" output="screen">
     <param name="frame" value="$(arg frame)" />
@@ -65,7 +67,7 @@
       <param name="worldFrame" value="$(arg worldFrame)" />
       <param name="Prediction" value="$(arg Prediction)" />
     </node>
- <!--  
+   
       
     <node name="BagOperations" pkg="beb" type="BagOps.py" output="screen">
       <param name="frame" value="$(arg frame)" />
@@ -75,7 +77,10 @@
       <param name="worldFrame" value="$(arg worldFrame)" />
       <param name="Prediction" value="$(arg Prediction)" />
     </node>
-   -->
+  
+
+
+
 
      <include file="$(find qualisys)/launch/qualisys.launch">
      </include>
@@ -84,7 +89,12 @@
         <arg name="model" default="$(arg frame)"/>
         <arg name="output" default="screen"/>
     </include>
+
+    -->
+
+     
   
-  
+  <node name="GP_Predicter" pkg="beb" type="GPfiltObserver.py" output="screen">
+    </node> 
 
 </launch>

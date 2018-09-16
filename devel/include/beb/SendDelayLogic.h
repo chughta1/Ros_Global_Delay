@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::beb::SendDelayLogic > {
   static const char* value()
   {
-    return "2b123fbf2a4603e168a3151939e3bbe7";
+    return "d41d8cd98f00b204e9800998ecf8427e";
   }
 
   static const char* value(const ::beb::SendDelayLogic&) { return value(); }

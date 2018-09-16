@@ -24,17 +24,14 @@ struct SendDelayLogicResponse_
   typedef SendDelayLogicResponse_<ContainerAllocator> Type;
 
   SendDelayLogicResponse_()
-    : senddb(false)  {
+    {
     }
   SendDelayLogicResponse_(const ContainerAllocator& _alloc)
-    : senddb(false)  {
+    {
   (void)_alloc;
     }
 
 
-
-   typedef uint8_t _senddb_type;
-  _senddb_type senddb;
 
 
 
@@ -114,12 +111,12 @@ struct MD5Sum< ::beb::SendDelayLogicResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "e52faeaea82bd7603b003f2316da72c4";
+    return "d41d8cd98f00b204e9800998ecf8427e";
   }
 
   static const char* value(const ::beb::SendDelayLogicResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xe52faeaea82bd760ULL;
-  static const uint64_t static_value2 = 0x3b003f2316da72c4ULL;
+  static const uint64_t static_value1 = 0xd41d8cd98f00b204ULL;
+  static const uint64_t static_value2 = 0xe9800998ecf8427eULL;
 };
 
 template<class ContainerAllocator>
@@ -138,7 +135,7 @@ struct Definition< ::beb::SendDelayLogicResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "bool senddb\n\
+    return "\n\
 \n\
 ";
   }
@@ -156,10 +153,8 @@ namespace serialization
 
   template<class ContainerAllocator> struct Serializer< ::beb::SendDelayLogicResponse_<ContainerAllocator> >
   {
-    template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
-    {
-      stream.next(m.senddb);
-    }
+    template<typename Stream, typename T> inline static void allInOne(Stream&, T)
+    {}
 
     ROS_DECLARE_ALLINONE_SERIALIZER
   }; // struct SendDelayLogicResponse_
@@ -175,11 +170,8 @@ namespace message_operations
 template<class ContainerAllocator>
 struct Printer< ::beb::SendDelayLogicResponse_<ContainerAllocator> >
 {
-  template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::beb::SendDelayLogicResponse_<ContainerAllocator>& v)
-  {
-    s << indent << "senddb: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.senddb);
-  }
+  template<typename Stream> static void stream(Stream&, const std::string&, const ::beb::SendDelayLogicResponse_<ContainerAllocator>&)
+  {}
 };
 
 } // namespace message_operations

@@ -12,8 +12,10 @@ from geometry_msgs.msg import Pose
 from geometry_msgs.msg import PoseStamped
 from geometry_msgs.msg import Vector3
 from geometry_msgs.msg import PoseArray
+from std_msgs.msg import Int64
 
 # Create Optimization node here
+# Ditch this function or write a new one 2018/08/09
 
 global steps # Make sure this is the same in the other nodes!!
 global CurrentPoint
@@ -26,14 +28,18 @@ global RadiusOfCurvature # Radius of Trajectory in Meters
 global ApproachAngle # Angle the drone approaches the trajectory curvature with in Degrees
 global frame
 global delay
+global ind
+global checkDelay
+checkDelay = False
 
+ind = 0
 
 FirstHit = True
 TrajRecieved = True
 TrajValid = True
 Proceed = False
 
-ApproachAngle = 45
+ApproachAngle = 0
 steps = 150
 
 GoalInp = rospy.Publisher('GoalInput',Vector3,queue_size=1)
@@ -49,19 +55,41 @@ def getInputs(Inp):
 	global RadiusOfCurvature
 	global ApproachAngle
 	global delay
+	global ind
+	global checkDelay
 	ToSend = np.array([0,0],dtype = np.float64)
 	GlInp = Vector3()
+	#ind = ind
 	if(TrajValid):
 		PointMem = ConfirmTrajectory()
 		if(Inp.ask):
+			#ind = ind + 1
+			
 			ind = np.argmin(cdist(CurrentPoint,PointMem),1)
-			ind = getApproachArc(ind,RadiusOfCurvature,mt.radians(ApproachAngle))
+			#print(checkDelay)
+			if(checkDelay):
+				ApproachAngle = 15
+				#print("Delay sequence initiated")
+				ind = getApproachArc(ind,RadiusOfCurvature,mt.radians(ApproachAngle))
+
+			#d = cdist(CurrentPoint,PointMem[ind,:],'euclidean')
+			#iteration = 5+(d*steps)/(2*mt.pi*0.3)
+			#print("Distance from trajectory")
+			#print(d)
+
+			if(ind >= len(PointMem)):
+				ind = ind - len(PointMem) - 1
+
+			else:
+				ind = ind + 1
+			
 			ToSend[0] = PointMem[ind,0]
 			ToSend[1] = PointMem[ind,1]
 			GlInp.x = ToSend[0]
 			GlInp.y = ToSend[1]
 			GlInp.z = 1
-			rospy.sleep(delay)
+			#print(GlInp)
+			#rospy.sleep(delay)
 			GoalInp.publish(GlInp)
 		#	print("The index")
 	#		print(ind)
@@ -70,15 +98,25 @@ def getInputs(Inp):
 			return OptimizedResponse(ToSend)
 
 
+
+def DelayLogic(DelayValue):
+	global checkDelay
+	#print("Delay value data:")
+	#print(DelayValue.data)
+	if(DelayValue.data):
+		checkDelay = True
+
+
+
 def getApproachArc(index,Radius,Angle):
 	global steps
 	global PointMem
 	ArcLength = Radius*Angle
 	iteration = ArcLength/(2*mt.pi*Radius/steps)
-	approachIndex = index + int(iteration)
+	approachIndex = index + int(iteration) + 1
 	if(approachIndex >= len(PointMem)):
 		approachIndex = approachIndex - len(PointMem) - 1 
-		return approachIndex
+		return (approachIndex)
 	else:
 		return approachIndex
 
@@ -119,6 +157,7 @@ def Optimize():
 	global frame
 	global RadiusOfCurvature
 	global delay
+	global checkDelay
 	rospy.init_node('Optimizer', anonymous=True)
 	frame = rospy.get_param('~frame')
 	delay = rospy.get_param('~delay')
@@ -128,7 +167,7 @@ def Optimize():
 	RadiusOfCurvature = float(RadiusOfCurvature)
 	listener = tf.TransformListener()
 	OptimizeDist = rospy.Service('OptimizeDistance',Optimized,getInputs)
-	
+	checkD = rospy.Subscriber("DelayDrone", Int64, DelayLogic)
 
 	rate = rospy.Rate(50.0)
 

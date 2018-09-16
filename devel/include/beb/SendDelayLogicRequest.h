@@ -24,17 +24,14 @@ struct SendDelayLogicRequest_
   typedef SendDelayLogicRequest_<ContainerAllocator> Type;
 
   SendDelayLogicRequest_()
-    : askdb(false)  {
+    {
     }
   SendDelayLogicRequest_(const ContainerAllocator& _alloc)
-    : askdb(false)  {
+    {
   (void)_alloc;
     }
 
 
-
-   typedef uint8_t _askdb_type;
-  _askdb_type askdb;
 
 
 
@@ -114,12 +111,12 @@ struct MD5Sum< ::beb::SendDelayLogicRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "2f1eb7492a4a0a560ddac2697fe18261";
+    return "d41d8cd98f00b204e9800998ecf8427e";
   }
 
   static const char* value(const ::beb::SendDelayLogicRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x2f1eb7492a4a0a56ULL;
-  static const uint64_t static_value2 = 0x0ddac2697fe18261ULL;
+  static const uint64_t static_value1 = 0xd41d8cd98f00b204ULL;
+  static const uint64_t static_value2 = 0xe9800998ecf8427eULL;
 };
 
 template<class ContainerAllocator>
@@ -138,7 +135,7 @@ struct Definition< ::beb::SendDelayLogicRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "bool askdb\n\
+    return "\n\
 ";
   }
 
@@ -155,10 +152,8 @@ namespace serialization
 
   template<class ContainerAllocator> struct Serializer< ::beb::SendDelayLogicRequest_<ContainerAllocator> >
   {
-    template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
-    {
-      stream.next(m.askdb);
-    }
+    template<typename Stream, typename T> inline static void allInOne(Stream&, T)
+    {}
 
     ROS_DECLARE_ALLINONE_SERIALIZER
   }; // struct SendDelayLogicRequest_
@@ -174,11 +169,8 @@ namespace message_operations
 template<class ContainerAllocator>
 struct Printer< ::beb::SendDelayLogicRequest_<ContainerAllocator> >
 {
-  template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::beb::SendDelayLogicRequest_<ContainerAllocator>& v)
-  {
-    s << indent << "askdb: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.askdb);
-  }
+  template<typename Stream> static void stream(Stream&, const std::string&, const ::beb::SendDelayLogicRequest_<ContainerAllocator>&)
+  {}
 };
 
 } // namespace message_operations

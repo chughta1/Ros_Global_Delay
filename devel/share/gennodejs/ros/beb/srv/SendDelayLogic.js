@@ -21,22 +21,13 @@ class SendDelayLogicRequest {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.askdb = null;
     }
     else {
-      if (initObj.hasOwnProperty('askdb')) {
-        this.askdb = initObj.askdb
-      }
-      else {
-        this.askdb = false;
-      }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type SendDelayLogicRequest
-    // Serialize message field [askdb]
-    bufferOffset = _serializer.bool(obj.askdb, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -44,13 +35,11 @@ class SendDelayLogicRequest {
     //deserializes a message object of type SendDelayLogicRequest
     let len;
     let data = new SendDelayLogicRequest(null);
-    // Deserialize message field [askdb]
-    data.askdb = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 1;
+    return 0;
   }
 
   static datatype() {
@@ -60,13 +49,12 @@ class SendDelayLogicRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '2f1eb7492a4a0a560ddac2697fe18261';
+    return 'd41d8cd98f00b204e9800998ecf8427e';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    bool askdb
     
     `;
   }
@@ -77,13 +65,6 @@ class SendDelayLogicRequest {
       msg = {};
     }
     const resolved = new SendDelayLogicRequest(null);
-    if (msg.askdb !== undefined) {
-      resolved.askdb = msg.askdb;
-    }
-    else {
-      resolved.askdb = false
-    }
-
     return resolved;
     }
 };
@@ -92,22 +73,13 @@ class SendDelayLogicResponse {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.senddb = null;
     }
     else {
-      if (initObj.hasOwnProperty('senddb')) {
-        this.senddb = initObj.senddb
-      }
-      else {
-        this.senddb = false;
-      }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type SendDelayLogicResponse
-    // Serialize message field [senddb]
-    bufferOffset = _serializer.bool(obj.senddb, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -115,13 +87,11 @@ class SendDelayLogicResponse {
     //deserializes a message object of type SendDelayLogicResponse
     let len;
     let data = new SendDelayLogicResponse(null);
-    // Deserialize message field [senddb]
-    data.senddb = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 1;
+    return 0;
   }
 
   static datatype() {
@@ -131,13 +101,13 @@ class SendDelayLogicResponse {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'e52faeaea82bd7603b003f2316da72c4';
+    return 'd41d8cd98f00b204e9800998ecf8427e';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    bool senddb
+    
     
     
     `;
@@ -149,13 +119,6 @@ class SendDelayLogicResponse {
       msg = {};
     }
     const resolved = new SendDelayLogicResponse(null);
-    if (msg.senddb !== undefined) {
-      resolved.senddb = msg.senddb;
-    }
-    else {
-      resolved.senddb = false
-    }
-
     return resolved;
     }
 };
@@ -163,6 +126,6 @@ class SendDelayLogicResponse {
 module.exports = {
   Request: SendDelayLogicRequest,
   Response: SendDelayLogicResponse,
-  md5sum() { return '2b123fbf2a4603e168a3151939e3bbe7'; },
+  md5sum() { return 'd41d8cd98f00b204e9800998ecf8427e'; },
   datatype() { return 'beb/SendDelayLogic'; }
 };
